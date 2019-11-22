@@ -62,6 +62,9 @@
       </div>
     </section>
     <section>
+      <Panel :press="press" :livestream="livestream" />
+    </section>
+    <section>
       <figure class="image is-16by9">
         <iframe
           class="has-ratio"
@@ -78,20 +81,77 @@
 
 <script>
 import content from '~/content/01.md'
-import thumbnail from '~/components/Thumbnail'
+import Thumbnail from '~/components/Thumbnail'
+import Panel from '~/components/Panel'
+
 export default {
   components: {
-    thumbnail
+    Thumbnail,
+    Panel
   },
-  computed: {
-    content() {
-      return content
+  data() {
+    return {
+      content,
+      press: [
+        {
+          name: 'Anlib',
+          url:
+            'https://anlib.se/nyheter/inrikes/ockuperade-kycklingfabrik-kraver-total-insyn/'
+        }
+      ],
+      livestream: [
+        {
+          name: 'Svensk fågelproduktion',
+          url:
+            'https://www.facebook.com/svenskfagelproduktion/videos/2149182028724411/'
+        }
+      ]
+    }
+  },
+  head() {
+    return {
+      title: '#01',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Katrineholm - 2 oktober, 2019'
+        },
+        { property: 'og:title', content: 'Total Insyn #01' },
+        { property: 'og:site_name', content: 'Total Insyn' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://www.totalinsyn.nu/01' },
+        {
+          property: 'og:image',
+          content: 'https://www.totalinsyn.nu/01/meta.jpg'
+        },
+        {
+          property: 'og:description',
+          content: 'Katrineholm - 2 oktober, 2019'
+        },
+
+        { name: 'twitter:card', content: 'summary' },
+        { name: 'twitter:site', content: 'https://www.totalinsyn.nu/01' },
+        { name: 'twitter:title', content: 'Total Insyn #01' },
+        {
+          name: 'twitter:description',
+          content: 'Katrineholm - 2 oktober, 2019'
+        },
+        {
+          name: 'twitter:image:src',
+          content: 'https://www.totalinsyn.nu/01/meta.jpg'
+        },
+
+        { itemprop: 'name', content: 'Total Insyn #01' },
+        { itemprop: 'description', content: 'Katrineholm - 2 oktober, 2019' },
+        { itemprop: 'image', content: 'https://www.totalinsyn.nu/01/meta.jpg' }
+      ]
     }
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 iframe {
   margin: 10px 0;
 }

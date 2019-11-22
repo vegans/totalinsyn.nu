@@ -65,6 +65,12 @@ export default {
         path
       })
     }
+  },
+  head() {
+    return {
+      title: 'Total Insyn',
+      titleTemplate: null
+    }
   }
 }
 </script>
@@ -78,7 +84,7 @@ export default {
   background-image: url('/01/hero.jpg');
 }
 .totalinsyn2 {
-  background-image: url('/totalinsyn2.jpg');
+  background-image: url('/02/hero.jpg');
 }
 .card {
   max-width: 500px;
