@@ -78,7 +78,7 @@
 
 <script>
 import content from '~/content/01.md'
-import thumbnail from '~/components/thumbnail'
+import thumbnail from '~/components/Thumbnail'
 export default {
   components: {
     thumbnail
