@@ -219,10 +219,10 @@ export default {
         { property: 'og:title', content: 'Total Insyn #02' },
         { property: 'og:site_name', content: 'Total Insyn' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://www.totalinsyn.nu/02' },
+        { property: 'og:url', content: 'https://totalinsyn.nu/02' },
         {
           property: 'og:image',
-          content: 'https://www.totalinsyn.nu/02/meta.jpg'
+          content: 'https://totalinsyn.nu/02/meta.jpg'
         },
         {
           property: 'og:description',
@@ -230,7 +230,7 @@ export default {
         },
 
         { name: 'twitter:card', content: 'summary' },
-        { name: 'twitter:site', content: 'https://www.totalinsyn.nu/02' },
+        { name: 'twitter:site', content: 'https://totalinsyn.nu/02' },
         { name: 'twitter:title', content: 'Total Insyn #02' },
         {
           name: 'twitter:description',
@@ -238,7 +238,7 @@ export default {
         },
         {
           name: 'twitter:image:src',
-          content: 'https://www.totalinsyn.nu/02/meta.jpg'
+          content: 'https://totalinsyn.nu/02/meta.jpg'
         },
 
         { itemprop: 'name', content: 'Total Insyn #02' },
@@ -246,7 +246,7 @@ export default {
           itemprop: 'description',
           content: 'Kristianstad - 20 november, 2019'
         },
-        { itemprop: 'image', content: 'https://www.totalinsyn.nu/02/meta.jpg' }
+        { itemprop: 'image', content: 'https://totalinsyn.nu/02/meta.jpg' }
       ]
     }
   }

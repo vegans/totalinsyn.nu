@@ -120,10 +120,10 @@ export default {
         { property: 'og:title', content: 'Total Insyn #01' },
         { property: 'og:site_name', content: 'Total Insyn' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://www.totalinsyn.nu/01' },
+        { property: 'og:url', content: 'https://totalinsyn.nu/01' },
         {
           property: 'og:image',
-          content: 'https://www.totalinsyn.nu/01/meta.jpg'
+          content: 'https://totalinsyn.nu/01/meta.jpg'
         },
         {
           property: 'og:description',
@@ -131,7 +131,7 @@ export default {
         },
 
         { name: 'twitter:card', content: 'summary' },
-        { name: 'twitter:site', content: 'https://www.totalinsyn.nu/01' },
+        { name: 'twitter:site', content: 'https://totalinsyn.nu/01' },
         { name: 'twitter:title', content: 'Total Insyn #01' },
         {
           name: 'twitter:description',
@@ -139,12 +139,12 @@ export default {
         },
         {
           name: 'twitter:image:src',
-          content: 'https://www.totalinsyn.nu/01/meta.jpg'
+          content: 'https://totalinsyn.nu/01/meta.jpg'
         },
 
         { itemprop: 'name', content: 'Total Insyn #01' },
         { itemprop: 'description', content: 'Katrineholm - 2 oktober, 2019' },
-        { itemprop: 'image', content: 'https://www.totalinsyn.nu/01/meta.jpg' }
+        { itemprop: 'image', content: 'https://totalinsyn.nu/01/meta.jpg' }
       ]
     }
   }

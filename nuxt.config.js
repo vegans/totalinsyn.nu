@@ -13,6 +13,14 @@ export default {
         hid: 'description',
         name: 'description',
         content: 'Vi kräver total insyn in i djurindustrin'
+      },
+      {
+        property: 'og:image',
+        content: 'https://totalinsyn.nu/02/meta.jpg'
+      },
+      {
+        name: 'twitter:image:src',
+        content: 'https://totalinsyn.nu/02/meta.jpg'
       }
     ]
   },
