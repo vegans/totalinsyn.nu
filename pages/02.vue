@@ -152,6 +152,35 @@
         </div>
       </div>
     </section>
+    <section>
+      <div class="is-divider" data-content="2019-11-20"></div>
+      <div class="columns">
+        <div class="column">
+          <thumbnail
+            :image="'/02/2019-11-20/1.jpg'"
+            :thumbnail="'/02/2019-11-20/1.jpg'"
+          />
+        </div>
+        <div class="column">
+          <thumbnail
+            :image="'/02/2019-11-20/2.jpg'"
+            :thumbnail="'/02/2019-11-20/2.jpg'"
+          />
+        </div>
+        <div class="column">
+          <thumbnail
+            :image="'/02/2019-11-20/3.jpg'"
+            :thumbnail="'/02/2019-11-20/3.jpg'"
+          />
+        </div>
+        <div class="column">
+          <thumbnail
+            :image="'/02/2019-11-20/4.jpg'"
+            :thumbnail="'/02/2019-11-20/4.jpg'"
+          />
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
