@@ -27,7 +27,7 @@
       <div class="content has-text-centered">
         <p>
           <strong>#totalinsyn</strong> is a campaign for total transparancy into
-          every single farm and every single slaughter house in Sweden.
+          every single farm and every single slaughterhouse in Sweden.
         </p>
       </div>
     </footer>
