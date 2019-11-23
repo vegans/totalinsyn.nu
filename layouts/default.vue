@@ -22,10 +22,26 @@
     <section class="main-content">
       <nuxt />
     </section>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>#totalinsyn</strong> is a campaign for total transparancy into
+          every single farm and every single slaughter house in Sweden.
+        </p>
+      </div>
+    </footer>
   </div>
 </template>
 
 <style lang="sass">
 @import 'bulma';
 @import "~bulma-extensions/bulma-divider/src/sass/index.sass"
+</style>
+
+<style lang="scss">
+.footer .content {
+  max-width: 500px;
+  margin: 0 auto;
+}
 </style>
