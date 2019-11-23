@@ -97,6 +97,11 @@ export default {
           name: 'Anlib',
           url:
             'https://anlib.se/nyheter/inrikes/ockuperade-kycklingfabrik-kraver-total-insyn/'
+        },
+        {
+          name: 'Katrineholms-Kuriren',
+          url:
+            'https://www.kkuriren.se/nyheter/katrineholm/aktivister-stangdes-in-hos-slaktkycklingarna-sm5244450.aspx'
         }
       ],
       livestream: [
