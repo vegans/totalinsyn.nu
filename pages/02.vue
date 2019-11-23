@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="hero is-medium is-primary totalinsyn1">
+    <section class="hero is-medium is-dark totalinsyn1">
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
@@ -253,7 +253,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .card {
   max-width: 500px;
   margin: 10px auto;
@@ -262,5 +262,7 @@ export default {
   background-size: cover;
   cursor: pointer;
   background-image: url('/02/hero.jpg');
+  background-color: #828282;
+  background-blend-mode: soft-light;
 }
 </style>

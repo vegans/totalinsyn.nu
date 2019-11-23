@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="hero is-medium is-primary totalinsyn1">
+    <section class="hero is-medium is-dark totalinsyn1">
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
@@ -167,5 +167,7 @@ iframe {
 .hero {
   background-size: cover;
   background-image: url('/01/hero.jpg');
+  background-color: #828282;
+  background-blend-mode: soft-light;
 }
 </style>

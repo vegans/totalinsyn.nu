@@ -28,7 +28,7 @@
       </footer>
     </div>
 
-    <section @click="goto('/02')" class="hero is-medium is-primary totalinsyn2">
+    <section @click="goto('/02')" class="hero is-medium is-dark totalinsyn2">
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
@@ -40,8 +40,7 @@
         </div>
       </div>
     </section>
-
-    <section @click="goto('/01')" class="hero is-medium is-primary totalinsyn1">
+    <section @click="goto('/01')" class="hero is-medium is-dark totalinsyn1">
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
@@ -79,6 +78,8 @@ export default {
 .hero {
   background-size: cover;
   cursor: pointer;
+  background-color: #828282;
+  background-blend-mode: soft-light;
 }
 .totalinsyn1 {
   background-image: url('/01/hero.jpg');
