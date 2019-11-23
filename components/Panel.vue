@@ -1,8 +1,5 @@
 <template>
   <article class="panel is-primary">
-    <p class="panel-heading">
-      Resurser
-    </p>
     <b-tabs v-model="activeTab" position="is-centered" size="is-small">
       <b-tab-item label="Press">
         <a

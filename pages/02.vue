@@ -33,37 +33,124 @@
         </footer>
       </div>
     </section>
-    TODO: Lägg upp rätt bilder här
     <section>
+      <Panel :press="press" :livestream="livestream" />
+    </section>
+    <section>
+      <div class="is-divider" data-content="2019-10-19"></div>
       <div class="columns">
         <div class="column">
           <thumbnail
-            :image="'/01/IMG_5052.jpg'"
-            :thumbnail="'/01/IMG_5052.jpg'"
+            :image="'/02/2019-10-19/1.jpg'"
+            :thumbnail="'/02/2019-10-19/1.jpg'"
           />
         </div>
         <div class="column">
           <thumbnail
-            :image="'/01/IMG_5055.jpg'"
-            :thumbnail="'/01/IMG_5055.jpg'"
+            :image="'/02/2019-10-19/2.jpg'"
+            :thumbnail="'/02/2019-10-19/2.jpg'"
           />
         </div>
         <div class="column">
           <thumbnail
-            :image="'/01/IMG_5066.jpg'"
-            :thumbnail="'/01/IMG_5066.jpg'"
+            :image="'/02/2019-10-19/3.jpg'"
+            :thumbnail="'/02/2019-10-19/3.jpg'"
           />
         </div>
         <div class="column">
           <thumbnail
-            :image="'/01/IMG_5072.jpg'"
-            :thumbnail="'/01/IMG_5072.jpg'"
+            :image="'/02/2019-10-19/4.jpg'"
+            :thumbnail="'/02/2019-10-19/4.jpg'"
           />
         </div>
       </div>
     </section>
     <section>
-      <Panel :press="press" :livestream="livestream" />
+      <div class="is-divider" data-content="2019-10-20"></div>
+      <div class="columns">
+        <div class="column">
+          <thumbnail
+            :image="'/02/2019-10-20/1.jpg'"
+            :thumbnail="'/02/2019-10-20/1.jpg'"
+          />
+        </div>
+        <div class="column">
+          <thumbnail
+            :image="'/02/2019-10-20/2.jpg'"
+            :thumbnail="'/02/2019-10-20/2.jpg'"
+          />
+        </div>
+        <div class="column">
+          <thumbnail
+            :image="'/02/2019-10-20/3.jpg'"
+            :thumbnail="'/02/2019-10-20/3.jpg'"
+          />
+        </div>
+        <div class="column">
+          <thumbnail
+            :image="'/02/2019-10-20/4.jpg'"
+            :thumbnail="'/02/2019-10-20/4.jpg'"
+          />
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="is-divider" data-content="2019-11-09"></div>
+      <div class="columns">
+        <div class="column">
+          <thumbnail
+            :image="'/02/2019-11-09/1.jpg'"
+            :thumbnail="'/02/2019-11-09/1.jpg'"
+          />
+        </div>
+        <div class="column">
+          <thumbnail
+            :image="'/02/2019-11-09/2.jpg'"
+            :thumbnail="'/02/2019-11-09/2.jpg'"
+          />
+        </div>
+        <div class="column">
+          <thumbnail
+            :image="'/02/2019-11-09/3.jpg'"
+            :thumbnail="'/02/2019-11-09/3.jpg'"
+          />
+        </div>
+        <div class="column">
+          <thumbnail
+            :image="'/02/2019-11-09/4.jpg'"
+            :thumbnail="'/02/2019-11-09/4.jpg'"
+          />
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="is-divider" data-content="2019-11-19"></div>
+      <div class="columns">
+        <div class="column">
+          <thumbnail
+            :image="'/02/2019-11-19/1.jpg'"
+            :thumbnail="'/02/2019-11-19/1.jpg'"
+          />
+        </div>
+        <div class="column">
+          <thumbnail
+            :image="'/02/2019-11-19/2.jpg'"
+            :thumbnail="'/02/2019-11-19/2.jpg'"
+          />
+        </div>
+        <div class="column">
+          <thumbnail
+            :image="'/02/2019-11-19/3.jpg'"
+            :thumbnail="'/02/2019-11-19/3.jpg'"
+          />
+        </div>
+        <div class="column">
+          <thumbnail
+            :image="'/02/2019-11-19/4.jpg'"
+            :thumbnail="'/02/2019-11-19/4.jpg'"
+          />
+        </div>
+      </div>
     </section>
   </div>
 </template>

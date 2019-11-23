@@ -24,3 +24,8 @@
     </section>
   </div>
 </template>
+
+<style lang="sass">
+@import 'bulma';
+@import "~bulma-extensions/bulma-divider/src/sass/index.sass"
+</style>
