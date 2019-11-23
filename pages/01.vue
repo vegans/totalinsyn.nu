@@ -34,6 +34,9 @@
       </div>
     </section>
     <section>
+      <Panel :press="press" :livestream="livestream" />
+    </section>
+    <section>
       <div class="columns">
         <div class="column">
           <thumbnail
@@ -62,9 +65,7 @@
       </div>
     </section>
     <section>
-      <Panel :press="press" :livestream="livestream" />
-    </section>
-    <section>
+      <div class="is-divider" data-content="Video"></div>
       <figure class="image is-16by9">
         <iframe
           class="has-ratio"

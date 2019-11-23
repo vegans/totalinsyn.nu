@@ -181,6 +181,19 @@
         </div>
       </div>
     </section>
+    <section>
+      <div class="is-divider" data-content="Video"></div>
+      <figure class="image is-16by9">
+        <iframe
+          class="has-ratio"
+          width="640"
+          height="360"
+          src="https://www.youtube.com/embed/GPge15gJnZw?showinfo=0"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </figure>
+    </section>
   </div>
 </template>
 
