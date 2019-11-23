@@ -4,7 +4,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: 'Total Insyn',
+    title: '#totalinsyn',
     titleTemplate: '%s | Total Insyn',
     meta: [
       { charset: 'utf-8' },

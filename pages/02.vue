@@ -289,7 +289,6 @@ export default {
 }
 .hero {
   background-size: cover;
-  cursor: pointer;
   background-image: url('/02/hero.jpg');
   background-color: #828282;
   background-blend-mode: soft-light;

@@ -64,12 +64,6 @@ export default {
         path
       })
     }
-  },
-  head() {
-    return {
-      title: 'Total Insyn',
-      titleTemplate: null
-    }
   }
 }
 </script>
