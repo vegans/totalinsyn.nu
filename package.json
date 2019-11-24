@@ -23,12 +23,14 @@
   "dependencies": {
     "@nuxtjs/markdownit": "^1.2.7",
     "bulma-extensions": "^6.2.7",
+    "mapbox-gl": "^1.5.0",
     "markdown-it-attrs": "^3.0.1",
     "markdown-it-div": "^1.1.0",
     "node-sass": "^4.13.0",
     "nuxt": "^2.0.0",
     "nuxt-buefy": "^0.3.2",
-    "sass-loader": "^8.0.0"
+    "sass-loader": "^8.0.0",
+    "vue-mapbox": "^0.4.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",

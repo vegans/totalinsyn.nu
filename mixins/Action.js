@@ -3,6 +3,7 @@ import PhotoStrip from '~/components/PhotoStrip'
 import PressRelease from '~/components/PressRelease'
 import VideoEmbed from '~/components/VideoEmbed'
 import Hero from '~/components/Hero'
+import ActionMap from '~/components/ActionMap'
 
 export default {
   components: {
@@ -10,7 +11,8 @@ export default {
     PhotoStrip,
     PressRelease,
     VideoEmbed,
-    Hero
+    Hero,
+    ActionMap
   },
   data() {
     return {
