@@ -1,70 +1,35 @@
 <template>
   <div>
-    <section class="hero is-medium is-dark totalinsyn1">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">
-            Total Insyn #01
-          </h1>
-          <h2 class="subtitle">
-            Katrineholm - 2 oktober, 2019
-          </h2>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="card">
-        <div class="card-content">
-          <div class="content">
-            <div v-html="content"></div>
-          </div>
-        </div>
-        <footer class="card-footer">
-          <p class="card-footer-item">
-            <span>
-              <a
-                href="https://drive.google.com/drive/folders/1nCxifs9a-MBzufIMqkFFlJybntQNcvCP"
-                target="_blank"
-                rel="noopener"
-                >Alla bilder</a
-              >
-            </span>
-          </p>
-        </footer>
-      </div>
-    </section>
-    <section>
-      <Panel :press="press" :livestream="livestream" />
-    </section>
+    <hero
+      title="Total Insyn #01"
+      subtitle="Katrineholm - 2 oktober, 2019"
+      image="/01/hero.jpg"
+    />
+    <press-release
+      :imagesLink="
+        'https://drive.google.com/drive/folders/1nCxifs9a-MBzufIMqkFFlJybntQNcvCP'
+      "
+      :content="content"
+    />
+    <panel :press="press" :livestream="livestream" />
     <photo-strip :images="images" title="2019-10-04" />
-    <section>
-      <div class="is-divider" data-content="Video"></div>
-      <figure class="image is-16by9">
-        <iframe
-          class="has-ratio"
-          width="640"
-          height="360"
-          src="https://www.youtube.com/embed/k4s4WKkFc2Y?showinfo=0"
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
-      </figure>
-    </section>
+    <video-embed url="https://www.youtube.com/embed/k4s4WKkFc2Y?showinfo=0" />
   </div>
 </template>
 
 <script>
 import content from '~/content/01.md'
-import Panel from '~/components/Panel'
-import PhotoStrip from '~/components/PhotoStrip'
+import Action from '~/mixins/Action.js'
 
 export default {
-  components: {
-    Panel,
-    PhotoStrip
-  },
+  mixins: [Action],
   data() {
     return {
+      action: '#01',
+      url: 'https://totalinsyn.nu/01',
+      metaImage: 'https://totalinsyn.nu/01/meta.jpg',
+      title: 'Total Insyn #01',
+      description: 'Katrineholm - 2 oktober, 2019',
       content,
       images: ['/01/IMG_5052', '/01/IMG_5055', '/01/IMG_5066', '/01/IMG_5072'],
       press: [
@@ -87,62 +52,6 @@ export default {
         }
       ]
     }
-  },
-  head() {
-    return {
-      title: '#01',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'Katrineholm - 2 oktober, 2019'
-        },
-        { property: 'og:title', content: 'Total Insyn #01' },
-        { property: 'og:site_name', content: 'Total Insyn' },
-        { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://totalinsyn.nu/01' },
-        {
-          property: 'og:image',
-          content: 'https://totalinsyn.nu/01/meta.jpg'
-        },
-        {
-          property: 'og:description',
-          content: 'Katrineholm - 2 oktober, 2019'
-        },
-
-        { name: 'twitter:card', content: 'summary' },
-        { name: 'twitter:site', content: 'https://totalinsyn.nu/01' },
-        { name: 'twitter:title', content: 'Total Insyn #01' },
-        {
-          name: 'twitter:description',
-          content: 'Katrineholm - 2 oktober, 2019'
-        },
-        {
-          name: 'twitter:image:src',
-          content: 'https://totalinsyn.nu/01/meta.jpg'
-        },
-
-        { itemprop: 'name', content: 'Total Insyn #01' },
-        { itemprop: 'description', content: 'Katrineholm - 2 oktober, 2019' },
-        { itemprop: 'image', content: 'https://totalinsyn.nu/01/meta.jpg' }
-      ]
-    }
   }
 }
 </script>
-
-<style lang="scss" scoped>
-iframe {
-  margin: 10px 0;
-}
-.card {
-  max-width: 500px;
-  margin: 10px auto;
-}
-.hero {
-  background-size: cover;
-  background-image: url('/01/hero.jpg');
-  background-color: #828282;
-  background-blend-mode: soft-light;
-}
-</style>
