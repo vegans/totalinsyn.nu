@@ -245,6 +245,11 @@ export default {
         {
           name: 'A.R.E Sweden',
           url: 'https://www.facebook.com/arexpsweden/videos/562195541222869/'
+        },
+        {
+          name: 'Sonja Marie',
+          url:
+            'https://www.facebook.com/sonja.marie125/videos/2909969759049287/'
         }
       ]
     }
