@@ -36,34 +36,7 @@
     <section>
       <Panel :press="press" :livestream="livestream" />
     </section>
-    <section>
-      <div class="columns">
-        <div class="column">
-          <thumbnail
-            :image="'/01/IMG_5052.jpg'"
-            :thumbnail="'/01/IMG_5052_thumb.jpg'"
-          />
-        </div>
-        <div class="column">
-          <thumbnail
-            :image="'/01/IMG_5055.jpg'"
-            :thumbnail="'/01/IMG_5055_thumb.jpg'"
-          />
-        </div>
-        <div class="column">
-          <thumbnail
-            :image="'/01/IMG_5066.jpg'"
-            :thumbnail="'/01/IMG_5066_thumb.jpg'"
-          />
-        </div>
-        <div class="column">
-          <thumbnail
-            :image="'/01/IMG_5072.jpg'"
-            :thumbnail="'/01/IMG_5072_thumb.jpg'"
-          />
-        </div>
-      </div>
-    </section>
+    <photo-strip :images="images" title="2019-10-04" />
     <section>
       <div class="is-divider" data-content="Video"></div>
       <figure class="image is-16by9">
@@ -82,17 +55,18 @@
 
 <script>
 import content from '~/content/01.md'
-import Thumbnail from '~/components/Thumbnail'
 import Panel from '~/components/Panel'
+import PhotoStrip from '~/components/PhotoStrip'
 
 export default {
   components: {
-    Thumbnail,
-    Panel
+    Panel,
+    PhotoStrip
   },
   data() {
     return {
       content,
+      images: ['/01/IMG_5052', '/01/IMG_5055', '/01/IMG_5066', '/01/IMG_5072'],
       press: [
         {
           name: 'Anlib',

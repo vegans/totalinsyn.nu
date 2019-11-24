@@ -36,151 +36,12 @@
     <section>
       <Panel :press="press" :livestream="livestream" />
     </section>
-    <section>
-      <div class="is-divider" data-content="2019-10-19"></div>
-      <div class="columns">
-        <div class="column">
-          <thumbnail
-            :image="'/02/2019-10-19/1.jpg'"
-            :thumbnail="'/02/2019-10-19/1_thumb.jpg'"
-          />
-        </div>
-        <div class="column">
-          <thumbnail
-            :image="'/02/2019-10-19/2.jpg'"
-            :thumbnail="'/02/2019-10-19/2_thumb.jpg'"
-          />
-        </div>
-        <div class="column">
-          <thumbnail
-            :image="'/02/2019-10-19/3.jpg'"
-            :thumbnail="'/02/2019-10-19/3_thumb.jpg'"
-          />
-        </div>
-        <div class="column">
-          <thumbnail
-            :image="'/02/2019-10-19/4.jpg'"
-            :thumbnail="'/02/2019-10-19/4_thumb.jpg'"
-          />
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="is-divider" data-content="2019-10-20"></div>
-      <div class="columns">
-        <div class="column">
-          <thumbnail
-            :image="'/02/2019-10-20/1.jpg'"
-            :thumbnail="'/02/2019-10-20/1_thumb.jpg'"
-          />
-        </div>
-        <div class="column">
-          <thumbnail
-            :image="'/02/2019-10-20/2.jpg'"
-            :thumbnail="'/02/2019-10-20/2_thumb.jpg'"
-          />
-        </div>
-        <div class="column">
-          <thumbnail
-            :image="'/02/2019-10-20/3.jpg'"
-            :thumbnail="'/02/2019-10-20/3_thumb.jpg'"
-          />
-        </div>
-        <div class="column">
-          <thumbnail
-            :image="'/02/2019-10-20/4.jpg'"
-            :thumbnail="'/02/2019-10-20/4_thumb.jpg'"
-          />
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="is-divider" data-content="2019-11-09"></div>
-      <div class="columns">
-        <div class="column">
-          <thumbnail
-            :image="'/02/2019-11-09/1.jpg'"
-            :thumbnail="'/02/2019-11-09/1_thumb.jpg'"
-          />
-        </div>
-        <div class="column">
-          <thumbnail
-            :image="'/02/2019-11-09/2.jpg'"
-            :thumbnail="'/02/2019-11-09/2_thumb.jpg'"
-          />
-        </div>
-        <div class="column">
-          <thumbnail
-            :image="'/02/2019-11-09/3.jpg'"
-            :thumbnail="'/02/2019-11-09/3_thumb.jpg'"
-          />
-        </div>
-        <div class="column">
-          <thumbnail
-            :image="'/02/2019-11-09/4.jpg'"
-            :thumbnail="'/02/2019-11-09/4_thumb.jpg'"
-          />
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="is-divider" data-content="2019-11-19"></div>
-      <div class="columns">
-        <div class="column">
-          <thumbnail
-            :image="'/02/2019-11-19/1.jpg'"
-            :thumbnail="'/02/2019-11-19/1_thumb.jpg'"
-          />
-        </div>
-        <div class="column">
-          <thumbnail
-            :image="'/02/2019-11-19/2.jpg'"
-            :thumbnail="'/02/2019-11-19/2_thumb.jpg'"
-          />
-        </div>
-        <div class="column">
-          <thumbnail
-            :image="'/02/2019-11-19/3.jpg'"
-            :thumbnail="'/02/2019-11-19/3_thumb.jpg'"
-          />
-        </div>
-        <div class="column">
-          <thumbnail
-            :image="'/02/2019-11-19/4.jpg'"
-            :thumbnail="'/02/2019-11-19/4_thumb.jpg'"
-          />
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="is-divider" data-content="2019-11-20"></div>
-      <div class="columns">
-        <div class="column">
-          <thumbnail
-            :image="'/02/2019-11-20/1.jpg'"
-            :thumbnail="'/02/2019-11-20/1_thumb.jpg'"
-          />
-        </div>
-        <div class="column">
-          <thumbnail
-            :image="'/02/2019-11-20/2.jpg'"
-            :thumbnail="'/02/2019-11-20/2_thumb.jpg'"
-          />
-        </div>
-        <div class="column">
-          <thumbnail
-            :image="'/02/2019-11-20/3.jpg'"
-            :thumbnail="'/02/2019-11-20/3_thumb.jpg'"
-          />
-        </div>
-        <div class="column">
-          <thumbnail
-            :image="'/02/2019-11-20/4.jpg'"
-            :thumbnail="'/02/2019-11-20/4_thumb.jpg'"
-          />
-        </div>
-      </div>
-    </section>
+    <photo-strip
+      v-for="(images, date) in dates"
+      :key="date"
+      :images="images"
+      :title="date"
+    />
     <section>
       <div class="is-divider" data-content="Video"></div>
       <figure class="image is-16by9">
@@ -199,17 +60,49 @@
 
 <script>
 import content from '~/content/02.md'
-import Thumbnail from '~/components/Thumbnail'
 import Panel from '~/components/Panel'
+import PhotoStrip from '~/components/PhotoStrip'
 
 export default {
   components: {
-    Thumbnail,
-    Panel
+    Panel,
+    PhotoStrip
   },
   data() {
     return {
       content,
+      dates: {
+        '2019-10-19': [
+          '/02/2019-10-19/1',
+          '/02/2019-10-19/2',
+          '/02/2019-10-19/3',
+          '/02/2019-10-19/4'
+        ],
+        '2019-10-20': [
+          '/02/2019-10-20/1',
+          '/02/2019-10-20/2',
+          '/02/2019-10-20/3',
+          '/02/2019-10-20/4'
+        ],
+        '2019-11-09': [
+          '/02/2019-11-09/1',
+          '/02/2019-11-09/2',
+          '/02/2019-11-09/3',
+          '/02/2019-11-09/4'
+        ],
+        '2019-11-19': [
+          '/02/2019-11-19/1',
+          '/02/2019-11-19/2',
+          '/02/2019-11-19/3',
+          '/02/2019-11-19/4'
+        ],
+        '2019-11-20': [
+          '/02/2019-11-20/1',
+          '/02/2019-11-20/2',
+          '/02/2019-11-20/3',
+          '/02/2019-11-20/4'
+        ]
+      },
       press: [
         {
           name: 'Anlib',
