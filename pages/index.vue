@@ -3,7 +3,7 @@
     <div class="card">
       <div class="card-content">
         <p class="title">
-          Vi kräver en total insyn på varenda gård och slakteri i Sverige.
+          Vi kräver total insyn på varenda gård och slakteri i Sverige.
         </p>
         <p class="subtitle">
           #totalinsyn
