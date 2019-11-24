@@ -42,25 +42,25 @@
         <div class="column">
           <thumbnail
             :image="'/02/2019-10-19/1.jpg'"
-            :thumbnail="'/02/2019-10-19/1.jpg'"
+            :thumbnail="'/02/2019-10-19/1_thumb.jpg'"
           />
         </div>
         <div class="column">
           <thumbnail
             :image="'/02/2019-10-19/2.jpg'"
-            :thumbnail="'/02/2019-10-19/2.jpg'"
+            :thumbnail="'/02/2019-10-19/2_thumb.jpg'"
           />
         </div>
         <div class="column">
           <thumbnail
             :image="'/02/2019-10-19/3.jpg'"
-            :thumbnail="'/02/2019-10-19/3.jpg'"
+            :thumbnail="'/02/2019-10-19/3_thumb.jpg'"
           />
         </div>
         <div class="column">
           <thumbnail
             :image="'/02/2019-10-19/4.jpg'"
-            :thumbnail="'/02/2019-10-19/4.jpg'"
+            :thumbnail="'/02/2019-10-19/4_thumb.jpg'"
           />
         </div>
       </div>
@@ -71,25 +71,25 @@
         <div class="column">
           <thumbnail
             :image="'/02/2019-10-20/1.jpg'"
-            :thumbnail="'/02/2019-10-20/1.jpg'"
+            :thumbnail="'/02/2019-10-20/1_thumb.jpg'"
           />
         </div>
         <div class="column">
           <thumbnail
             :image="'/02/2019-10-20/2.jpg'"
-            :thumbnail="'/02/2019-10-20/2.jpg'"
+            :thumbnail="'/02/2019-10-20/2_thumb.jpg'"
           />
         </div>
         <div class="column">
           <thumbnail
             :image="'/02/2019-10-20/3.jpg'"
-            :thumbnail="'/02/2019-10-20/3.jpg'"
+            :thumbnail="'/02/2019-10-20/3_thumb.jpg'"
           />
         </div>
         <div class="column">
           <thumbnail
             :image="'/02/2019-10-20/4.jpg'"
-            :thumbnail="'/02/2019-10-20/4.jpg'"
+            :thumbnail="'/02/2019-10-20/4_thumb.jpg'"
           />
         </div>
       </div>
@@ -100,25 +100,25 @@
         <div class="column">
           <thumbnail
             :image="'/02/2019-11-09/1.jpg'"
-            :thumbnail="'/02/2019-11-09/1.jpg'"
+            :thumbnail="'/02/2019-11-09/1_thumb.jpg'"
           />
         </div>
         <div class="column">
           <thumbnail
             :image="'/02/2019-11-09/2.jpg'"
-            :thumbnail="'/02/2019-11-09/2.jpg'"
+            :thumbnail="'/02/2019-11-09/2_thumb.jpg'"
           />
         </div>
         <div class="column">
           <thumbnail
             :image="'/02/2019-11-09/3.jpg'"
-            :thumbnail="'/02/2019-11-09/3.jpg'"
+            :thumbnail="'/02/2019-11-09/3_thumb.jpg'"
           />
         </div>
         <div class="column">
           <thumbnail
             :image="'/02/2019-11-09/4.jpg'"
-            :thumbnail="'/02/2019-11-09/4.jpg'"
+            :thumbnail="'/02/2019-11-09/4_thumb.jpg'"
           />
         </div>
       </div>
@@ -129,25 +129,25 @@
         <div class="column">
           <thumbnail
             :image="'/02/2019-11-19/1.jpg'"
-            :thumbnail="'/02/2019-11-19/1.jpg'"
+            :thumbnail="'/02/2019-11-19/1_thumb.jpg'"
           />
         </div>
         <div class="column">
           <thumbnail
             :image="'/02/2019-11-19/2.jpg'"
-            :thumbnail="'/02/2019-11-19/2.jpg'"
+            :thumbnail="'/02/2019-11-19/2_thumb.jpg'"
           />
         </div>
         <div class="column">
           <thumbnail
             :image="'/02/2019-11-19/3.jpg'"
-            :thumbnail="'/02/2019-11-19/3.jpg'"
+            :thumbnail="'/02/2019-11-19/3_thumb.jpg'"
           />
         </div>
         <div class="column">
           <thumbnail
             :image="'/02/2019-11-19/4.jpg'"
-            :thumbnail="'/02/2019-11-19/4.jpg'"
+            :thumbnail="'/02/2019-11-19/4_thumb.jpg'"
           />
         </div>
       </div>
@@ -158,25 +158,25 @@
         <div class="column">
           <thumbnail
             :image="'/02/2019-11-20/1.jpg'"
-            :thumbnail="'/02/2019-11-20/1.jpg'"
+            :thumbnail="'/02/2019-11-20/1_thumb.jpg'"
           />
         </div>
         <div class="column">
           <thumbnail
             :image="'/02/2019-11-20/2.jpg'"
-            :thumbnail="'/02/2019-11-20/2.jpg'"
+            :thumbnail="'/02/2019-11-20/2_thumb.jpg'"
           />
         </div>
         <div class="column">
           <thumbnail
             :image="'/02/2019-11-20/3.jpg'"
-            :thumbnail="'/02/2019-11-20/3.jpg'"
+            :thumbnail="'/02/2019-11-20/3_thumb.jpg'"
           />
         </div>
         <div class="column">
           <thumbnail
             :image="'/02/2019-11-20/4.jpg'"
-            :thumbnail="'/02/2019-11-20/4.jpg'"
+            :thumbnail="'/02/2019-11-20/4_thumb.jpg'"
           />
         </div>
       </div>

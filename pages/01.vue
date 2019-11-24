@@ -41,25 +41,25 @@
         <div class="column">
           <thumbnail
             :image="'/01/IMG_5052.jpg'"
-            :thumbnail="'/01/IMG_5052.jpg'"
+            :thumbnail="'/01/IMG_5052_thumb.jpg'"
           />
         </div>
         <div class="column">
           <thumbnail
             :image="'/01/IMG_5055.jpg'"
-            :thumbnail="'/01/IMG_5055.jpg'"
+            :thumbnail="'/01/IMG_5055_thumb.jpg'"
           />
         </div>
         <div class="column">
           <thumbnail
             :image="'/01/IMG_5066.jpg'"
-            :thumbnail="'/01/IMG_5066.jpg'"
+            :thumbnail="'/01/IMG_5066_thumb.jpg'"
           />
         </div>
         <div class="column">
           <thumbnail
             :image="'/01/IMG_5072.jpg'"
-            :thumbnail="'/01/IMG_5072.jpg'"
+            :thumbnail="'/01/IMG_5072_thumb.jpg'"
           />
         </div>
       </div>
