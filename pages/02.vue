@@ -93,6 +93,11 @@ export default {
           name: 'ATL',
           url:
             'https://www.atl.nu/lantbruk/tva-aktivister-gripna-efter-aktion-i-grisstall/'
+        },
+        {
+          name: 'Jordbruksaktuellt',
+          url:
+            'https://www.ja.se/artikel/61426/delad.html'
         }
       ],
       livestream: [
