@@ -96,8 +96,7 @@ export default {
         },
         {
           name: 'Jordbruksaktuellt',
-          url:
-            'https://www.ja.se/artikel/61426/delad.html'
+          url: 'https://www.ja.se/artikel/61426/delad.html'
         }
       ],
       livestream: [
