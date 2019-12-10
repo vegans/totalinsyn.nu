@@ -16,6 +16,9 @@
         <b-navbar-item tag="nuxt-link" to="/motion">
           Motionen
         </b-navbar-item>
+        <b-navbar-item tag="nuxt-link" to="/lansstyrelsen">
+          Myten om djurskyddet
+        </b-navbar-item>
       </template>
     </b-navbar>
 
