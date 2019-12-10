@@ -4,6 +4,7 @@ import PressRelease from '~/components/PressRelease'
 import VideoEmbed from '~/components/VideoEmbed'
 import Hero from '~/components/Hero'
 import ActionMap from '~/components/ActionMap'
+import ImageSource from '~/components/ImageSource'
 
 export default {
   components: {
@@ -12,7 +13,8 @@ export default {
     PressRelease,
     VideoEmbed,
     Hero,
-    ActionMap
+    ActionMap,
+    ImageSource
   },
   data() {
     return {
