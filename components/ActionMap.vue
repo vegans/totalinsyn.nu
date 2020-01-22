@@ -15,14 +15,8 @@
 </template>
 
 <script>
-import { MglMap, MglMarker } from 'vue-mapbox'
-
 export default {
   name: 'Map',
-  components: {
-    MglMap,
-    MglMarker
-  },
   props: {
     coordinates: Array
   },
