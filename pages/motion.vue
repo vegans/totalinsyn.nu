@@ -74,6 +74,21 @@
   </div>
 </template>
 
+<script>
+import Action from '~/mixins/Action.js'
+
+export default {
+  mixins: [Action],
+  data() {
+    return {
+      action: 'Motionen',
+      url: 'https://totalinsyn.nu/motion',
+      title: 'Motionen'
+    }
+  }
+}
+</script>
+
 <style lang="scss" scoped>
 .content {
   padding: 10px;

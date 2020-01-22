@@ -48,6 +48,13 @@
 import Action from '~/mixins/Action.js'
 
 export default {
-  mixins: [Action]
+  mixins: [Action],
+  data() {
+    return {
+      action: 'Världens bästa djurskydd',
+      url: 'https://totalinsyn.nu/lansstyrelsen',
+      title: 'Världens bästa djurskydd'
+    }
+  }
 }
 </script>
