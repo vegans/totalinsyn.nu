@@ -19,9 +19,7 @@
       :title="date"
     />
     <video-embed url="https://www.youtube.com/embed/GPge15gJnZw?showinfo=0" />
-    <client-only placeholder="Loading...">
-      <action-map :coordinates="[13.99179, 55.987572]" />
-    </client-only>
+    <action-map :coordinates="[13.99179, 55.987572]" />
   </div>
 </template>
 
