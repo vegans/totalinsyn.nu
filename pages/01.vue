@@ -14,7 +14,9 @@
     <panel :press="press" :livestream="livestream" />
     <photo-strip :images="images" title="2019-10-04" />
     <video-embed url="https://www.youtube.com/embed/k4s4WKkFc2Y?showinfo=0" />
-    <action-map :coordinates="[16.20618, 58.99592]" />
+    <client-only placeholder="Loading...">
+      <action-map :coordinates="[16.20618, 58.99592]" />
+    </client-only>
   </div>
 </template>
 
