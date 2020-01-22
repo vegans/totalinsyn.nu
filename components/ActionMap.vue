@@ -1,7 +1,7 @@
 <template>
   <div class="map">
     <div class="is-divider" data-content="Map"></div>
-    <no-ssr>
+    <client-only>
       <MglMap
         :access-token="accessToken"
         :map-style="mapStyle"
@@ -10,19 +10,13 @@
       >
         <MglMarker :coordinates="coordinates" color="blue" />
       </MglMap>
-    </no-ssr>
+    </client-only>
   </div>
 </template>
 
 <script>
-import { MglMap, MglMarker } from 'vue-mapbox'
-
 export default {
   name: 'Map',
-  components: {
-    MglMap,
-    MglMarker
-  },
   props: {
     coordinates: Array
   },
