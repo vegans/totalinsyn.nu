@@ -17,9 +17,7 @@
         </p>
         <p class="card-footer-item">
           <span
-            ><a
-              rel="noopener"
-              href="https://www.facebook.com/search/top/?q=%23totalinsyn"
+            ><a rel="noopener" href="https://www.facebook.com/totalinsyn"
               >Facebook</a
             >
           </span>
