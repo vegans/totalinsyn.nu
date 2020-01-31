@@ -32,6 +32,21 @@
           <strong>#totalinsyn</strong> is a campaign for total transparancy into
           every single farm and every single slaughterhouse in Sweden.
         </p>
+        <p>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="http://facebook.com/totalinsyn"
+            >Facebook</a
+          >
+          |
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/vegans/totalinsyn.nu"
+            >Github</a
+          >
+        </p>
       </div>
     </footer>
   </div>
