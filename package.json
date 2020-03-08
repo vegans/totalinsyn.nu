@@ -10,7 +10,8 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "test": "jest"
+    "test": "jest",
+    "cypress": "cypress open"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint"
@@ -23,6 +24,7 @@
   "dependencies": {
     "@nuxtjs/markdownit": "^1.2.7",
     "bulma-extensions": "^6.2.7",
+    "cypress": "^4.1.0",
     "mapbox-gl": "^1.5.0",
     "markdown-it-attrs": "^3.0.1",
     "markdown-it-div": "^1.1.0",

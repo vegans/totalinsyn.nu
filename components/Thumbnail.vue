@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section data-testid="thumbnail">
     <img :src="thumbnail" @click="isModalActive = true" class="image" />
     <b-modal :active.sync="isModalActive">
       <p class="image is-16by9">
