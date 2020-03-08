@@ -8,6 +8,7 @@ context('Action page', () => {
       .should('be.gt', 0)
     cy.get('[data-testid="thumbnail"]')
       .first()
+      .scrollIntoView()
       .find('img')
       .should('be.visible')
       .and(($img) => {

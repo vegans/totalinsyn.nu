@@ -8,6 +8,7 @@ context('Lansstyrelsen', () => {
       .should('be.gt', 0)
     cy.get('[data-testid="image-source"]')
       .first()
+      .scrollIntoView()
       .find('img')
       .should('be.visible')
       .and(($img) => {
