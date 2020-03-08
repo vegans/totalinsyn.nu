@@ -1,12 +1,12 @@
 /// <reference types="Cypress" />
 
-context('Action page', () => {
+context('Lansstyrelsen', () => {
   it('should render images', () => {
-    cy.visit('/01')
-    cy.get('[data-testid="thumbnail"]')
+    cy.visit('/lansstyrelsen')
+    cy.get('[data-testid="image-source"]')
       .its('length')
       .should('be.gt', 0)
-    cy.get('[data-testid="thumbnail"]')
+    cy.get('[data-testid="image-source"]')
       .first()
       .find('img')
       .should('be.visible')

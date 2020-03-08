@@ -1,6 +1,6 @@
 <template>
-  <div class="image">
-    <img :src="src" />
+  <div class="image" data-testid="image-source">
+    <nuxt-img :src="src" />
     <div class="text">
       {{ text }}
       <a v-if="href" :href="href">Källa</a>
