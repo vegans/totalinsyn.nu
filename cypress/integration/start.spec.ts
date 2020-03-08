@@ -3,6 +3,7 @@
 context('Action page', () => {
   it('should render images', () => {
     cy.visit('/01')
+    cy.wait(1000)
     cy.get('[data-testid="thumbnail"]')
       .its('length')
       .should('be.gt', 0)
