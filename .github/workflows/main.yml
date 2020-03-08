@@ -34,6 +34,8 @@ jobs:
         with:
           start: yarn start
           record: true
+          command-prefix: 'percy exec -- npx'
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}

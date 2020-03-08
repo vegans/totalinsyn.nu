@@ -8,5 +8,6 @@ context('Categories', () => {
       .should('be.gt', 0)
     cy.get('[data-testid="thumbnail"]')
       .first().find("img").should('be.visible');
+    cy.percySnapshot();
   })
 })
