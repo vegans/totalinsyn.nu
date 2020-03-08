@@ -6,7 +6,7 @@
       image="/02/hero.jpg"
     />
     <press-release
-      :imagesLink="
+      :images-link="
         'https://drive.google.com/drive/folders/1arQkgvgKHJX9yX5kCtaPylgxqpOORJEz'
       "
       :content="content"

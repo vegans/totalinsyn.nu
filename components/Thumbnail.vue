@@ -1,6 +1,6 @@
 <template>
   <section data-testid="thumbnail">
-    <div @click="isModalActive = true" class="thumbnail">
+    <div class="thumbnail" @click="isModalActive = true">
       <nuxt-img :src="image" image-style="thumbnail" />
     </div>
     <b-modal :active.sync="isModalActive">
