@@ -1,4 +1,4 @@
-# totalinsyn.nu
+# totalinsyn.nu ![Test status][tests]
 
 > #totalinsyn
 
@@ -20,3 +20,5 @@ $ yarn generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+[tests]: https://github.com/vegans/totalinsyn.nu/workflows/CI/badge.svg
