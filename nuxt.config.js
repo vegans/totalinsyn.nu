@@ -50,7 +50,24 @@ export default {
   modules: [
     // Doc: https://buefy.github.io/#/documentation
     'nuxt-buefy',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    // Doc: https://github.com/reallifedigital/nuxt-image-loader-module
+    [
+      '@reallifedigital/nuxt-image-loader-module',
+      {
+        imagesBaseDir: 'content',
+        imageStyles: {
+          thumbnail: {
+            actions: [
+              'gravity|Center',
+              'resize|400|276^',
+              'extent|400|276|+0|+90'
+            ]
+          },
+          large: { macros: ['scaleAndCrop|1200|800'] }
+        }
+      }
+    ]
   ],
   /*
    ** Build configuration

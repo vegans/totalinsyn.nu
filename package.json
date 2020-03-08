@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@nuxtjs/markdownit": "^1.2.7",
+    "@reallifedigital/nuxt-image-loader-module": "^1.4.1",
     "bulma-extensions": "^6.2.7",
     "cypress": "^4.1.0",
     "mapbox-gl": "^1.5.0",
