@@ -20,6 +20,14 @@ export default {
   props: {
     coordinates: Array
   },
+  data() {
+    return {
+      accessToken:
+        'pk.eyJ1IjoiYmVuamljayIsImEiOiJjazNhbHY5NXowZDAyM2dtcjNvZjc0eHYxIn0.szv0m6PsD7q5cVAAlI6uCg',
+      mapStyle: 'mapbox://styles/benjick/ck1t54q2a071j1clzqkqx54bj',
+      location: null
+    }
+  },
   head() {
     return {
       link: [
@@ -29,14 +37,6 @@ export default {
           rel: 'stylesheet'
         }
       ]
-    }
-  },
-  data() {
-    return {
-      accessToken:
-        'pk.eyJ1IjoiYmVuamljayIsImEiOiJjazNhbHY5NXowZDAyM2dtcjNvZjc0eHYxIn0.szv0m6PsD7q5cVAAlI6uCg',
-      mapStyle: 'mapbox://styles/benjick/ck1t54q2a071j1clzqkqx54bj',
-      location: null
     }
   }
 }

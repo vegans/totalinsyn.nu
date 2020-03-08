@@ -3,6 +3,7 @@
     <div class="card">
       <div class="card-content">
         <div class="content">
+          <!-- eslint-disable-next-line vue/no-v-html -->
           <div v-html="content"></div>
         </div>
       </div>

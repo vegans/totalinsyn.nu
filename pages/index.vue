@@ -25,7 +25,7 @@
       </footer>
     </div>
 
-    <section @click="goto('/02')" class="hero is-medium is-dark totalinsyn2">
+    <section class="hero is-medium is-dark totalinsyn2" @click="goto('/02')">
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
@@ -37,7 +37,7 @@
         </div>
       </div>
     </section>
-    <section @click="goto('/01')" class="hero is-medium is-dark totalinsyn1">
+    <section class="hero is-medium is-dark totalinsyn1" @click="goto('/01')">
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
