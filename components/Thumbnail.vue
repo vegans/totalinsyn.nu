@@ -1,9 +1,11 @@
 <template>
   <section data-testid="thumbnail">
-    <img :src="thumbnail" @click="isModalActive = true" class="image" />
+    <div @click="isModalActive = true" class="thumbnail">
+      <nuxt-img :src="image" image-style="thumbnail" />
+    </div>
     <b-modal :active.sync="isModalActive">
       <p class="image is-16by9">
-        <img :src="image" />
+        <nuxt-img :src="image" image-style="large" />
       </p>
     </b-modal>
   </section>
@@ -12,8 +14,7 @@
 <script>
 export default {
   props: {
-    image: String,
-    thumbnail: String
+    image: String
   },
   data() {
     return {
@@ -22,3 +23,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.thumbnail {
+  cursor: pointer;
+}
+</style>

@@ -1,6 +1,6 @@
 <template>
   <div class="column">
-    <thumbnail :image="`${image}.jpg`" :thumbnail="`${image}_thumb.jpg`" />
+    <thumbnail :image="`${image}.jpg`" />
   </div>
 </template>
 
