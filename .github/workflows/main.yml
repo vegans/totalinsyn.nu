@@ -3,18 +3,37 @@ name: CI
 on: [push]
 
 jobs:
-  build:
-
+  run:
+    name: Main
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v1
-    - uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: install
-    - uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: lint
-    - uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: generate
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Run linters
+        uses: samuelmeuli/lint-action@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          # Enable linters
+          eslint: true
+          eslint_extensions: js,vue
+
+      - name: Build project
+        run: yarn generate
+
+      - name: Run e2e tests
+        uses: cypress-io/github-action@v1
+        with:
+          start: yarn start
+          record: true
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
