@@ -3,7 +3,7 @@
     <ti-hero
       type="Vår motion till"
       title="Sveriges riksdag"
-      subtitle="Katrineholm - 2 oktober, 2019"
+      subtitle="läsvärt"
       image="/calf.jpg"
       text="För att förtydliga målet med vår kampanj har vi lämnat in en motion till Sveriges riksdag. Den lämnades in i September 2019. Läs den här nedanför!"
     />
