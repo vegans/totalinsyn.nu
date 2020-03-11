@@ -20,7 +20,7 @@ export default {
   justify-content: center;
   align-items: center;
   font-size: 0.8em;
-  margin: 0 1em;
+  margin: 10px 1em;
 }
 .divider.italic {
   font-style: italic;
