@@ -5,7 +5,7 @@
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <button
             class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
-            @click="open = !open"
+            @click="toggle()"
           >
             <svg
               class="h-6 w-6"
@@ -78,11 +78,14 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex'
+
 export default {
-  data() {
-    return {
-      open: false
-    }
-  }
+  computed: mapState({
+    open: (state) => state.nav.open
+  }),
+  methods: mapMutations({
+    toggle: 'nav/toggle'
+  })
 }
 </script>
