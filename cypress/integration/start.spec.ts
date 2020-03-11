@@ -26,3 +26,11 @@ context('Home page', () => {
     cy.percySnapshot();
   })
 })
+
+context('Motionen', () => {
+  it('should render', () => {
+    cy.visit('/motion')
+    cy.wait(1000)
+    cy.percySnapshot();
+  })
+})
