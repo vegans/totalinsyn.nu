@@ -3,32 +3,6 @@
     <div
       class="max-w-screen-xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8"
     >
-      <nav class="-mx-5 -my-2 flex flex-wrap justify-center">
-        <div class="px-5 py-2">
-          <nuxt-link
-            to="/"
-            class="text-base leading-6 text-gray-500 hover:text-gray-900"
-          >
-            Start
-          </nuxt-link>
-        </div>
-        <div class="px-5 py-2">
-          <nuxt-link
-            to="/motionen"
-            class="text-base leading-6 text-gray-500 hover:text-gray-900"
-          >
-            Motionen
-          </nuxt-link>
-        </div>
-        <div class="px-5 py-2">
-          <nuxt-link
-            to="/lansstyrelsen"
-            class="text-base leading-6 text-gray-500 hover:text-gray-900"
-          >
-            Länsstyrelsen
-          </nuxt-link>
-        </div>
-      </nav>
       <div class="mt-8 flex justify-center">
         <a
           href="https://www.facebook.com/totalinsyn"
