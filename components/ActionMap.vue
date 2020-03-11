@@ -8,7 +8,7 @@
         :center="coordinates"
         :zoom="11"
       >
-        <MglMarker :coordinates="coordinates" color="blue" />
+        <MglMarker :coordinates="coordinates" color="#1C64F2" />
       </MglMap>
     </client-only>
   </div>
