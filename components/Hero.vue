@@ -38,6 +38,19 @@
                 </nuxt-link>
               </div>
             </template>
+            <template v-else-if="imageUrl">
+              <div
+                class="mt-5 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0"
+              >
+                <a
+                  :href="imageUrl"
+                  type="submit"
+                  class="mt-3 w-full px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-700 focus:outline-none focus:shadow-outline active:bg-gray-900 transition duration-150 ease-in-out sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
+                >
+                  Se alla bilder
+                </a>
+              </div>
+            </template>
           </div>
           <div
             class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center"
@@ -106,6 +119,7 @@ export default {
     subtitle: String,
     url: String,
     text: String,
+    imageUrl: String,
     type: {
       type: String,
       default: 'Aktion'

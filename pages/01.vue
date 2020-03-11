@@ -5,13 +5,13 @@
       subtitle="Katrineholm - 2 oktober, 2019"
       image="/01/header.jpg"
       :full="false"
+      :image-url="
+        'https://drive.google.com/drive/folders/1nCxifs9a-MBzufIMqkFFlJybntQNcvCP'
+      "
     />
     <press-release
       sub="Pressmeddelande onsdagen den 2 oktober 2019"
       title="Personer ockuperar kycklingfarm"
-      :images-link="
-        'https://drive.google.com/drive/folders/1nCxifs9a-MBzufIMqkFFlJybntQNcvCP'
-      "
       :content="content"
     />
     <panel :press="press" :livestream="livestream" />
