@@ -91,7 +91,9 @@ export default {
               'extent|400|276|+0|+90'
             ]
           },
-          large: { macros: ['scaleAndCrop|1200|800'] }
+          large: { macros: ['scaleAndCrop|1200|800'] },
+          header: { macros: ['scaleAndCrop|600|400'] },
+          meta: { macros: ['scaleAndCrop|1200|628'] }
         }
       }
     ]

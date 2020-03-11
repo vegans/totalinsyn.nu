@@ -3,7 +3,8 @@
     <hero
       title="Total Insyn #01"
       subtitle="Katrineholm - 2 oktober, 2019"
-      image="/01/hero.jpg"
+      image="/01/header.jpg"
+      :full="false"
     />
     <press-release
       :images-link="
@@ -28,7 +29,7 @@ export default {
     return {
       action: '#01',
       url: 'https://totalinsyn.nu/01',
-      metaImage: 'https://totalinsyn.nu/01/meta.jpg',
+      metaImage: 'https://totalinsyn.nu/01/header.jpg?style=meta',
       title: 'Total Insyn #01',
       description: 'Katrineholm - 2 oktober, 2019',
       content,

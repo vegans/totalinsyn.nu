@@ -102,17 +102,17 @@
         />
       </div>
     </div>
-    <homepage-hero
+    <hero
       title="Total Insyn #02"
       subtitle="Kristianstad - 20 november, 2019"
-      image="/02/hero.jpg"
+      image="/02/header.jpg"
       url="/02"
       text="Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt."
     />
-    <homepage-hero
+    <hero
       title="Total Insyn #01"
       subtitle="Katrineholm - 2 oktober, 2019"
-      image="/01/hero.jpg"
+      image="/01/header.jpg"
       url="/01"
       text="Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt."
     />
@@ -122,14 +122,14 @@
 
 <script>
 import HeaderLink from '~/components/HeaderLink'
-import HomepageHero from '~/components/HomepageHero'
+import Hero from '~/components/Hero'
 
 export default {
   name: 'HomePage',
   layout: 'empty',
   components: {
     HeaderLink,
-    HomepageHero
+    Hero
   },
   data() {
     return {
