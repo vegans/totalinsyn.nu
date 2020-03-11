@@ -6,6 +6,23 @@ export default {
   head: {
     title: '#totalinsyn',
     titleTemplate: '%s | Total Insyn',
+    link: [
+      {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/icons/apple-touch-icon.png'
+      },
+      {
+        rel: 'icon',
+        sizes: '32x32',
+        href: '/icons/favicon-32x32.png'
+      },
+      {
+        rel: 'icon',
+        sizes: '16x16',
+        href: '/icons/favicon-16x16.png'
+      }
+    ],
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -21,6 +38,14 @@ export default {
       {
         name: 'twitter:image:src',
         content: 'https://totalinsyn.nu/02/meta.jpg'
+      },
+      {
+        name: 'apple-mobile-web-app-title',
+        contennt: 'Total Insyn'
+      },
+      {
+        name: 'application-name',
+        contennt: 'Total Insyn'
       }
     ]
   },
