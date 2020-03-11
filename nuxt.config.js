@@ -96,6 +96,13 @@ export default {
           headerSmall: { macros: ['scaleAndCrop|600|300'] },
           meta: { macros: ['scaleAndCrop|1200|628'] },
           logo: { macros: ['scaleAndCrop|40|40'] }
+        },
+        forceGenerateImages: {
+          logo: '**/logo-*',
+          thumbnail: '**/*',
+          header: '**/header.jpg',
+          headerSmall: '**/header.jpg',
+          meta: '**/header.jpg'
         }
       }
     ]
