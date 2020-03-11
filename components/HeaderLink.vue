@@ -1,5 +1,9 @@
 <template>
-  <nuxt-link :to="to" active-class="text-white bg-blue-800" :class="classes">
+  <nuxt-link
+    :to="to"
+    :class="[{ block: mobile }, classes]"
+    active-class="text-white bg-blue-800"
+  >
     <slot />
   </nuxt-link>
 </template>
@@ -8,7 +12,11 @@
 export default {
   props: {
     to: String,
-    homepage: Boolean
+    homepage: Boolean,
+    mobile: {
+      type: Boolean,
+      default: false
+    }
   },
   computed: {
     classes() {
