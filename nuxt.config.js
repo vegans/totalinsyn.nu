@@ -35,14 +35,16 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '~/plugins/mapbox', mode: 'client' }],
+  plugins: [{ src: '~/plugins/mapbox', mode: 'client' }, '~/plugins/globals'],
   /*
    ** Nuxt.js dev-modules
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    // Doc: https://github.com/nuxt-community/tailwindcss-module
+    '@nuxtjs/tailwindcss'
   ],
   /*
    ** Nuxt.js modules

@@ -1,56 +1,51 @@
 <template>
   <div>
-    <b-navbar>
-      <template slot="brand">
-        <b-navbar-item :to="{ path: '/' }" tag="nuxt-link">
-          Total Insyn
-        </b-navbar-item>
-      </template>
-      <template slot="start">
-        <b-navbar-item tag="nuxt-link" to="/01">
-          #01
-        </b-navbar-item>
-        <b-navbar-item tag="nuxt-link" to="/02">
-          #02
-        </b-navbar-item>
-        <b-navbar-item tag="nuxt-link" to="/motion">
-          Motionen
-        </b-navbar-item>
-        <b-navbar-item tag="nuxt-link" to="/lansstyrelsen">
-          Myten om djurskyddet
-        </b-navbar-item>
-      </template>
-    </b-navbar>
-
-    <section class="main-content">
-      <nuxt />
-    </section>
-
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <p>
-          <strong>#totalinsyn</strong> is a campaign for total transparancy into
-          every single farm and every single slaughterhouse in Sweden.
-        </p>
-        <p>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="http://facebook.com/totalinsyn"
-            >Facebook</a
-          >
-          |
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/vegans/totalinsyn.nu"
-            >Github</a
-          >
-        </p>
+    <nav class="bg-blue-700">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <nuxt-link to="/">
+                <img class="h-8 w-8" src="/logo-white.png" alt="" />
+              </nuxt-link>
+            </div>
+            <div class="block">
+              <div class="ml-10 flex items-baseline">
+                <header-link to="/01">#01</header-link>
+                <header-link to="/02">#02</header-link>
+                <header-link to="/motion">Motionen</header-link>
+                <header-link to="/lansstyrelsen">
+                  Myten om djurskyddet
+                </header-link>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </footer>
+    </nav>
+    <main>
+      <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <nuxt />
+      </div>
+    </main>
+    <ti-footer />
   </div>
 </template>
+
+<script>
+import HeaderLink from '~/components/HeaderLink'
+
+export default {
+  components: {
+    HeaderLink
+  },
+  data() {
+    return {
+      open: false
+    }
+  }
+}
+</script>
 
 <style lang="sass">
 @import 'bulma';

@@ -1,60 +1,135 @@
 <template>
-  <div>
-    <div class="card">
-      <div class="card-content">
-        <p class="title">
-          Vi kräver total insyn på varenda gård och slakteri i Sverige.
-        </p>
-        <p class="subtitle">
-          #totalinsyn
-        </p>
-      </div>
-      <footer class="card-footer">
-        <p class="card-footer-item">
-          <span>
-            <nuxt-link to="/motion">Vår motion i riksdagen</nuxt-link>
-          </span>
-        </p>
-        <p class="card-footer-item">
-          <span
-            ><a rel="noopener" href="https://www.facebook.com/totalinsyn"
-              >Facebook</a
+  <div x-data="{ open: false }" class="relative bg-white overflow-hidden">
+    <div class="max-w-screen-xl mx-auto ">
+      <div
+        class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32"
+      >
+        <div class="pt-6 px-4 sm:px-6 lg:px-8">
+          <nav
+            class="relative flex items-center justify-between sm:h-10 lg:justify-start"
+          >
+            <div
+              class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0"
             >
-          </span>
-        </p>
-      </footer>
-    </div>
+              <div class="flex items-center justify-between w-full md:w-auto">
+                <img class="h-8 w-auto sm:h-10" src="/logo-black.png" alt="" />
+              </div>
+            </div>
+            <div class="block md:ml-10 md:pr-4">
+              <header-link to="/01" :homepage="true">#01</header-link>
+              <header-link to="/02" :homepage="true">#02</header-link>
+              <header-link
+                to="/motion"
+                class="hidden md:inline"
+                :homepage="true"
+              >
+                Motionen</header-link
+              >
+              <header-link
+                to="/lansstyrelsen"
+                class="hidden md:inline"
+                :homepage="true"
+              >
+                Myten om djurskyddet
+              </header-link>
+            </div>
+          </nav>
+        </div>
 
-    <section class="hero is-medium is-dark totalinsyn2" @click="goto('/02')">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">
-            Total Insyn #02
-          </h1>
-          <h2 class="subtitle">
-            Kristianstad - 20 november, 2019
-          </h2>
+        <div
+          class="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28"
+        >
+          <div class="sm:text-center lg:text-left">
+            <h2
+              class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl"
+            >
+              Vi kräver
+              <br class="xl:hidden" />
+              <span class="text-blue-600">total insyn</span>
+            </h2>
+            <p
+              class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
+            >
+              I nuläget får inte privatpersoner reda på tillräckligt mycket
+              information för att bilda sig en uppfattning om huruvida
+              produkterna, så som mjölk- och köttprodukter, är något som de vill
+              stödja med anledning av miljö- och djurhänsyn.
+            </p>
+            <div
+              class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start"
+            >
+              <div class="rounded-md shadow">
+                <a
+                  rel="noopener"
+                  href="https://change.org/totalinsyn"
+                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+                >
+                  Skriv under
+                </a>
+              </div>
+              <div class="mt-3 sm:mt-0 sm:ml-3">
+                <a
+                  rel="noopener"
+                  href="https://www.facebook.com/totalinsyn"
+                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-blue-700 bg-blue-100 hover:text-blue-600 hover:bg-blue-50 focus:outline-none focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+                >
+                  Facebook
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
+        <svg
+          class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
+          fill="currentColor"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+        >
+          <polygon points="50,0 100,0 50,100 0,100" />
+        </svg>
       </div>
-    </section>
-    <section class="hero is-medium is-dark totalinsyn1" @click="goto('/01')">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">
-            Total Insyn #01
-          </h1>
-          <h2 class="subtitle">
-            Katrineholm - 2 oktober, 2019
-          </h2>
-        </div>
-      </div>
-    </section>
+    </div>
+    <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+      <img
+        class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+        src="/homepage.jpg"
+        alt=""
+      />
+    </div>
+    <homepage-hero
+      title="Total Insyn #02"
+      subtitle="Kristianstad - 20 november, 2019"
+      image="/02/hero.jpg"
+      url="/02"
+      text="Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt."
+    />
+    <homepage-hero
+      title="Total Insyn #01"
+      subtitle="Katrineholm - 2 oktober, 2019"
+      image="/01/hero.jpg"
+      url="/01"
+      text="Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt."
+    />
+    <ti-footer />
   </div>
 </template>
 
 <script>
+import HeaderLink from '~/components/HeaderLink'
+import HomepageHero from '~/components/HomepageHero'
+
 export default {
   name: 'HomePage',
+  layout: 'empty',
+  components: {
+    HeaderLink,
+    HomepageHero
+  },
+  data() {
+    return {
+      open: false
+    }
+  },
   methods: {
     goto(path) {
       this.$router.push({
