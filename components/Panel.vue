@@ -2,11 +2,12 @@
   <div class="panel">
     <div class="sm:hidden">
       <select
+        v-model="activeTab"
         aria-label="Selected tab"
         class="mt-1 form-select block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5 transition ease-in-out duration-150"
       >
-        <option>My Account</option>
-        <option>Company</option>
+        <option :value="0">Press</option>
+        <option :value="1">Livestream</option>
       </select>
     </div>
     <div class="hidden sm:block">

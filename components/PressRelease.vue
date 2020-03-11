@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper px-1">
     <p class="text-xs text-gray-500">{{ sub }}</p>
     <h4
       class="text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9"

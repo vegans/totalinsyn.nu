@@ -14,7 +14,7 @@
       title="Aktivister synar grisgård i Skåne"
       :content="content"
     />
-    <Panel :press="press" :livestream="livestream" />
+    <panel :press="press" :livestream="livestream" />
     <photo-strip
       v-for="(images, date) in dates"
       :key="date"
