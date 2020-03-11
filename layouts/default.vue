@@ -6,7 +6,11 @@
           <div class="flex items-center">
             <div class="flex-shrink-0">
               <nuxt-link to="/">
-                <img class="h-8 w-8" src="/logo-white.png" alt="" />
+                <nuxt-img
+                  class="h-8 w-8"
+                  src="/logo-white.png"
+                  image-style="logo"
+                />
               </nuxt-link>
             </div>
             <div class="block">

@@ -27,6 +27,7 @@
                 {{ text }}
               </p>
               <div
+                v-if="url"
                 class="mt-5 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0"
               >
                 <nuxt-link

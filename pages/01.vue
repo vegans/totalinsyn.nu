@@ -1,6 +1,6 @@
 <template>
   <div>
-    <hero
+    <ti-hero
       title="Total Insyn #01"
       subtitle="Katrineholm - 2 oktober, 2019"
       image="/01/header.jpg"

@@ -2,7 +2,6 @@ import Panel from '~/components/Panel'
 import PhotoStrip from '~/components/PhotoStrip'
 import PressRelease from '~/components/PressRelease'
 import VideoEmbed from '~/components/VideoEmbed'
-import Hero from '~/components/Hero'
 import ActionMap from '~/components/ActionMap'
 import ImageSource from '~/components/ImageSource'
 
@@ -12,7 +11,6 @@ export default {
     PhotoStrip,
     PressRelease,
     VideoEmbed,
-    Hero,
     ActionMap,
     ImageSource
   },

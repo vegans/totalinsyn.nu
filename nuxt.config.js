@@ -94,7 +94,8 @@ export default {
           large: { macros: ['scaleAndCrop|1200|800'] },
           header: { macros: ['scaleAndCrop|600|400'] },
           headerSmall: { macros: ['scaleAndCrop|600|300'] },
-          meta: { macros: ['scaleAndCrop|1200|628'] }
+          meta: { macros: ['scaleAndCrop|1200|628'] },
+          logo: { macros: ['scaleAndCrop|40|40'] }
         }
       }
     ]

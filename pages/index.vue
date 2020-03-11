@@ -13,10 +13,10 @@
                 class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0"
               >
                 <div class="flex items-center justify-between w-full md:w-auto">
-                  <img
+                  <nuxt-img
                     class="h-8 w-auto sm:h-10"
                     src="/logo-black.png"
-                    alt=""
+                    image-style="logo"
                   />
                 </div>
               </div>
@@ -102,14 +102,14 @@
         />
       </div>
     </div>
-    <hero
+    <ti-hero
       title="Total Insyn #02"
       subtitle="Kristianstad - 20 november, 2019"
       image="/02/header.jpg"
       url="/02"
       text="Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt."
     />
-    <hero
+    <ti-hero
       title="Total Insyn #01"
       subtitle="Katrineholm - 2 oktober, 2019"
       image="/01/header.jpg"
@@ -122,14 +122,12 @@
 
 <script>
 import HeaderLink from '~/components/HeaderLink'
-import Hero from '~/components/Hero'
 
 export default {
   name: 'HomePage',
   layout: 'empty',
   components: {
-    HeaderLink,
-    Hero
+    HeaderLink
   },
   data() {
     return {
