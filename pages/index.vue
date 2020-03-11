@@ -126,6 +126,7 @@ import HeaderLink from '~/components/HeaderLink'
 export default {
   name: 'HomePage',
   layout: 'empty',
+  transition: 'none',
   components: {
     HeaderLink
   },
