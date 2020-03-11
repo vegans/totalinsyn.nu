@@ -18,3 +18,11 @@ context('Action page', () => {
     cy.percySnapshot();
   })
 })
+
+context('Home page', () => {
+  it('should render', () => {
+    cy.visit('/')
+    cy.wait(1000)
+    cy.percySnapshot();
+  })
+})
