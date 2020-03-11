@@ -35,16 +35,18 @@
           class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
         >
           <div class="flex-shrink-0">
-            <img
-              class="block lg:hidden h-8 w-auto"
-              src="/logo-white.png"
-              alt=""
-            />
-            <img
-              class="hidden lg:block h-8 w-auto"
-              src="/logo-white.png"
-              alt=""
-            />
+            <nuxt-link to="/">
+              <img
+                class="block lg:hidden h-8 w-auto"
+                src="/logo-white.png"
+                alt=""
+              />
+              <img
+                class="hidden lg:block h-8 w-auto"
+                src="/logo-white.png"
+                alt=""
+              />
+            </nuxt-link>
           </div>
           <div class="hidden sm:block sm:ml-6">
             <div class="flex">
