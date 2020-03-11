@@ -11,7 +11,7 @@
       </template>
       <header-link to="/01">#01</header-link>
       <header-link to="/02">#02</header-link>
-      <header-link to="/motion">Motionen</header-link>
+      <header-link data-testid="link-motion" to="/motion">Motionen</header-link>
       <header-link to="/lansstyrelsen">
         Myten om djurskyddet
       </header-link>
