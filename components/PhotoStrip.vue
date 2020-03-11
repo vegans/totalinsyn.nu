@@ -1,21 +1,21 @@
 <template>
-  <section class="container is-fluid">
-    <div :data-content="title" class="is-divider"></div>
-    <div class="columns">
-      <div class="column">
-        <div class="columns is-mobile">
-          <photo-strip-image :image="images[0]" />
-          <photo-strip-image :image="images[1]" />
-        </div>
+  <div>
+    <ti-divider>{{ title }}</ti-divider>
+    <div class="flex-row">
+      <div class="flex-col">
+        <photo-strip-image :image="images[0]" />
       </div>
-      <div class="column">
-        <div class="columns is-mobile">
-          <photo-strip-image :image="images[2]" />
-          <photo-strip-image :image="images[3]" />
-        </div>
+      <div class="flex-col">
+        <photo-strip-image :image="images[1]" />
+      </div>
+      <div class="flex-col">
+        <photo-strip-image :image="images[2]" />
+      </div>
+      <div class="flex-col">
+        <photo-strip-image :image="images[3]" />
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -30,3 +30,34 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.flex-row {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  flex-direction: column;
+  color: white;
+  box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  .flex-col {
+    flex-basis: calc(50% - 12px);
+  }
+}
+
+@media (max-width: 460px) {
+  .flex-col {
+    flex-basis: 100%;
+  }
+}
+</style>
