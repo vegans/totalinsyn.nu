@@ -34,7 +34,7 @@
         :key="item.url"
         :href="item.url"
         rel="noopener"
-        class="panel-block"
+        class="panel-item"
       >
         {{ item.name }}
       </a>
