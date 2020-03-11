@@ -38,23 +38,6 @@ import HeaderLink from '~/components/HeaderLink'
 export default {
   components: {
     HeaderLink
-  },
-  data() {
-    return {
-      open: false
-    }
   }
 }
 </script>
-
-<style lang="sass">
-@import 'bulma';
-@import "~bulma-extensions/bulma-divider/src/sass/index.sass"
-</style>
-
-<style lang="scss">
-.footer .content {
-  max-width: 500px;
-  margin: 0 auto;
-}
-</style>

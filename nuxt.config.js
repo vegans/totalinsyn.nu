@@ -75,8 +75,6 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://buefy.github.io/#/documentation
-    'nuxt-buefy',
     '@nuxtjs/markdownit',
     // Doc: https://github.com/reallifedigital/nuxt-image-loader-module
     [
