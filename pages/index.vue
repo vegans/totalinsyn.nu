@@ -103,15 +103,19 @@
       subtitle="Kristianstad - 20 november, 2019"
       image="/02/header.jpg"
       url="/02"
-      text="Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt."
-    />
+    >
+      Omkring 25 aktivister gick in på en gård utanför Kristianstad för att
+      dokumentera grisarnas levnadsförhållanden.
+    </ti-hero>
     <ti-hero
       title="Total Insyn #01"
       subtitle="Katrineholm - 2 oktober, 2019"
       image="/01/header.jpg"
       url="/01"
-      text="Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt."
-    />
+    >
+      Vår första aktion under #totalinsyn. Omkring 15 aktivister gick in på en
+      kycklingfarm i Katrineholm för att dokumentera hur djuren lever.
+    </ti-hero>
     <ti-footer />
   </div>
 </template>

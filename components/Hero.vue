@@ -20,19 +20,18 @@
               <br />
               <span class="text-blue-600">{{ title }}</span>
             </h2>
+            <p
+              class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"
+            >
+              <slot />
+            </p>
             <template v-if="full">
-              <p
-                class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"
-              >
-                {{ text }}
-              </p>
               <div
                 v-if="url"
                 class="mt-5 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0"
               >
                 <nuxt-link
                   :to="url"
-                  type="submit"
                   class="mt-3 w-full px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-700 focus:outline-none focus:shadow-outline active:bg-gray-900 transition duration-150 ease-in-out sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
                 >
                   Läs mer
@@ -45,7 +44,6 @@
               >
                 <a
                   :href="imageUrl"
-                  type="submit"
                   class="mt-3 w-full px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-700 focus:outline-none focus:shadow-outline active:bg-gray-900 transition duration-150 ease-in-out sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
                 >
                   Se alla bilder
@@ -70,7 +68,6 @@ export default {
     title: String,
     subtitle: String,
     url: String,
-    text: String,
     imageUrl: String,
     type: {
       type: String,

@@ -8,7 +8,10 @@
       :image-url="
         'https://drive.google.com/drive/folders/1nCxifs9a-MBzufIMqkFFlJybntQNcvCP'
       "
-    />
+    >
+      Vår första aktion under #totalinsyn. Omkring 15 aktivister gick in på en
+      kycklingfarm i Katrineholm för att dokumentera hur djuren lever.
+    </ti-hero>
     <press-release
       sub="Pressmeddelande onsdagen den 2 oktober 2019"
       title="Personer ockuperar kycklingfarm"
