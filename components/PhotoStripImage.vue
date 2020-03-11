@@ -1,5 +1,5 @@
 <template>
-  <div class="column">
+  <div class="column" data-testid="thumbnail">
     <nuxt-img :src="`${image}.jpg`" image-style="thumbnail" />
     <thumbnail v-show="false" :image="`${image}.jpg`" />
   </div>
