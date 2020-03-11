@@ -7,6 +7,8 @@
       :full="false"
     />
     <press-release
+      sub="Pressmeddelande onsdagen den 2 oktober 2019"
+      title="Personer ockuperar kycklingfarm"
       :images-link="
         'https://drive.google.com/drive/folders/1nCxifs9a-MBzufIMqkFFlJybntQNcvCP'
       "

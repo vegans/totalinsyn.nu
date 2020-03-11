@@ -7,6 +7,8 @@
       :full="false"
     />
     <press-release
+      sub="Pressmeddelande onsdagen den 20 november 2019"
+      title="Aktivister synar grisgård i Skåne"
       :images-link="
         'https://drive.google.com/drive/folders/1arQkgvgKHJX9yX5kCtaPylgxqpOORJEz'
       "

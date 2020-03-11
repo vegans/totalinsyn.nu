@@ -1,34 +1,30 @@
 <template>
-  <section>
-    <div class="card">
-      <div class="card-content">
-        <div class="content">
-          <!-- eslint-disable-next-line vue/no-v-html -->
-          <div v-html="content"></div>
-        </div>
-      </div>
-      <footer class="card-footer">
-        <p class="card-footer-item">
-          <span>
-            <a :href="imagesLink" target="_blank" rel="noopener">Alla bilder</a>
-          </span>
-        </p>
-      </footer>
-    </div>
-  </section>
+  <div class="wrapper">
+    <p class="text-xs text-gray-500">{{ sub }}</p>
+    <h4
+      class="text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9"
+    >
+      Just nu:
+      <br />
+      <span class="text-blue-600">{{ title }}</span>
+    </h4>
+    <div class="mt-3 text-lg leading-7 text-gray-500" v-html="content"></div>
+  </div>
 </template>
 
 <script>
 export default {
   props: {
     imagesLink: String,
-    content: null
+    content: null,
+    title: String,
+    sub: String
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.card {
+.wrapper {
   max-width: 500px;
   margin: 10px auto;
 }
