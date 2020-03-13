@@ -76,7 +76,6 @@ export default {
    */
   modules: [
     '@nuxtjs/markdownit',
-    '@nuxtjs/pwa',
     // Doc: https://github.com/reallifedigital/nuxt-image-loader-module
     [
       '@reallifedigital/nuxt-image-loader-module',
