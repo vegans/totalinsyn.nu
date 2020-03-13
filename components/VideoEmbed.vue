@@ -9,6 +9,7 @@
         height="360"
         frameborder="0"
         allowfullscreen
+        title="Video"
       ></iframe>
     </figure>
   </section>

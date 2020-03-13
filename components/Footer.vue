@@ -45,7 +45,7 @@
         </a>
       </div>
       <div class="mt-8">
-        <p class="text-center text-base leading-6 text-gray-400">
+        <p class="text-center text-base leading-6 text-gray-500">
           <strong>#totalinsyn</strong> is a campaign for total transparancy
           into<br />
           every single farm and every single slaughterhouse in Sweden.

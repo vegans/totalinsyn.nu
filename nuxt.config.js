@@ -76,6 +76,7 @@ export default {
    */
   modules: [
     '@nuxtjs/markdownit',
+    '@nuxtjs/pwa',
     // Doc: https://github.com/reallifedigital/nuxt-image-loader-module
     [
       '@reallifedigital/nuxt-image-loader-module',
@@ -85,8 +86,8 @@ export default {
           thumbnail: {
             actions: [
               'gravity|Center',
-              'resize|400|276^',
-              'extent|400|276|+0|+90'
+              'resize|300|200^',
+              'extent|300|200|+0|+90'
             ]
           },
           large: { macros: ['scaleAndCrop|1200|800'] },
@@ -95,9 +96,8 @@ export default {
           meta: { macros: ['scaleAndCrop|1200|628'] }
         },
         forceGenerateImages: {
-          logo: '**/logo-*',
           thumbnail: '**/*',
-          header: '**/header.jpg',
+          header: '**/*',
           headerSmall: '**/header.jpg',
           meta: '**/header.jpg'
         }

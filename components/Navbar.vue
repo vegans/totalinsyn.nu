@@ -37,14 +37,14 @@
           <div class="flex-shrink-0">
             <nuxt-link to="/">
               <img
+                alt="logo"
                 class="block lg:hidden h-8 w-auto"
                 src="/logo-white.png"
-                alt=""
               />
               <img
+                alt="logo"
                 class="hidden lg:block h-8 w-auto"
                 src="/logo-white.png"
-                alt=""
               />
             </nuxt-link>
           </div>

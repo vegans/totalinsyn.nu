@@ -11,7 +11,7 @@
     >
       <defs>
         <pattern
-          id="svg-pattern-squares-mobile"
+          :id="id"
           x="118"
           y="0"
           width="20"
@@ -35,12 +35,7 @@
         class="text-gray-50"
         fill="currentColor"
       />
-      <rect
-        x="118"
-        width="404"
-        height="784"
-        fill="url(#svg-pattern-squares-mobile)"
-      />
+      <rect x="118" width="404" height="784" :fill="`url(#${id})`" />
     </svg>
     <div class="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
       <div
@@ -49,6 +44,7 @@
         <nuxt-img
           class="w-full"
           :src="image"
+          alt="Hero image"
           :image-style="full ? 'header' : 'headerSmall'"
         />
       </div>
@@ -57,10 +53,17 @@
 </template>
 
 <script>
+import uniqid from 'uniqid'
+
 export default {
   props: {
     image: String,
     full: Boolean
+  },
+  computed: {
+    id() {
+      return uniqid()
+    }
   }
 }
 </script>

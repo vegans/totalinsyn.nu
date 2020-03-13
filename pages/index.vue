@@ -13,7 +13,11 @@
                 class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0"
               >
                 <div class="flex items-center justify-between w-full md:w-auto">
-                  <img class="h-8 w-auto sm:h-10" src="/logo-black.png" />
+                  <img
+                    class="h-8 w-auto sm:h-10"
+                    alt="Logo"
+                    src="/logo-black.png"
+                  />
                 </div>
               </div>
               <div class="block md:ml-10 md:pr-4">
