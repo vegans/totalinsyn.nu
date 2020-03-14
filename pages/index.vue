@@ -76,7 +76,7 @@
                   <a
                     rel="noopener"
                     href="https://www.facebook.com/totalinsyn"
-                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-yellow-500 bg-yellow-100 hover:text-yellow-600 hover:bg-yellow-200 focus:outline-none focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-yellow-800 bg-yellow-100 hover:text-yellow-700 hover:bg-yellow-200 focus:outline-none focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
                   >
                     Facebook
                   </a>
