@@ -122,5 +122,8 @@ export default {
   },
   googleAnalytics: {
     id: 'UA-138880673-2'
+  },
+  sitemap: {
+    hostname: 'https://totalinsyn.nu'
   }
 }
