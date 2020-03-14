@@ -50,7 +50,7 @@
               >
                 Vi kräver
                 <br class="xl:hidden" />
-                <span class="text-blue-600">total insyn</span>
+                <span class="text-yellow-500">total insyn</span>
               </h2>
               <p
                 class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
@@ -67,7 +67,7 @@
                   <a
                     rel="noopener"
                     href="https://change.org/totalinsyn"
-                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
                   >
                     Skriv under
                   </a>
@@ -76,7 +76,7 @@
                   <a
                     rel="noopener"
                     href="https://www.facebook.com/totalinsyn"
-                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-blue-700 bg-blue-100 hover:text-blue-600 hover:bg-blue-50 focus:outline-none focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-yellow-500 bg-yellow-100 hover:text-yellow-600 hover:bg-yellow-200 focus:outline-none focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
                   >
                     Facebook
                   </a>

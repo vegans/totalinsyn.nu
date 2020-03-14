@@ -2,7 +2,7 @@
   <nuxt-link
     :to="to"
     :class="[{ block: mobile }, classes]"
-    active-class="text-white bg-blue-800"
+    active-class="text-white bg-blue-700"
     @click.native="close()"
   >
     <slot />

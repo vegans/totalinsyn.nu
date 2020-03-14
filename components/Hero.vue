@@ -18,7 +18,7 @@
             >
               {{ type }}
               <br />
-              <span class="text-blue-600">{{ title }}</span>
+              <span class="text-yellow-500">{{ title }}</span>
             </h2>
             <p
               class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"

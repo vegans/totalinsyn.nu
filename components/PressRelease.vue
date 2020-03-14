@@ -6,7 +6,7 @@
     >
       Just nu:
       <br />
-      <span class="text-blue-600">{{ title }}</span>
+      <span class="text-yellow-500">{{ title }}</span>
     </h4>
     <!-- eslint-disable-next-line vue/no-v-html -->
     <div class="mt-3 text-lg leading-7 text-gray-500" v-html="content"></div>
