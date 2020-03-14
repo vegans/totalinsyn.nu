@@ -6,6 +6,9 @@ export default {
   head: {
     title: '#totalinsyn',
     titleTemplate: '%s | Total Insyn',
+    htmlAttrs: {
+      lang: 'sv-se'
+    },
     link: [
       {
         rel: 'apple-touch-icon',
