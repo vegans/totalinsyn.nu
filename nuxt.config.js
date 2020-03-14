@@ -76,6 +76,8 @@ export default {
    */
   modules: [
     '@nuxtjs/markdownit',
+    // Doc: https://github.com/nuxt-community/sitemap-module
+    '@nuxtjs/sitemap',
     // Doc: https://github.com/reallifedigital/nuxt-image-loader-module
     [
       '@reallifedigital/nuxt-image-loader-module',
