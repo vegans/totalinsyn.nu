@@ -41,4 +41,9 @@ iframe {
   height: 100%;
   width: 100%;
 }
+@media only percy {
+  iframe {
+    visibility: hidden;
+  }
+}
 </style>
