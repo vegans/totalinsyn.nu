@@ -41,12 +41,7 @@
       <div
         class="relative block w-full rounded-lg overflow-hidden focus:outline-none focus:shadow-outline"
       >
-        <img
-          class="w-full"
-          :src="require(`~/assets${image}?resize&size=600`)"
-          alt="Hero image"
-          :image-style="full ? 'header' : 'headerSmall'"
-        />
+        <img v-lazy="require(`~/assets${image}?resize&size=600`)" />
       </div>
     </div>
   </div>
