@@ -14,27 +14,31 @@ context('Action page', () => {
       .and(($img) => {
         expect($img[0].naturalWidth).to.be.greaterThan(0)
       })
-    cy.percySnapshot();
+    cy.wait(2000)
+    cy.percySnapshot()
   })
 })
 
 context('Home page', () => {
   it('should render', () => {
     cy.visit('/')
-    cy.percySnapshot();
+    cy.wait(2000)
+    cy.percySnapshot()
   })
 })
 
 context('Motionen', () => {
   it('should render', () => {
     cy.visit('/motion')
-    cy.percySnapshot();
+    cy.wait(2000)
+    cy.percySnapshot()
   })
 })
 
 context('Material', () => {
   it('should render', () => {
     cy.visit('/material')
-    cy.percySnapshot();
+    cy.wait(2000)
+    cy.percySnapshot()
   })
 })
