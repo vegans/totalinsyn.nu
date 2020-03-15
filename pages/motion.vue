@@ -7,7 +7,7 @@
       image="/calf.jpg"
     >
       För att förtydliga målet med vår kampanj har vi lämnat in en motion till
-      Sveriges riksdag. Den lämnades in i September 2019. Läs den här nedanför!
+      Sveriges riksdag. Den lämnades in i september 2019. Läs den här nedanför!
     </ti-hero>
     <div class="content">
       <h3
