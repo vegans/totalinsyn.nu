@@ -1,6 +1,10 @@
 <template>
   <div class="image" data-testid="image-source">
-    <img :src="require(`~/assets${src}`)" />
+    <picture>
+      <source :srcSet="require(`~/assets${src}?webp`)" type="image/webp" />
+      <source :srcSet="require(`~/assets${src}`)" type="image/jpeg" />
+      <img :src="require(`~/assets${src}`)" />
+    </picture>
     <div class="text">
       {{ text }}
       <a v-if="href" :href="href">Källa</a>

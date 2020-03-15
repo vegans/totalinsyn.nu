@@ -42,7 +42,8 @@
     "sass-loader": "^8.0.2",
     "sharp": "^0.25.1",
     "uniqid": "^5.2.0",
-    "vue-mapbox": "^0.4.1"
+    "vue-mapbox": "^0.4.1",
+    "webp-loader": "^0.6.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.2",
