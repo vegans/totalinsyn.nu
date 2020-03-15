@@ -1,14 +1,20 @@
 <template>
   <div>
-    <hero
+    <ti-hero
       title="Total Insyn #01"
       subtitle="Katrineholm - 2 oktober, 2019"
-      image="/01/hero.jpg"
-    />
-    <press-release
-      :images-link="
+      image="/01/header.jpg"
+      :full="false"
+      :image-url="
         'https://drive.google.com/drive/folders/1nCxifs9a-MBzufIMqkFFlJybntQNcvCP'
       "
+    >
+      Vår första aktion under #totalinsyn. Omkring 15 aktivister gick in på en
+      kycklingfarm i Katrineholm för att dokumentera hur djuren lever.
+    </ti-hero>
+    <press-release
+      sub="Pressmeddelande onsdagen den 2 oktober 2019"
+      title="Personer ockuperar kycklingfarm"
       :content="content"
     />
     <panel :press="press" :livestream="livestream" />
@@ -28,7 +34,7 @@ export default {
     return {
       action: '#01',
       url: 'https://totalinsyn.nu/01',
-      metaImage: 'https://totalinsyn.nu/01/meta.jpg',
+      metaImage: 'https://totalinsyn.nu/01/header.jpg?style=meta',
       title: 'Total Insyn #01',
       description: 'Katrineholm - 2 oktober, 2019',
       content,

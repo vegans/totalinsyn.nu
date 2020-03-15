@@ -3,7 +3,6 @@
 context('Action page', () => {
   it('should render images', () => {
     cy.visit('/01')
-    cy.wait(1000)
     cy.get('[data-testid="thumbnail"]')
       .its('length')
       .should('be.gt', 0)
@@ -22,7 +21,20 @@ context('Action page', () => {
 context('Home page', () => {
   it('should render', () => {
     cy.visit('/')
-    cy.wait(1000)
+    cy.percySnapshot();
+  })
+})
+
+context('Motionen', () => {
+  it('should render', () => {
+    cy.visit('/motion')
+    cy.percySnapshot();
+  })
+})
+
+context('Material', () => {
+  it('should render', () => {
+    cy.visit('/material')
     cy.percySnapshot();
   })
 })

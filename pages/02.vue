@@ -1,17 +1,23 @@
 <template>
   <div>
-    <hero
+    <ti-hero
       title="Total Insyn #02"
       subtitle="Kristianstad - 20 november, 2019"
-      image="/02/hero.jpg"
-    />
-    <press-release
-      :images-link="
+      image="/02/header.jpg"
+      :full="false"
+      :image-url="
         'https://drive.google.com/drive/folders/1arQkgvgKHJX9yX5kCtaPylgxqpOORJEz'
       "
+    >
+      Omkring 25 aktivister gick in på en gård utanför Kristianstad för att
+      dokumentera grisarnas levnadsförhållanden.
+    </ti-hero>
+    <press-release
+      sub="Pressmeddelande onsdagen den 20 november 2019"
+      title="Aktivister synar grisgård i Skåne"
       :content="content"
     />
-    <Panel :press="press" :livestream="livestream" />
+    <panel :press="press" :livestream="livestream" />
     <photo-strip
       v-for="(images, date) in dates"
       :key="date"
@@ -33,7 +39,7 @@ export default {
     return {
       action: '#02',
       url: 'https://totalinsyn.nu/02',
-      metaImage: 'https://totalinsyn.nu/02/meta.jpg',
+      metaImage: 'https://totalinsyn.nu/02/header.jpg?style=meta',
       title: 'Total Insyn #02',
       description: 'Kristianstad - 20 november, 2019',
       content,

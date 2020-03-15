@@ -1,6 +1,6 @@
 <template>
   <div class="map">
-    <div class="is-divider" data-content="Map"></div>
+    <ti-divider>Map</ti-divider>
     <client-only>
       <MglMap
         :access-token="accessToken"
@@ -8,7 +8,7 @@
         :center="coordinates"
         :zoom="11"
       >
-        <MglMarker :coordinates="coordinates" color="blue" />
+        <MglMarker :coordinates="coordinates" color="#F1B500" />
       </MglMap>
     </client-only>
   </div>

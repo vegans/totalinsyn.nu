@@ -6,6 +6,26 @@ export default {
   head: {
     title: '#totalinsyn',
     titleTemplate: '%s | Total Insyn',
+    htmlAttrs: {
+      lang: 'sv-se'
+    },
+    link: [
+      {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/icons/apple-touch-icon.png'
+      },
+      {
+        rel: 'icon',
+        sizes: '32x32',
+        href: '/icons/favicon-32x32.png'
+      },
+      {
+        rel: 'icon',
+        sizes: '16x16',
+        href: '/icons/favicon-16x16.png'
+      }
+    ],
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -21,6 +41,14 @@ export default {
       {
         name: 'twitter:image:src',
         content: 'https://totalinsyn.nu/02/meta.jpg'
+      },
+      {
+        name: 'apple-mobile-web-app-title',
+        contennt: 'Total Insyn'
+      },
+      {
+        name: 'application-name',
+        contennt: 'Total Insyn'
       }
     ]
   },
@@ -31,26 +59,28 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['~/assets/main.css'],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '~/plugins/mapbox', mode: 'client' }],
+  plugins: [{ src: '~/plugins/mapbox', mode: 'client' }, '~/plugins/globals'],
   /*
    ** Nuxt.js dev-modules
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    // Doc: https://github.com/nuxt-community/tailwindcss-module
+    '@nuxtjs/tailwindcss'
   ],
   /*
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://buefy.github.io/#/documentation
-    'nuxt-buefy',
     '@nuxtjs/markdownit',
+    // Doc: https://github.com/nuxt-community/sitemap-module
+    '@nuxtjs/sitemap',
     // Doc: https://github.com/reallifedigital/nuxt-image-loader-module
     [
       '@reallifedigital/nuxt-image-loader-module',
@@ -60,11 +90,20 @@ export default {
           thumbnail: {
             actions: [
               'gravity|Center',
-              'resize|400|276^',
-              'extent|400|276|+0|+90'
+              'resize|300|200^',
+              'extent|300|200|+0|+90'
             ]
           },
-          large: { macros: ['scaleAndCrop|1200|800'] }
+          large: { macros: ['scaleAndCrop|1200|800'] },
+          header: { macros: ['scaleAndCrop|600|400'] },
+          headerSmall: { macros: ['scaleAndCrop|600|300'] },
+          meta: { macros: ['scaleAndCrop|1200|628'] }
+        },
+        forceGenerateImages: {
+          thumbnail: '**/*',
+          header: '**/*',
+          headerSmall: '**/header.jpg',
+          meta: '**/header.jpg'
         }
       }
     ]
@@ -86,5 +125,8 @@ export default {
   },
   googleAnalytics: {
     id: 'UA-138880673-2'
+  },
+  sitemap: {
+    hostname: 'https://totalinsyn.nu'
   }
 }

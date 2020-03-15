@@ -1,65 +1,40 @@
 <template>
   <div>
-    <b-navbar>
-      <template slot="brand">
-        <b-navbar-item :to="{ path: '/' }" tag="nuxt-link">
-          Total Insyn
-        </b-navbar-item>
-      </template>
-      <template slot="start">
-        <b-navbar-item tag="nuxt-link" to="/01">
-          #01
-        </b-navbar-item>
-        <b-navbar-item tag="nuxt-link" to="/02">
-          #02
-        </b-navbar-item>
-        <b-navbar-item tag="nuxt-link" to="/motion">
-          Motionen
-        </b-navbar-item>
-        <b-navbar-item tag="nuxt-link" to="/lansstyrelsen">
+    <navbar>
+      <template v-slot:mobile>
+        <header-link :mobile="true" to="/01">#01</header-link>
+        <header-link :mobile="true" to="/02">#02</header-link>
+        <header-link :mobile="true" to="/motion">Motionen</header-link>
+        <header-link :mobile="true" to="/lansstyrelsen">
           Myten om djurskyddet
-        </b-navbar-item>
+        </header-link>
+        <header-link :mobile="true" to="/material">Material</header-link>
       </template>
-    </b-navbar>
-
-    <section class="main-content">
-      <nuxt />
-    </section>
-
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <p>
-          <strong>#totalinsyn</strong> is a campaign for total transparancy into
-          every single farm and every single slaughterhouse in Sweden.
-        </p>
-        <p>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="http://facebook.com/totalinsyn"
-            >Facebook</a
-          >
-          |
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/vegans/totalinsyn.nu"
-            >Github</a
-          >
-        </p>
+      <header-link to="/01">#01</header-link>
+      <header-link to="/02">#02</header-link>
+      <header-link data-testid="link-motion" to="/motion">Motionen</header-link>
+      <header-link to="/lansstyrelsen">
+        Myten om djurskyddet
+      </header-link>
+      <header-link to="/material">Material</header-link>
+    </navbar>
+    <main>
+      <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <nuxt />
       </div>
-    </footer>
+    </main>
+    <ti-footer />
   </div>
 </template>
 
-<style lang="sass">
-@import 'bulma';
-@import "~bulma-extensions/bulma-divider/src/sass/index.sass"
-</style>
+<script>
+import HeaderLink from '~/components/HeaderLink'
+import Navbar from '~/components/Navbar'
 
-<style lang="scss">
-.footer .content {
-  max-width: 500px;
-  margin: 0 auto;
+export default {
+  components: {
+    HeaderLink,
+    Navbar
+  }
 }
-</style>
+</script>
