@@ -23,11 +23,11 @@
         Inlägg
       </h3>
       <div class="flex flex-wrap">
-        <material url="/material/djurvälfärd1.jpg" />
-        <material url="/material/djurvälfärd2.jpg" />
-        <material url="/material/djurvälfärd3.jpg" />
+        <material url="/material/djurvalfard1.jpg" />
+        <material url="/material/djurvalfard2.jpg" />
+        <material url="/material/djurvalfard3.jpg" />
         <material url="/material/namninsamling.jpg" />
-        <material url="/material/stängdadörrar.jpg" />
+        <material url="/material/stangdadorrar.jpg" />
       </div>
       <h3
         class="mt-1 mb-3 text-3xl tracking-tight leading-10 font-extrabold text-gray-900 sm:leading-none sm:text-5xl lg:text-4xl xl:text-5xl"
