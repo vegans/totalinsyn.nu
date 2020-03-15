@@ -1,5 +1,5 @@
 <template>
-  <div class="map">
+  <div>
     <ti-divider>Map</ti-divider>
     <client-only>
       <MglMap
@@ -43,7 +43,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.map {
+.mapboxgl-map,
+.mgl-map-wrapper {
   height: 300px;
 }
 </style>
