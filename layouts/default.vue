@@ -8,6 +8,7 @@
         <header-link :mobile="true" to="/lansstyrelsen">
           Myten om djurskyddet
         </header-link>
+        <header-link :mobile="true" to="/material">Material</header-link>
       </template>
       <header-link to="/01">#01</header-link>
       <header-link to="/02">#02</header-link>
@@ -15,6 +16,7 @@
       <header-link to="/lansstyrelsen">
         Myten om djurskyddet
       </header-link>
+      <header-link to="/material">Material</header-link>
     </navbar>
     <main>
       <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">

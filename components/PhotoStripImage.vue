@@ -1,6 +1,8 @@
 <template>
   <div class="column" data-testid="thumbnail">
-    <nuxt-img :src="`${image}.jpg`" image-style="thumbnail" alt="Thumbnail" />
+    <a :href="`${image}.jpg`">
+      <nuxt-img :src="`${image}.jpg`" image-style="thumbnail" alt="Thumbnail" />
+    </a>
   </div>
 </template>
 

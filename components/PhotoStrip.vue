@@ -54,10 +54,4 @@ export default {
     flex-basis: calc(50% - 12px);
   }
 }
-
-@media (max-width: 460px) {
-  .flex-col {
-    flex-basis: 100%;
-  }
-}
 </style>
