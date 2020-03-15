@@ -1,6 +1,8 @@
 <template>
   <div class="column" data-testid="thumbnail">
-    <a :href="original"><img :src="thumbnail" alt="Thumbnail"/></a>
+    <a :href="require(`~/assets${image}.jpg?original`)">
+      <img v-lazy="require(`~/assets${image}.jpg?resize&size=300`)" />
+    </a>
   </div>
 </template>
 
@@ -8,14 +10,6 @@
 export default {
   props: {
     image: String
-  },
-  computed: {
-    thumbnail() {
-      return require(`~/assets${this.image}.jpg?resize&size=300`)
-    },
-    original() {
-      return require(`~/assets${this.image}.jpg?original`)
-    }
   }
 }
 </script>
