@@ -1,6 +1,6 @@
 <template>
   <div class="column" data-testid="thumbnail">
-    <nuxt-img :src="`${image}.jpg`" image-style="thumbnail" alt="Thumbnail" />
+    <a :href="original"><img :src="thumbnail" alt="Thumbnail"/></a>
   </div>
 </template>
 
@@ -8,6 +8,14 @@
 export default {
   props: {
     image: String
+  },
+  computed: {
+    thumbnail() {
+      return require(`~/assets${this.image}.jpg?resize&size=300`)
+    },
+    original() {
+      return require(`~/assets${this.image}.jpg?original`)
+    }
   }
 }
 </script>

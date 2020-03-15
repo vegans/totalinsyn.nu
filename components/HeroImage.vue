@@ -41,9 +41,9 @@
       <div
         class="relative block w-full rounded-lg overflow-hidden focus:outline-none focus:shadow-outline"
       >
-        <nuxt-img
+        <img
           class="w-full"
-          :src="image"
+          :src="require(`~/assets${image}?resize&size=600`)"
           alt="Hero image"
           :image-style="full ? 'header' : 'headerSmall'"
         />
