@@ -36,11 +36,11 @@ export default {
       },
       {
         property: 'og:image',
-        content: 'https://totalinsyn.nu/02/meta.jpg'
+        content: 'https://totalinsyn.nu/meta.jpg'
       },
       {
         name: 'twitter:image:src',
-        content: 'https://totalinsyn.nu/02/meta.jpg'
+        content: 'https://totalinsyn.nu/meta.jpg'
       },
       {
         name: 'apple-mobile-web-app-title',

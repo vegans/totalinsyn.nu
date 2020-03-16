@@ -39,7 +39,6 @@ export default {
     return {
       action: '#02',
       url: 'https://totalinsyn.nu/02',
-      metaImage: 'https://totalinsyn.nu/02/header.jpg?style=meta',
       title: 'Total Insyn #02',
       description: 'Kristianstad - 20 november, 2019',
       content,
