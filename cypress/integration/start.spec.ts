@@ -14,6 +14,7 @@ context('Action page', () => {
       .and(($img) => {
         expect($img[0].naturalWidth).to.be.greaterThan(0)
       })
+    cy.scrollTo('bottom')
     cy.wait(2000)
     cy.percySnapshot()
   })
