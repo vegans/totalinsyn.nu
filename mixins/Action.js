@@ -27,7 +27,6 @@ export default {
     return this.generateHead({
       action: this.action,
       url: this.url,
-      metaImage: this.metaImage,
       title: this.title,
       description: this.description
     })

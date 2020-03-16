@@ -41,12 +41,7 @@
       <div
         class="relative block w-full rounded-lg overflow-hidden focus:outline-none focus:shadow-outline"
       >
-        <nuxt-img
-          class="w-full"
-          :src="image"
-          alt="Hero image"
-          :image-style="full ? 'header' : 'headerSmall'"
-        />
+        <img v-lazy="require(`~/assets${image}?resize&size=600`)" />
       </div>
     </div>
   </div>

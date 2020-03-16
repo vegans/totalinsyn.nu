@@ -34,7 +34,6 @@ export default {
     return {
       action: '#01',
       url: 'https://totalinsyn.nu/01',
-      metaImage: 'https://totalinsyn.nu/01/header.jpg?style=meta',
       title: 'Total Insyn #01',
       description: 'Katrineholm - 2 oktober, 2019',
       content,

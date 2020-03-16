@@ -1,6 +1,8 @@
 <template>
   <div class="column" data-testid="thumbnail">
-    <nuxt-img :src="`${image}.jpg`" image-style="thumbnail" alt="Thumbnail" />
+    <a :href="require(`~/assets${image}.jpg?original`)">
+      <img v-lazy="require(`~/assets${image}.jpg?resize&size=300`)" />
+    </a>
   </div>
 </template>
 

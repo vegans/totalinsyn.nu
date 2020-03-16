@@ -36,11 +36,11 @@ export default {
       },
       {
         property: 'og:image',
-        content: 'https://totalinsyn.nu/02/meta.jpg'
+        content: 'https://totalinsyn.nu/meta.jpg'
       },
       {
         name: 'twitter:image:src',
-        content: 'https://totalinsyn.nu/02/meta.jpg'
+        content: 'https://totalinsyn.nu/meta.jpg'
       },
       {
         name: 'apple-mobile-web-app-title',
@@ -63,7 +63,11 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '~/plugins/mapbox', mode: 'client' }, '~/plugins/globals'],
+  plugins: [
+    { src: '~/plugins/mapbox', mode: 'client' },
+    { src: '~/plugins/lazyload', mode: 'client' },
+    '~/plugins/globals'
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -79,34 +83,10 @@ export default {
    */
   modules: [
     '@nuxtjs/markdownit',
+    // Doc: https://github.com/bazzite/nuxt-optimized-images
+    '@bazzite/nuxt-optimized-images',
     // Doc: https://github.com/nuxt-community/sitemap-module
-    '@nuxtjs/sitemap',
-    // Doc: https://github.com/reallifedigital/nuxt-image-loader-module
-    [
-      '@reallifedigital/nuxt-image-loader-module',
-      {
-        imagesBaseDir: 'content',
-        imageStyles: {
-          thumbnail: {
-            actions: [
-              'gravity|Center',
-              'resize|300|200^',
-              'extent|300|200|+0|+90'
-            ]
-          },
-          large: { macros: ['scaleAndCrop|1200|800'] },
-          header: { macros: ['scaleAndCrop|600|400'] },
-          headerSmall: { macros: ['scaleAndCrop|600|300'] },
-          meta: { macros: ['scaleAndCrop|1200|628'] }
-        },
-        forceGenerateImages: {
-          thumbnail: '**/*',
-          header: '**/*',
-          headerSmall: '**/header.jpg',
-          meta: '**/header.jpg'
-        }
-      }
-    ]
+    '@nuxtjs/sitemap'
   ],
   /*
    ** Build configuration
@@ -128,5 +108,8 @@ export default {
   },
   sitemap: {
     hostname: 'https://totalinsyn.nu'
+  },
+  optimizedImages: {
+    optimizeImages: true
   }
 }
