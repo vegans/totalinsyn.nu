@@ -13,8 +13,19 @@
           Sociala medier är en oerhört bra plattform att nå ut med vårt budskap.
           Vi har skapat lite färdiga bilder att sprida runt, både som inlägg och
           stories. Välkommen att använda fritt! Klicka på bilderna för att se
-          dom i full storlek.
+          dom i full storlek. Se även vår Google Drive för mer material.
         </p>
+        <div class="mt-4 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+          <div class="rounded-md shadow">
+            <a
+              rel="noopener"
+              href="https://drive.google.com/drive/u/1/folders/17A2cGJfRBV_z8D_aFGLk2PPBjlG63Iyw"
+              class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+            >
+              Öppna Google Drive
+            </a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="mx-2">
