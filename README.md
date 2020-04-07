@@ -8,9 +8,7 @@
   <h3 align="center">Total Insyn</h3>
 
   <p align="center">
-    <span style="max-width: 300px; display: block">
       #totalinsyn is a campaign for total transparancy into every single farm and every single slaughterhouse in Sweden.
-    </span>
     <br />
     <a href="https://totalinsyn.nu"><strong>Visit the website »</strong></a>
     <br />
