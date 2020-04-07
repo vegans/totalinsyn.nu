@@ -35,8 +35,9 @@
                   class="hidden md:inline"
                   :homepage="true"
                 >
-                  Myten om djurskyddet
+                  Djurskydd
                 </header-link>
+                <header-link to="/om" :homepage="true">Läs mer</header-link>
               </div>
             </nav>
           </div>
@@ -55,10 +56,15 @@
               <p
                 class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
               >
-                I nuläget får inte privatpersoner reda på tillräckligt mycket
-                information för att bilda sig en uppfattning om huruvida
-                produkterna, så som mjölk- och köttprodukter, är något som de
-                vill stödja med anledning av miljö- och djurhänsyn.
+                Total insyn-kampanjen startades för att vi anser att varje
+                enskild person har rätt att kräva total insyn på alla gårdar,
+                slakterier och andra företag som utnyttjar djur för ekonomisk
+                vinning i Sverige. I nuläget har privatpersoner inte möjlighet
+                att få tillräckligt mycket information för att bilda sig en
+                realistisk uppfattning om huruvida produkter, så som ägg-,
+                mjölk- och köttprodukter, är något som de vill stödja med tanke
+                på hur produktionskedjan ser ut och vad djuren behöver genomgå i
+                den.
               </p>
               <div
                 class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start"
