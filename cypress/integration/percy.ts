@@ -1,5 +1,7 @@
 /// <reference types="Cypress" />
 
+const scrollToBottom = require('scroll-to-bottomjs')
+
 context('Action page', () => {
   it('should render images', () => {
     cy.visit('/01')
@@ -14,7 +16,7 @@ context('Action page', () => {
       .and(($img) => {
         expect($img[0].naturalWidth).to.be.greaterThan(0)
       })
-    cy.wait(2000)
+    cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow }));
     cy.percySnapshot()
   })
 })
@@ -22,7 +24,7 @@ context('Action page', () => {
 context('Home page', () => {
   it('should render', () => {
     cy.visit('/')
-    cy.wait(2000)
+    cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow }));
     cy.percySnapshot()
   })
 })
@@ -30,7 +32,7 @@ context('Home page', () => {
 context('Motionen', () => {
   it('should render', () => {
     cy.visit('/motion')
-    cy.wait(2000)
+    cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow }));
     cy.percySnapshot()
   })
 })
@@ -38,7 +40,7 @@ context('Motionen', () => {
 context('Material', () => {
   it('should render', () => {
     cy.visit('/material')
-    cy.wait(2000)
+    cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow }));
     cy.percySnapshot()
   })
 })
@@ -46,7 +48,7 @@ context('Material', () => {
 context('About', () => {
   it('should render', () => {
     cy.visit('/om')
-    cy.wait(2000)
+    cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow }));
     cy.percySnapshot()
   })
 })
