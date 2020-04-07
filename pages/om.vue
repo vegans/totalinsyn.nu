@@ -4,7 +4,7 @@
       type="Vad är"
       title="total insyn?"
       subtitle="läsvärt"
-      image="/calf.jpg"
+      image="/chickens.jpg"
     >
       Total insyn-kampanjen startades för att vi anser att varje enskild person
       har rätt att kräva total insyn på alla gårdar, slakterier och andra
@@ -12,10 +12,7 @@
     </ti-hero>
     <div class="content">
       <p class="pb-4">
-        Total insyn-kampanjen startades för att vi anser att varje enskild
-        person har rätt att kräva total insyn på alla gårdar, slakterier och
-        andra företag som utnyttjar djur för ekonomisk vinning i Sverige. I
-        nuläget har privatpersoner inte möjlighet att få tillräckligt mycket
+        I nuläget har privatpersoner inte möjlighet att få tillräckligt mycket
         information för att bilda sig en realistisk uppfattning om huruvida
         produkter, så som ägg-, mjölk- och köttprodukter, är något som de vill
         stödja med tanke på hur produktionskedjan ser ut och vad djuren behöver
