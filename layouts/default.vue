@@ -14,9 +14,10 @@
       <header-link to="/02">#02</header-link>
       <header-link data-testid="link-motion" to="/motion">Motionen</header-link>
       <header-link to="/lansstyrelsen">
-        Myten om djurskyddet
+        Djurskydd
       </header-link>
       <header-link to="/material">Material</header-link>
+      <header-link to="/om">Läs mer</header-link>
     </navbar>
     <main>
       <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">

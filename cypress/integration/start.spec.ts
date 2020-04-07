@@ -42,3 +42,11 @@ context('Material', () => {
     cy.percySnapshot()
   })
 })
+
+context('About', () => {
+  it('should render', () => {
+    cy.visit('/om')
+    cy.wait(2000)
+    cy.percySnapshot()
+  })
+})
