@@ -35,7 +35,7 @@
                   class="hidden md:inline"
                   :homepage="true"
                 >
-                  Myten om djurskyddet
+                  Djurskydd
                 </header-link>
                 <header-link to="/om" :homepage="true">Läs mer</header-link>
               </div>

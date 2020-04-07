@@ -2,7 +2,7 @@
   <div>
     <ti-hero
       type="Vad är"
-      title="Total Insyn?"
+      title="total insyn?"
       subtitle="läsvärt"
       image="/calf.jpg"
     >
