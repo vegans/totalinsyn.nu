@@ -142,9 +142,9 @@ export default {
   mixins: [Action],
   data() {
     return {
-      action: 'Motionen',
-      url: 'https://totalinsyn.nu/motion',
-      title: 'Motionen'
+      action: 'Om total insyn',
+      url: 'https://totalinsyn.nu/om',
+      title: 'Om total insyn'
     }
   }
 }
