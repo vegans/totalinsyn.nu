@@ -109,6 +109,15 @@
       </div>
     </div>
     <ti-hero
+      title="Total Insyn #03"
+      subtitle="Sverige - 26 april, 2020"
+      image="/02/header.jpg"
+      url="/03"
+    >
+      Aktivister från kampanjen #totalinsyn sände direkt från sju olika
+      grisfabriker natten till idag.
+    </ti-hero>
+    <ti-hero
       title="Total Insyn #02"
       subtitle="Kristianstad - 20 november, 2019"
       image="/02/header.jpg"
