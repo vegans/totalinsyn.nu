@@ -3,11 +3,8 @@
     <ti-hero
       :title="title"
       :subtitle="description"
-      image="/02/header.jpg"
+      image="/03/header.jpg"
       :full="false"
-      :image-url="
-        'https://drive.google.com/drive/folders/1arQkgvgKHJX9yX5kCtaPylgxqpOORJEz'
-      "
     >
       Aktivister från kampanjen #totalinsyn sände direkt från sju olika
       grisfabriker natten till idag.
@@ -31,7 +28,7 @@
 </template>
 
 <script>
-import content from '~/content/02.md'
+import content from '~/content/03.md'
 import Action from '~/mixins/Action.js'
 
 export default {
