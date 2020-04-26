@@ -29,14 +29,7 @@
                   class="hidden md:inline"
                   :homepage="true"
                 >
-                  Motionen</header-link
-                >
-                <header-link
-                  to="/lansstyrelsen"
-                  class="hidden md:inline"
-                  :homepage="true"
-                >
-                  Djurskydd
+                  Motionen
                 </header-link>
                 <header-link to="/om" :homepage="true">Läs mer</header-link>
               </div>
