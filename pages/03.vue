@@ -19,12 +19,12 @@
       :prefix="false"
     />
     <panel :press="press" :livestream="livestream" />
-    <!-- <photo-strip
+    <photo-strip
       v-for="(images, date) in dates"
       :key="date"
       :images="images"
       :title="date"
-    /> -->
+    />
     <!-- <video-embed url="https://www.youtube.com/embed/GPge15gJnZw?showinfo=0" /> -->
     <action-map :coordinates="coordinates" />
   </div>
@@ -51,12 +51,7 @@ export default {
         [16.544809, 59.609901] // Västerås
       ],
       dates: {
-        '2019-10-19': [
-          '/02/2019-10-19/1',
-          '/02/2019-10-19/2',
-          '/02/2019-10-19/3',
-          '/02/2019-10-19/4'
-        ]
+        '2020-04-26': ['/03/image1', '/03/image2', '/03/image3', '/03/image4']
       },
       press: [
         {

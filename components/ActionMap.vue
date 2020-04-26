@@ -45,7 +45,9 @@ export default {
         const minLat = Math.min(...lat)
         const southWest = [minLng, minLat]
         const northEast = [maxLng, maxLat]
-        component.actions.fitBounds([southWest, northEast])
+        component.actions.fitBounds([southWest, northEast], {
+          padding: 25
+        })
       }
     }
   },
