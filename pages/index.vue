@@ -23,19 +23,13 @@
               <div class="block md:ml-10 md:pr-4">
                 <header-link to="/01" :homepage="true">#01</header-link>
                 <header-link to="/02" :homepage="true">#02</header-link>
+                <header-link to="/03" :homepage="true">#03</header-link>
                 <header-link
                   to="/motion"
                   class="hidden md:inline"
                   :homepage="true"
                 >
-                  Motionen</header-link
-                >
-                <header-link
-                  to="/lansstyrelsen"
-                  class="hidden md:inline"
-                  :homepage="true"
-                >
-                  Djurskydd
+                  Motionen
                 </header-link>
                 <header-link to="/om" :homepage="true">Läs mer</header-link>
               </div>
@@ -108,6 +102,15 @@
         />
       </div>
     </div>
+    <ti-hero
+      title="Total Insyn #03"
+      subtitle="Sverige - 26 april, 2020"
+      image="/03/header.jpg"
+      url="/03"
+    >
+      Aktivister från kampanjen #totalinsyn sände direkt från sju olika
+      grisfabriker natten till idag.
+    </ti-hero>
     <ti-hero
       title="Total Insyn #02"
       subtitle="Kristianstad - 20 november, 2019"
