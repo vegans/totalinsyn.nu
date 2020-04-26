@@ -20,7 +20,7 @@
       :title="date"
     /> -->
     <!-- <video-embed url="https://www.youtube.com/embed/GPge15gJnZw?showinfo=0" /> -->
-    <action-map :coordinates="[13.99179, 55.987572]" />
+    <action-map :coordinates="coordinates" />
   </div>
 </template>
 
@@ -35,6 +35,13 @@ export default {
       url: 'https://totalinsyn.nu/03',
       title: 'Total Insyn #03',
       description: 'Sverige - 26 april, 2020',
+      coordinates: [
+        [11.97456, 57.70887], // Göteborg
+        [13.43854, 55.795551], // Eslöv
+        [13.99179, 55.987572], // Träne
+        [15.621373, 58.410809], // Linköping
+        [16.544809, 59.609901] // Västerås
+      ],
       dates: {
         '2019-10-19': [
           '/02/2019-10-19/1',
