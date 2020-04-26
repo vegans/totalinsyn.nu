@@ -68,38 +68,31 @@ export default {
       livestream: [
         {
           name: 'Karlskrona',
-          url:
-            'https://www.facebook.com/watch/live/?v=660423254520877&ref=watch_permalink'
+          url: 'https://www.facebook.com/totalinsyn/videos/660423254520877'
         },
         {
           name: 'Göteborg',
-          url:
-            'https://www.facebook.com/watch/live/?v=1374354306082402&ref=watch_permalink'
+          url: 'https://www.facebook.com/totalinsyn/videos/1374354306082402'
         },
         {
           name: 'Linköping #1',
-          url:
-            'https://www.facebook.com/watch/live/?v=242167156837961&ref=watch_permalink'
+          url: 'https://www.facebook.com/totalinsyn/videos/242167156837961'
         },
         {
           name: 'Linköping #2',
-          url:
-            'https://www.facebook.com/watch/live/?v=1626421280844810&ref=watch_permalink'
+          url: 'https://www.facebook.com/totalinsyn/videos/1626421280844810'
         },
         {
-          name: '??? #1',
-          url:
-            'https://www.facebook.com/watch/live/?v=234228050995904&ref=watch_permalink'
+          name: 'Linköping #3',
+          url: 'https://www.facebook.com/totalinsyn/videos/234228050995904'
         },
         {
-          name: '??? #2',
-          url:
-            'https://www.facebook.com/watch/live/?v=606201163441176&ref=watch_permalink'
+          name: 'Eslöv',
+          url: 'https://www.facebook.com/totalinsyn/videos/606201163441176'
         },
         {
-          name: '??? #3',
-          url:
-            'https://www.facebook.com/watch/live/?v=284299409238805&ref=watch_permalink'
+          name: 'Västerås',
+          url: 'https://www.facebook.com/totalinsyn/videos/284299409238805'
         }
       ]
     }
