@@ -4,8 +4,7 @@
     <h4
       class="text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9"
     >
-      Just nu:
-      <br />
+      <template v-if="prefix">Just nu: <br /></template>
       <span class="text-yellow-500">{{ title }}</span>
     </h4>
     <!-- eslint-disable-next-line vue/no-v-html -->
@@ -19,7 +18,11 @@ export default {
     imagesLink: String,
     content: null,
     title: String,
-    sub: String
+    sub: String,
+    prefix: {
+      type: Boolean,
+      default: true
+    }
   }
 }
 </script>

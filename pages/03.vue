@@ -12,6 +12,12 @@
       Aktivister från kampanjen #totalinsyn sände direkt från sju olika
       grisfabriker natten till idag.
     </ti-hero>
+    <press-release
+      sub="Söndagen den 26 april 2020"
+      title="Stor samordnad aktion i natt"
+      :content="content"
+      :prefix="false"
+    />
     <panel :press="press" :livestream="livestream" />
     <!-- <photo-strip
       v-for="(images, date) in dates"
@@ -25,12 +31,14 @@
 </template>
 
 <script>
+import content from '~/content/02.md'
 import Action from '~/mixins/Action.js'
 
 export default {
   mixins: [Action],
   data() {
     return {
+      content,
       action: '#03',
       url: 'https://totalinsyn.nu/03',
       title: 'Total Insyn #03',
