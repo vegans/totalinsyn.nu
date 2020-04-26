@@ -23,6 +23,7 @@
               <div class="block md:ml-10 md:pr-4">
                 <header-link to="/01" :homepage="true">#01</header-link>
                 <header-link to="/02" :homepage="true">#02</header-link>
+                <header-link to="/03" :homepage="true">#03</header-link>
                 <header-link
                   to="/motion"
                   class="hidden md:inline"

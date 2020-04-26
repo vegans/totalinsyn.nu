@@ -4,6 +4,7 @@
       <template v-slot:mobile>
         <header-link :mobile="true" to="/01">#01</header-link>
         <header-link :mobile="true" to="/02">#02</header-link>
+        <header-link :mobile="true" to="/03">#03</header-link>
         <header-link :mobile="true" to="/motion">Motionen</header-link>
         <header-link :mobile="true" to="/lansstyrelsen">
           Myten om djurskyddet
@@ -12,6 +13,7 @@
       </template>
       <header-link to="/01">#01</header-link>
       <header-link to="/02">#02</header-link>
+      <header-link to="/03">#03</header-link>
       <header-link data-testid="link-motion" to="/motion">Motionen</header-link>
       <header-link to="/lansstyrelsen">
         Djurskydd
