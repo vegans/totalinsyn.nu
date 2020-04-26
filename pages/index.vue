@@ -112,7 +112,7 @@
     <ti-hero
       title="Total Insyn #03"
       subtitle="Sverige - 26 april, 2020"
-      image="/02/header.jpg"
+      image="/03/header.jpg"
       url="/03"
     >
       Aktivister från kampanjen #totalinsyn sände direkt från sju olika
