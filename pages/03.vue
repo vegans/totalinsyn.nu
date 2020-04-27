@@ -55,6 +55,16 @@ export default {
           name: 'Anlib',
           url:
             'https://anlib.se/nyheter/inrikes/exponerade-sju-grisfabriker-inatt/'
+        },
+        {
+          name: 'Skånska dagbladet',
+          url:
+            'https://www.skd.se/2020/04/27/djurrattsaktivister-trangde-in-pa-gard/'
+        },
+        {
+          name: 'ATL',
+          url:
+            'https://www.atl.nu/lantbruk/aktivister-inne-pa-sju-svenska-gardar/'
         }
       ],
       livestream: [
