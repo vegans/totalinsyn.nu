@@ -24,6 +24,10 @@ export default {
         rel: 'icon',
         sizes: '16x16',
         href: '/icons/favicon-16x16.png'
+      },
+      {
+        href: 'https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css',
+        rel: 'stylesheet'
       }
     ],
     meta: [

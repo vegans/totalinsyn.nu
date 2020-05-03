@@ -10,7 +10,7 @@
         :scroll-zoom="false"
         @load="loaded"
       >
-        <MglNavigationControl :show-compass="false" position="top-right" />
+        <!-- <MglNavigationControl :show-compass="false" position="top-right" /> -->
         <MglMarker
           v-for="(coord, i) in coordinates"
           :key="i"
@@ -55,7 +55,6 @@ export default {
 }
 </script>
 
-<style src="mapbox-gl/dist/mapbox-gl.css"></style>
 <style lang="scss" scoped>
 .mapboxgl-map,
 .mgl-map-wrapper {
