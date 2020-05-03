@@ -7,8 +7,10 @@
         :map-style="mapStyle"
         :center="coordinates[0]"
         :zoom="11"
+        :scroll-zoom="false"
         @load="loaded"
       >
+        <MglNavigationControl :show-compass="false" position="top-right" />
         <MglMarker
           v-for="(coord, i) in coordinates"
           :key="i"
@@ -30,8 +32,7 @@ export default {
     return {
       accessToken:
         'pk.eyJ1IjoiYmVuamljayIsImEiOiJjazNhbHY5NXowZDAyM2dtcjNvZjc0eHYxIn0.szv0m6PsD7q5cVAAlI6uCg',
-      mapStyle: 'mapbox://styles/benjick/ck1t54q2a071j1clzqkqx54bj',
-      location: null
+      mapStyle: 'mapbox://styles/benjick/ck9qw07vv4er41ilcvzls5k3d'
     }
   },
   methods: {
@@ -50,21 +51,11 @@ export default {
         })
       }
     }
-  },
-  head() {
-    return {
-      link: [
-        {
-          href:
-            'https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css',
-          rel: 'stylesheet'
-        }
-      ]
-    }
   }
 }
 </script>
 
+<style src="mapbox-gl/dist/mapbox-gl.css"></style>
 <style lang="scss" scoped>
 .mapboxgl-map,
 .mgl-map-wrapper {
