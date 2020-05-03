@@ -22,7 +22,7 @@
       :images="images"
       :title="date"
     />
-    <!-- <video-embed url="https://www.youtube.com/embed/GPge15gJnZw?showinfo=0" /> -->
+    <video-embed url="https://www.youtube.com/embed/e1HTVN4Aly8?showinfo=0" />
     <action-map :coordinates="coordinates" />
   </div>
 </template>
