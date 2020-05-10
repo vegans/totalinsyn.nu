@@ -14,7 +14,7 @@
           </nuxt-link>
         </div>
         <div class="-mr-2 -my-2 md:hidden">
-          <mobile-menu @click.native="mobileOpen = true" />
+          <mobile-menu-button @click.native="mobileOpen = true" />
         </div>
         <div
           class="hidden md:flex-1 md:flex md:items-center md:justify-between md:space-x-12"
@@ -149,94 +149,7 @@
           </div>
         </div>
       </div>
-
-      <transition
-        enter-active-class="duration-200 ease-out"
-        enter-class="opacity-0 scale-95"
-        enter-to-class="opacity-100 scale-100"
-        leave-active-class="duration-100 ease-in"
-        leave-class="opacity-100 scale-100"
-        leave-to-class="opacity-0 scale-95"
-      >
-        <div
-          v-show="mobileOpen"
-          class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
-        >
-          <div class="rounded-lg shadow-lg">
-            <div
-              class="rounded-lg shadow-xs bg-white divide-y-2 divide-gray-50"
-            >
-              <div class="pt-5 pb-6 px-5 space-y-6">
-                <div class="flex items-center justify-between">
-                  <div>
-                    <img
-                      class="h-8 w-auto"
-                      src="/logo-black.png"
-                      alt="Workflow"
-                    />
-                  </div>
-                  <div class="-mr-2">
-                    <button
-                      type="button"
-                      class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
-                      @click="mobileOpen = false"
-                    >
-                      <svg
-                        class="h-6 w-6"
-                        stroke="currentColor"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M6 18L18 6M6 6l12 12"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div>
-                  <nav class="grid gap-6">
-                    <action-link to="/04">
-                      Total Insyn #04
-                    </action-link>
-                    <action-link to="/03">
-                      Total Insyn #03
-                    </action-link>
-                    <action-link to="/02">
-                      Total Insyn #02
-                    </action-link>
-                    <action-link to="/01">
-                      Total Insyn #01
-                    </action-link>
-                  </nav>
-                </div>
-              </div>
-              <div class="py-6 px-5 space-y-6">
-                <div class="grid grid-cols-2 gap-4">
-                  <mobile-link to="/om">Om Total Insyn</mobile-link>
-                  <mobile-link to="/motion">Motionen</mobile-link>
-                  <mobile-link to="/lansstyrelsen">Djurskyddet</mobile-link>
-                  <mobile-link to="/material">Material</mobile-link>
-                </div>
-                <div class="space-y-6">
-                  <div class="rounded-md shadow">
-                    <a
-                      rel="noopener"
-                      href="https://change.org/totalinsyn"
-                      class="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 rounded-md text-white bg-yellow-500 hover:bg-yellow-400 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-1 md:px-3"
-                    >
-                      Skriv under
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </transition>
+      <mobile-menu v-model="mobileOpen" />
     </div>
     <main>
       <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
@@ -251,7 +164,7 @@
 import ActionLink from '~/components/HeaderActionLink'
 import MoreLink from '~/components/HeaderMoreLink'
 import HeaderButton from '~/components/HeaderButton'
-import MobileLink from '~/components/HeaderMobileLink'
+import MobileMenuButton from '~/components/MobileMenuButton'
 import MobileMenu from '~/components/MobileMenu'
 
 export default {
@@ -259,8 +172,8 @@ export default {
     ActionLink,
     MoreLink,
     HeaderButton,
-    MobileLink,
-    MobileMenu
+    MobileMenu,
+    MobileMenuButton
   },
   data() {
     return {
