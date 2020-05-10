@@ -32,7 +32,7 @@ jobs:
       - name: Run e2e tests
         uses: cypress-io/github-action@v1
         with:
-          start: yarn start
+          start: yarn serve
           record: true
           command-prefix: 'percy exec -- npx'
         env:
