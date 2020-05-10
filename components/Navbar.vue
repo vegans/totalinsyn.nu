@@ -1,92 +1,187 @@
 <template>
-  <nav class="bg-blue-500">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-      <div class="relative flex items-center justify-between h-16">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-          <button
-            class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
-            aria-label="Toggle menu"
-            @click="toggle()"
+  <div
+    class="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10"
+  >
+    <div>
+      <nuxt-link to="/" class="flex">
+        <img
+          class="h-8 w-auto sm:h-10"
+          :src="dark ? '/logo-black.png' : '/logo-white.png'"
+          alt="Workflow"
+        />
+      </nuxt-link>
+    </div>
+    <div class="-mr-2 -my-2 md:hidden">
+      <mobile-menu-button :dark="dark" @click.native="mobileOpen = true" />
+    </div>
+    <div
+      class="hidden md:flex-1 md:flex md:items-center md:justify-between md:space-x-12"
+    >
+      <nav class="flex space-x-10">
+        <div class="relative">
+          <header-button
+            :dark="dark"
+            data-testid="actions-menu"
+            @click.native="isOpen = !isOpen"
           >
-            <svg
-              class="h-6 w-6"
-              stroke="currentColor"
-              fill="none"
-              viewBox="0 0 24 24"
+            Aktionerna
+          </header-button>
+          <transition
+            enter-active-class="transition ease-out duration-200"
+            enter-class="opacity-0 translate-y-1"
+            enter-to-class="opacity-100 translate-y-0"
+            leave-active-class="transition ease-in duration-150"
+            leave-class="opacity-100 translate-y-0"
+            leave-to-class="opacity-0 translate-y-1"
+          >
+            <div
+              v-show="isOpen"
+              class="z-50 absolute -ml-4 mt-3 transform w-screen max-w-md lg:max-w-3xl"
             >
-              <path
-                :class="{ hidden: open, 'inline-flex': !open }"
-                class="inline-flex"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-              <path
-                :class="{ hidden: !open, 'inline-flex': open }"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-        </div>
-        <div
-          class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
-        >
-          <div class="flex-shrink-0">
-            <nuxt-link to="/">
-              <img
-                alt="logo"
-                class="block lg:hidden h-8 w-auto"
-                src="/logo-white.png"
-              />
-              <img
-                alt="logo"
-                class="hidden lg:block h-8 w-auto"
-                src="/logo-white.png"
-              />
-            </nuxt-link>
-          </div>
-          <div class="hidden sm:block sm:ml-6">
-            <div class="flex">
-              <slot />
+              <div class="rounded-lg shadow-lg">
+                <div class="rounded-lg shadow-xs overflow-hidden">
+                  <div
+                    class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2"
+                  >
+                    <action-link
+                      to="/04"
+                      text="På småtimmarna natten till söndagen besökte aktivister i Kampanjen Total
+      insyn en av regionens största äggproducenter."
+                    >
+                      Total Insyn #04
+                    </action-link>
+                    <action-link
+                      to="/03"
+                      text="Aktivister från kampanjen #totalinsyn sände direkt från sju olika
+      grisfabriker natten till idag."
+                    >
+                      Total Insyn #03
+                    </action-link>
+                    <action-link
+                      to="/02"
+                      text="Omkring 25 aktivister gick in på en gård utanför Kristianstad för att
+      dokumentera grisarnas levnadsförhållanden."
+                    >
+                      Total Insyn #02
+                    </action-link>
+                    <action-link
+                      to="/01"
+                      text="Vår första aktion under #totalinsyn. Omkring 15 aktivister gick in på en
+      kycklingfarm i Katrineholm för att dokumentera hur djuren lever."
+                    >
+                      Total Insyn #01
+                    </action-link>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
+          </transition>
         </div>
-        <div
-          class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-        >
-          <div class="rounded-md shadow">
-            <a
-              rel="noopener"
-              href="https://change.org/totalinsyn"
-              class="w-full flex items-center justify-center px-4 py-1 border border-transparent text-base leading-6 rounded-md text-white bg-yellow-500 hover:bg-yellow-400 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-1 md:px-3"
+        <header-link to="/material" :dark="dark">
+          Material
+        </header-link>
+
+        <div class="relative">
+          <header-button
+            :dark="dark"
+            data-testid="more-menu"
+            @click.native="isOpenMore = !isOpenMore"
+          >
+            Mer
+          </header-button>
+
+          <transition
+            enter-active-class="transition ease-out duration-200"
+            enter-class="opacity-0 translate-y-1"
+            enter-to-class="opacity-100 translate-y-0"
+            leave-active-class="transition ease-in duration-150"
+            leave-class="opacity-100 translate-y-0"
+            leave-to-class="opacity-0 translate-y-1"
+          >
+            <div
+              v-show="isOpenMore"
+              class="z-50 absolute left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-xs sm:px-0"
             >
-              Skriv under
-            </a>
-          </div>
+              <div class="rounded-lg shadow-lg">
+                <div class="rounded-lg shadow-xs overflow-hidden">
+                  <div
+                    class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8"
+                  >
+                    <more-link
+                      data-testid="link-motion"
+                      to="/motion"
+                      text="Vår motion till riksdagen"
+                    >
+                      Motionen
+                    </more-link>
+                    <more-link
+                      to="/lansstyrelsen"
+                      text="Hur myten om världens bästa djurskydd upprätthålls"
+                    >
+                      Djurskyddet
+                    </more-link>
+                    <more-link to="/om" text="Vad är egentligen Total Insyn?">
+                      Om Total Insyn
+                    </more-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </transition>
+        </div>
+      </nav>
+      <div v-if="!dark" class="flex items-center space-x-8">
+        <div class="rounded-md shadow">
+          <a
+            rel="noopener"
+            href="https://change.org/totalinsyn"
+            class="w-full flex items-center justify-center px-4 py-1 border border-transparent text-base leading-6 rounded-md text-white bg-yellow-500 hover:bg-yellow-400 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-1 md:px-3"
+          >
+            Skriv under
+          </a>
         </div>
       </div>
     </div>
-    <div :class="{ block: open, hidden: !open }" class="sm:hidden">
-      <div class="px-2 pt-2 pb-3">
-        <slot name="mobile" />
-      </div>
-    </div>
-  </nav>
+    <mobile-menu v-model="mobileOpen" />
+  </div>
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex'
+import ActionLink from '~/components/HeaderActionLink'
+import MoreLink from '~/components/HeaderMoreLink'
+import HeaderButton from '~/components/HeaderButton'
+import MobileMenuButton from '~/components/MobileMenuButton'
+import MobileMenu from '~/components/MobileMenu'
+import HeaderLink from '~/components/HeaderLink'
 
 export default {
-  computed: mapState({
-    open: (state) => state.nav.open
-  }),
-  methods: mapMutations({
-    toggle: 'nav/toggle'
-  })
+  components: {
+    ActionLink,
+    MoreLink,
+    HeaderButton,
+    MobileMenu,
+    MobileMenuButton,
+    HeaderLink
+  },
+  props: {
+    dark: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data() {
+    return {
+      mobileOpen: false,
+      isOpen: false,
+      isOpenMore: false
+    }
+  },
+  created() {
+    this.$bus.$on('close', () => {
+      this.mobileOpen = false
+      this.isOpen = false
+      this.isOpenMore = false
+    })
+  }
 }
 </script>
