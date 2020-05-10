@@ -38,6 +38,7 @@ context('Action #03 page', () => {
     cy.get('[data-testid="thumbnail"]')
       .its('length')
       .should('be.gt', 0)
+    cy.wait(10000)
     cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow }));
     cy.percySnapshot()
   })
