@@ -5,6 +5,7 @@ const scrollToBottom = require('scroll-to-bottomjs')
 context('Home page', () => {
   it('should render', () => {
     cy.visit('/')
+    cy.get('[data-testid="actions-menu"]').click()
     cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow }));
     cy.percySnapshot()
   })

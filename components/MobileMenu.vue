@@ -9,7 +9,7 @@
   >
     <div
       v-show="value"
-      class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+      class="absolute z-50 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
     >
       <div class="rounded-lg shadow-lg">
         <div class="rounded-lg shadow-xs bg-white divide-y-2 divide-gray-50">
