@@ -1,5 +1,7 @@
 <template>
-  <div class="flex justify-between items-center md:justify-start md:space-x-10">
+  <div
+    class="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10"
+  >
     <div>
       <nuxt-link to="/" class="flex">
         <img

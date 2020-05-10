@@ -5,9 +5,7 @@
         <div
           class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32"
         >
-          <div class="pt-6 px-4 sm:px-6 lg:px-8">
-            <navbar :dark="true" />
-          </div>
+          <navbar :dark="true" />
           <div
             class="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28"
           >
@@ -78,32 +76,3 @@
     <ti-footer />
   </div>
 </template>
-
-<script>
-import Navbar from '~/components/Navbar'
-
-export default {
-  components: {
-    Navbar
-  }
-}
-</script>
-
-<style lang="scss" scoped>
-.hero {
-  background-size: cover;
-  cursor: pointer;
-  background-color: #828282;
-  background-blend-mode: soft-light;
-}
-.totalinsyn1 {
-  background-image: url('/01/hero.jpg');
-}
-.totalinsyn2 {
-  background-image: url('/02/hero.jpg');
-}
-.card {
-  max-width: 500px;
-  margin: 10px auto;
-}
-</style>
