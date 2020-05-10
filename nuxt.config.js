@@ -68,6 +68,7 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
+    '~/plugins/bus',
     { src: '~/plugins/mapbox', mode: 'client' },
     { src: '~/plugins/lazyload', mode: 'client' },
     '~/plugins/globals'
@@ -87,8 +88,8 @@ export default {
    */
   modules: [
     '@nuxtjs/markdownit',
-    // Doc: https://github.com/bazzite/nuxt-optimized-images
-    '@bazzite/nuxt-optimized-images',
+    // Doc: https://github.com/aceforth/nuxt-optimized-images
+    '@aceforth/nuxt-optimized-images',
     // Doc: https://github.com/nuxt-community/sitemap-module
     '@nuxtjs/sitemap'
   ],

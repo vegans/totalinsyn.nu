@@ -24,6 +24,7 @@
                 <header-link to="/01" :homepage="true">#01</header-link>
                 <header-link to="/02" :homepage="true">#02</header-link>
                 <header-link to="/03" :homepage="true">#03</header-link>
+                <header-link to="/04" :homepage="true">#04</header-link>
                 <header-link
                   to="/motion"
                   class="hidden md:inline"
@@ -102,6 +103,15 @@
         />
       </div>
     </div>
+    <ti-hero
+      title="Total Insyn #04"
+      subtitle="Sverige - 10 maj, 2020"
+      image="/04/header.jpg"
+      url="/04"
+    >
+      På småtimmarna natten till söndagen besökte aktivister i Kampanjen Total
+      insyn en av regionens största äggproducenter.
+    </ti-hero>
     <ti-hero
       title="Total Insyn #03"
       subtitle="Sverige - 26 april, 2020"

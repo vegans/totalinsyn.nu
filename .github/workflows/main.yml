@@ -25,6 +25,8 @@ jobs:
           # Enable linters
           eslint: true
           eslint_extensions: js,vue
+          prettier: true
+          prettier_extensions: js,vue
 
       - name: Build project
         run: yarn generate
