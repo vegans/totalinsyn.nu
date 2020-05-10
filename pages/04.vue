@@ -47,23 +47,7 @@ export default {
       press: [
         {
           name: 'Anlib',
-          url:
-            'https://anlib.se/nyheter/inrikes/exponerade-sju-grisfabriker-inatt/'
-        },
-        {
-          name: 'Tidningen Syre',
-          url:
-            'https://tidningensyre.se/2020/30-april/intrang-pa-grisfarmer-filmades/'
-        },
-        {
-          name: 'Skånska dagbladet',
-          url:
-            'https://www.skd.se/2020/04/27/djurrattsaktivister-trangde-in-pa-gard/'
-        },
-        {
-          name: 'ATL',
-          url:
-            'https://www.atl.nu/lantbruk/aktivister-inne-pa-sju-svenska-gardar/'
+          url: 'https://anlib.se/nyheter/inrikes/24-honor-raddade-inatt/'
         }
       ],
       livestream: [

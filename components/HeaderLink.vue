@@ -10,8 +10,6 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
-
 export default {
   props: {
     to: String,
@@ -29,8 +27,10 @@ export default {
       return 'ml-0 md:ml-1 px-3 py-2 rounded-md text-sm font-medium text-blue-200 hover:text-white hover:bg-blue-600 focus:outline-none focus:text-white focus:bg-blue-600'
     }
   },
-  methods: mapMutations({
-    close: 'nav/close'
-  })
+  methods: {
+    close() {
+      this.$bus.$emit('close')
+    }
+  }
 }
 </script>

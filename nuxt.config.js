@@ -68,6 +68,7 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
+    '~/plugins/bus',
     { src: '~/plugins/mapbox', mode: 'client' },
     { src: '~/plugins/lazyload', mode: 'client' },
     '~/plugins/globals'

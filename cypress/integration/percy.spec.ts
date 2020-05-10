@@ -73,7 +73,7 @@ context('Material', () => {
 context('About', () => {
   it('should render', () => {
     cy.visit('/om')
-    cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow }));
+    cy.get('[data-testid="actions-menu"]').click()
     cy.percySnapshot()
   })
 })
