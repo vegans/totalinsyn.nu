@@ -9,7 +9,7 @@
       class="flex-shrink-0 flex items-center justify-center w-12 rounded-md text-white "
       :class="{ 'sm:w-15': text }"
     >
-      <img v-lazy="require(`~/assets${to}/header.jpg?resize&size=300`)" />
+      <img v-lazy="require(`~/assets${to}/header.jpg?resize&size=100`)" />
     </div>
     <div v-if="text" class="space-y-1">
       <p class="text-base leading-6 font-medium text-gray-900">
