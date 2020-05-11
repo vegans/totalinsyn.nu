@@ -51,6 +51,11 @@ export default {
         },
         {
           name: 'Tidningen Syre',
+          url:
+            'https://tidningensyre.se/2020/11-maj/aktivister-fritog-24-burhons/'
+        },
+        {
+          name: 'Tidningen Syre (debatt)',
           url: 'https://tidningensyre.se/2020/11-maj/darfor-fritog-vi-24-honor/'
         }
       ],
