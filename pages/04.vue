@@ -48,6 +48,10 @@ export default {
         {
           name: 'Anlib',
           url: 'https://anlib.se/nyheter/inrikes/24-honor-raddade-inatt/'
+        },
+        {
+          name: 'Tidningen Syre',
+          url: 'https://tidningensyre.se/2020/11-maj/darfor-fritog-vi-24-honor/'
         }
       ],
       livestream: [
