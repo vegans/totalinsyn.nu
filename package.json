@@ -47,6 +47,7 @@
   },
   "devDependencies": {
     "@aceforth/nuxt-optimized-images": "^1.0.0",
+    "@nuxt/components": "^0.2.5",
     "@nuxtjs/eslint-config": "^2.0.2",
     "@nuxtjs/eslint-module": "^1.0.0",
     "@nuxtjs/google-analytics": "^2.2.3",

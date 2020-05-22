@@ -43,34 +43,34 @@
                   <div
                     class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2"
                   >
-                    <action-link
+                    <HeaderActionLink
                       to="/04"
                       text="På småtimmarna natten till söndagen besökte aktivister i Kampanjen Total
       insyn en av regionens största äggproducenter."
                     >
                       Total Insyn #04
-                    </action-link>
-                    <action-link
+                    </HeaderActionLink>
+                    <HeaderActionLink
                       to="/03"
                       text="Aktivister från kampanjen #totalinsyn sände direkt från sju olika
       grisfabriker natten till idag."
                     >
                       Total Insyn #03
-                    </action-link>
-                    <action-link
+                    </HeaderActionLink>
+                    <HeaderActionLink
                       to="/02"
                       text="Omkring 25 aktivister gick in på en gård utanför Kristianstad för att
       dokumentera grisarnas levnadsförhållanden."
                     >
                       Total Insyn #02
-                    </action-link>
-                    <action-link
+                    </HeaderActionLink>
+                    <HeaderActionLink
                       to="/01"
                       text="Vår första aktion under #totalinsyn. Omkring 15 aktivister gick in på en
       kycklingfarm i Katrineholm för att dokumentera hur djuren lever."
                     >
                       Total Insyn #01
-                    </action-link>
+                    </HeaderActionLink>
                   </div>
                 </div>
               </div>
@@ -107,22 +107,25 @@
                   <div
                     class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8"
                   >
-                    <more-link
+                    <HeaderMoreLink
                       data-testid="link-motion"
                       to="/motion"
                       text="Vår motion till riksdagen"
                     >
                       Motionen
-                    </more-link>
-                    <more-link
+                    </HeaderMoreLink>
+                    <HeaderMoreLink
                       to="/lansstyrelsen"
                       text="Hur myten om världens bästa djurskydd upprätthålls"
                     >
                       Djurskyddet
-                    </more-link>
-                    <more-link to="/om" text="Vad är egentligen Total Insyn?">
+                    </HeaderMoreLink>
+                    <HeaderMoreLink
+                      to="/om"
+                      text="Vad är egentligen Total Insyn?"
+                    >
                       Om Total Insyn
-                    </more-link>
+                    </HeaderMoreLink>
                   </div>
                 </div>
               </div>
@@ -147,22 +150,7 @@
 </template>
 
 <script>
-import ActionLink from '~/components/HeaderActionLink'
-import MoreLink from '~/components/HeaderMoreLink'
-import HeaderButton from '~/components/HeaderButton'
-import MobileMenuButton from '~/components/MobileMenuButton'
-import MobileMenu from '~/components/MobileMenu'
-import HeaderLink from '~/components/HeaderLink'
-
 export default {
-  components: {
-    ActionLink,
-    MoreLink,
-    HeaderButton,
-    MobileMenu,
-    MobileMenuButton,
-    HeaderLink
-  },
   props: {
     dark: {
       type: Boolean,
