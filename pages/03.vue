@@ -9,7 +9,11 @@
       {{ page.header.preamble }}
     </ti-hero>
 
-    <press-release :sub="page.press.subtitle" :title="page.press.title">
+    <press-release
+      :prefix="false"
+      :sub="page.press.subtitle"
+      :title="page.press.title"
+    >
       <nuxt-content :document="page" />
     </press-release>
     <panel :press="page.press.links" :livestream="page.livestreams" />
