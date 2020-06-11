@@ -123,35 +123,41 @@ export default {
   },
   router: {
     extendRoutes(routes, resolve) {
-      const actions = ['01', '02', '03', '04']
-      for (const action of actions) {
-        routes.push({
-          name: `action-${action}`,
-          path: `/${action}`,
-          component: resolve(__dirname, 'pages/action.vue'),
-          meta: {
-            action
-          }
-        })
-      }
-    }
-  },
-  content: {
-    async ready() {
       const { $content } = require('@nuxt/content')
-      const files = await $content()
+      $content('actions')
         .only(['slug'])
         .fetch()
-      console.log(files)
-    },
-    async routes() {
-      // TODO: Remove with 2.13
-      const { $content } = require('@nuxt/content')
-      const files = await $content()
-        .only(['path'])
-        .fetch()
-
-      return files.map((file) => (file.path === '/index' ? '/' : file.path))
+        .then((actions) => {
+          actions = actions.map(({ slug }) => slug)
+          for (const action of actions) {
+            routes.push({
+              name: `action-${action}`,
+              path: `/${action}`,
+              component: resolve(__dirname, 'pages/action.vue'),
+              meta: {
+                action
+              }
+            })
+          }
+        })
     }
   }
+  // content: {
+  //   async ready() {
+  //     const { $content } = require('@nuxt/content')
+  //     const files = await $content()
+  //       .only(['slug'])
+  //       .fetch()
+  //     console.log(files)
+  //   },
+  //   async routes() {
+  //     // TODO: Remove with 2.13
+  //     const { $content } = require('@nuxt/content')
+  //     const files = await $content()
+  //       .only(['path'])
+  //       .fetch()
+
+  //     return files.map((file) => (file.path === '/index' ? '/' : file.path))
+  //   }
+  // }
 }

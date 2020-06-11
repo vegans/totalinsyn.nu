@@ -35,7 +35,7 @@ import Action from '~/mixins/Action.js'
 export default {
   mixins: [Action],
   async asyncData({ $content, route }) {
-    const page = await $content(route.meta[0].action).fetch()
+    const page = await $content(`actions/${route.meta[0].action}`).fetch()
     return {
       page
     }
