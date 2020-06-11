@@ -8,10 +8,7 @@
       <template v-if="prefix">Just nu: <br /></template>
       <span class="text-yellow-500">{{ title }}</span>
     </h4>
-    <div
-      class="content mt-3 text-lg leading-7 text-gray-500"
-      v-html="content"
-    />
+    <div class="content mt-3 text-lg leading-7 text-gray-500"><slot /></div>
   </div>
 </template>
 
@@ -19,7 +16,6 @@
 export default {
   props: {
     imagesLink: String,
-    content: null,
     title: String,
     sub: String,
     prefix: {

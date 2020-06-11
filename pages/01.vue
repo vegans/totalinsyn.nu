@@ -1,62 +1,39 @@
 <template>
   <div>
     <ti-hero
-      title="Total Insyn #01"
-      subtitle="Katrineholm - 2 oktober, 2019"
-      image="/01/header.jpg"
+      :title="page.title"
+      :subtitle="`${page.location} - ${page.date}`"
+      :image="page.header.image"
       :full="false"
-      :image-url="
-        'https://drive.google.com/drive/folders/1nCxifs9a-MBzufIMqkFFlJybntQNcvCP'
-      "
+      :image-url="page.header.more"
     >
-      Vår första aktion under #totalinsyn. Omkring 15 aktivister gick in på en
-      kycklingfarm i Katrineholm för att dokumentera hur djuren lever.
+      {{ page.header.preamble }}
     </ti-hero>
-    <press-release
-      sub="Pressmeddelande onsdagen den 2 oktober 2019"
-      title="Personer ockuperar kycklingfarm"
-      :content="content"
+
+    <press-release :sub="page.press.subtitle" :title="page.press.title">
+      <nuxt-content :document="page" />
+    </press-release>
+    <panel :press="page.press.links" :livestream="page.livestreams" />
+    <photo-strip
+      v-for="(images, key) in page.images"
+      :key="key"
+      :images="images"
+      :title="key"
     />
-    <panel :press="press" :livestream="livestream" />
-    <photo-strip :images="images" title="2019-10-04" />
-    <video-embed url="https://www.youtube.com/embed/k4s4WKkFc2Y?showinfo=0" />
-    <action-map :coordinates="[[16.20618, 58.99592]]" />
+    <video-embed v-if="page.video" :url="page.video" />
+    <action-map v-if="page.coordinates" :coordinates="page.coordinates" />
   </div>
 </template>
 
 <script>
-import content from '~/content/01.md'
 import Action from '~/mixins/Action.js'
 
 export default {
   mixins: [Action],
-  data() {
+  async asyncData({ $content }) {
+    const page = await $content('01').fetch()
     return {
-      action: '#01',
-      url: 'https://totalinsyn.nu/01',
-      title: 'Total Insyn #01',
-      description: 'Katrineholm - 2 oktober, 2019',
-      content,
-      images: ['/01/IMG_5052', '/01/IMG_5055', '/01/IMG_5066', '/01/IMG_5072'],
-      press: [
-        {
-          name: 'Anlib',
-          url:
-            'https://anlib.se/nyheter/inrikes/ockuperade-kycklingfabrik-kraver-total-insyn/'
-        },
-        {
-          name: 'Katrineholms-Kuriren',
-          url:
-            'https://www.kkuriren.se/nyheter/katrineholm/aktivister-stangdes-in-hos-slaktkycklingarna-sm5244450.aspx'
-        }
-      ],
-      livestream: [
-        {
-          name: 'Svensk fågelproduktion',
-          url:
-            'https://www.facebook.com/svenskfagelproduktion/videos/2149182028724411/'
-        }
-      ]
+      page
     }
   }
 }

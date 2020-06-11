@@ -1,19 +1,16 @@
 export default {
   data() {
     return {
-      action: '',
-      url: '',
-      metaImage: '',
-      title: '',
-      description: ''
+      page: {}
     }
   },
   head() {
+    const { action, url, title, location, date } = this.page
     return this.generateHead({
-      action: this.action,
-      url: this.url,
-      title: this.title,
-      description: this.description
+      action,
+      url,
+      title,
+      description: `${location} - ${date}`
     })
   },
   methods: {

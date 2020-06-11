@@ -15,8 +15,10 @@
     <press-release
       sub="Pressmeddelande onsdagen den 20 november 2019"
       title="Aktivister synar grisgård i Skåne"
-      :content="content"
-    />
+    >
+      <!-- eslint-disable-next-line vue/no-v-html -->
+      <div v-html="content" />
+    </press-release>
     <panel :press="press" :livestream="livestream" />
     <photo-strip
       v-for="(images, date) in dates"

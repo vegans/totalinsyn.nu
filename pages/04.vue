@@ -12,9 +12,11 @@
     <press-release
       sub="Söndagen den 10 maj 2020"
       title="24 burhönor befriade i natt i Dalarna"
-      :content="content"
       :prefix="false"
-    />
+    >
+      <!-- eslint-disable-next-line vue/no-v-html -->
+      <div v-html="content" />
+    </press-release>
     <panel :press="press" :livestream="livestream" />
     <photo-strip
       v-for="(images, date) in dates"
