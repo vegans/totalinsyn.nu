@@ -1,76 +1,38 @@
 <template>
   <div>
     <ti-hero
-      :title="title"
-      :subtitle="description"
-      image="/04/header.jpg"
+      :title="page.title"
+      :subtitle="`${page.location} - ${page.date}`"
+      :image="page.header.image"
       :full="false"
     >
-      På småtimmarna natten till söndagen besökte aktivister i Kampanjen Total
-      insyn en av regionens största äggproducenter.
+      {{ page.header.preamble }}
     </ti-hero>
-    <press-release
-      sub="Söndagen den 10 maj 2020"
-      title="24 burhönor befriade i natt i Dalarna"
-      :prefix="false"
-    >
-      <!-- eslint-disable-next-line vue/no-v-html -->
-      <div v-html="content" />
+
+    <press-release :sub="page.press.subtitle" :title="page.press.title">
+      <nuxt-content :document="page" />
     </press-release>
-    <panel :press="press" :livestream="livestream" />
+    <panel :press="page.press.links" :livestream="page.livestreams" />
     <photo-strip
-      v-for="(images, date) in dates"
-      :key="date"
+      v-for="(images, key) in page.images"
+      :key="key"
       :images="images"
-      :title="date"
+      :title="key"
     />
-    <!-- <video-embed url="https://www.youtube.com/embed/e1HTVN4Aly8?showinfo=0" /> -->
-    <action-map :coordinates="coordinates" />
+    <video-embed v-if="page.video" :url="page.video" />
+    <action-map v-if="page.coordinates" :coordinates="page.coordinates" />
   </div>
 </template>
 
 <script>
-import content from '~/content/04.md'
 import Action from '~/mixins/Action.js'
 
 export default {
   mixins: [Action],
-  data() {
+  async asyncData({ $content }) {
+    const page = await $content('04').fetch()
     return {
-      content,
-      action: '#04',
-      url: 'https://totalinsyn.nu/04',
-      title: 'Total Insyn #04',
-      description: 'Dalarna - 10 maj, 2020',
-      coordinates: [[15.6355, 60.606461]],
-      dates: {
-        '2020-05-10': ['/04/image1', '/04/image2', '/04/image3', '/04/image4']
-      },
-      press: [
-        {
-          name: 'Anlib',
-          url: 'https://anlib.se/nyheter/inrikes/24-honor-raddade-inatt/'
-        },
-        {
-          name: 'Tidningen Syre',
-          url:
-            'https://tidningensyre.se/2020/11-maj/aktivister-fritog-24-burhons/'
-        },
-        {
-          name: 'Tidningen Syre (debatt)',
-          url: 'https://tidningensyre.se/2020/11-maj/darfor-fritog-vi-24-honor/'
-        },
-        {
-          name: 'Dalademokraten',
-          url: 'https://www.facebook.com/totalinsyn/posts/165460098267487'
-        }
-      ],
-      livestream: [
-        {
-          name: 'Total Insyn',
-          url: 'https://www.facebook.com/totalinsyn/videos/3027641393985083'
-        }
-      ]
+      page
     }
   }
 }
