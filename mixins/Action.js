@@ -1,19 +1,4 @@
-import Panel from '~/components/Panel'
-import PhotoStrip from '~/components/PhotoStrip'
-import PressRelease from '~/components/PressRelease'
-import VideoEmbed from '~/components/VideoEmbed'
-import ActionMap from '~/components/ActionMap'
-import ImageSource from '~/components/ImageSource'
-
 export default {
-  components: {
-    Panel,
-    PhotoStrip,
-    PressRelease,
-    VideoEmbed,
-    ActionMap,
-    ImageSource
-  },
   data() {
     return {
       action: '',

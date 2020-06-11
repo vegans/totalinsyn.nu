@@ -19,32 +19,34 @@
                 <img class="h-8 w-auto" src="/logo-black.png" alt="Workflow" />
               </div>
               <div class="-mr-2">
-                <close-button @click.native="$emit('input', false)" />
+                <MobileMenuClose @click.native="$emit('input', false)" />
               </div>
             </div>
             <div>
               <nav class="grid gap-6">
-                <action-link to="/04">
+                <HeaderActionLink to="/04">
                   Total Insyn #04
-                </action-link>
-                <action-link to="/03">
+                </HeaderActionLink>
+                <HeaderActionLink to="/03">
                   Total Insyn #03
-                </action-link>
-                <action-link to="/02">
+                </HeaderActionLink>
+                <HeaderActionLink to="/02">
                   Total Insyn #02
-                </action-link>
-                <action-link to="/01">
+                </HeaderActionLink>
+                <HeaderActionLink to="/01">
                   Total Insyn #01
-                </action-link>
+                </HeaderActionLink>
               </nav>
             </div>
           </div>
           <div class="py-6 px-5 space-y-6">
             <div class="grid grid-cols-2 gap-4">
-              <mobile-link to="/om">Om Total Insyn</mobile-link>
-              <mobile-link to="/motion">Motionen</mobile-link>
-              <mobile-link to="/lansstyrelsen">Djurskyddet</mobile-link>
-              <mobile-link to="/material">Material</mobile-link>
+              <HeaderMobileLink to="/om">Om Total Insyn</HeaderMobileLink>
+              <HeaderMobileLink to="/motion">Motionen</HeaderMobileLink>
+              <HeaderMobileLink to="/lansstyrelsen"
+                >Djurskyddet</HeaderMobileLink
+              >
+              <HeaderMobileLink to="/material">Material</HeaderMobileLink>
             </div>
             <div class="space-y-6">
               <div class="rounded-md shadow">
@@ -65,16 +67,7 @@
 </template>
 
 <script>
-import ActionLink from '~/components/HeaderActionLink'
-import MobileLink from '~/components/HeaderMobileLink'
-import CloseButton from '~/components/MobileMenuClose'
-
 export default {
-  components: {
-    ActionLink,
-    MobileLink,
-    CloseButton
-  },
   props: {
     value: Boolean
   }

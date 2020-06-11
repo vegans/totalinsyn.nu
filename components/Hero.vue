@@ -59,10 +59,7 @@
 </template>
 
 <script>
-import HeroImage from '~/components/HeroImage'
-
 export default {
-  components: { HeroImage },
   props: {
     image: String,
     title: String,

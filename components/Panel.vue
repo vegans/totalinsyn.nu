@@ -54,12 +54,7 @@
 </template>
 
 <script>
-import TabButton from '~/components/TabButton'
-
 export default {
-  components: {
-    TabButton
-  },
   props: {
     press: Array,
     livestream: Array

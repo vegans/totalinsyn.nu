@@ -81,7 +81,9 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/google-analytics',
     // Doc: https://github.com/nuxt-community/tailwindcss-module
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    // TODO: Remove when upgrading to nuxt 2.13+
+    '@nuxt/components'
   ],
   /*
    ** Nuxt.js modules

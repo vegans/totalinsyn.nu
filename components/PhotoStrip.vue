@@ -19,11 +19,7 @@
 </template>
 
 <script>
-import PhotoStripImage from './PhotoStripImage'
 export default {
-  components: {
-    PhotoStripImage
-  },
   props: {
     images: Array,
     title: String

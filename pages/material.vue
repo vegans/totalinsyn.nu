@@ -57,13 +57,3 @@
     </div>
   </div>
 </template>
-
-<script>
-import Material from '~/components/Material'
-
-export default {
-  components: {
-    Material
-  }
-}
-</script>
