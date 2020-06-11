@@ -121,6 +121,21 @@ export default {
   optimizedImages: {
     optimizeImages: true
   },
+  router: {
+    extendRoutes(routes, resolve) {
+      const actions = ['01', '02', '03', '04']
+      for (const action of actions) {
+        routes.push({
+          name: `action-${action}`,
+          path: `/${action}`,
+          component: resolve(__dirname, 'pages/action.vue'),
+          meta: {
+            action
+          }
+        })
+      }
+    }
+  },
   content: {
     async ready() {
       const { $content } = require('@nuxt/content')
