@@ -6,12 +6,15 @@ export default {
   },
   head() {
     const { action, url, title, location, date } = this.page
-    return this.generateHead({
+    const object = {
       action,
       url,
-      title,
-      description: `${location} - ${date}`
-    })
+      title
+    }
+    if (location) {
+      object.description = `${location} - ${date}`
+    }
+    return this.generateHead(object)
   },
   methods: {
     generateHead({ url, image, title, description, action }) {

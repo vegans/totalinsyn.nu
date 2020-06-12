@@ -94,9 +94,11 @@ export default {
   mixins: [Action],
   data() {
     return {
-      action: 'Motionen',
-      url: 'https://totalinsyn.nu/motion',
-      title: 'Motionen'
+      page: {
+        action: 'Motionen',
+        url: 'https://totalinsyn.nu/motion',
+        title: 'Motionen'
+      }
     }
   }
 }
