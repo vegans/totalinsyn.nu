@@ -27,7 +27,6 @@ context('Pages', () => {
       if (page.openMenu) {
         cy.get('[data-testid="actions-menu"]').click()
       }
-      cy.wait(1000)
       cy.window().then((cyWindow) => scrollToBottom({ remoteWindow: cyWindow }))
       cy.percySnapshot()
     })
@@ -41,7 +40,6 @@ context('Action pages', () => {
       cy.get('[data-testid="thumbnail"]')
         .its('length')
         .should('be.gt', 0)
-      cy.wait(1000)
       cy.window().then((cyWindow) => scrollToBottom({ remoteWindow: cyWindow }))
       cy.percySnapshot()
     })
