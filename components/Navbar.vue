@@ -44,32 +44,12 @@
                     class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2"
                   >
                     <HeaderActionLink
-                      to="/04"
-                      text="På småtimmarna natten till söndagen besökte aktivister i Kampanjen Total
-      insyn en av regionens största äggproducenter."
+                      v-for="action in actions"
+                      :key="action.slug"
+                      :to="`/${action.slug}`"
+                      :text="action.header.preamble"
                     >
-                      Total Insyn #04
-                    </HeaderActionLink>
-                    <HeaderActionLink
-                      to="/03"
-                      text="Aktivister från kampanjen #totalinsyn sände direkt från sju olika
-      grisfabriker natten till idag."
-                    >
-                      Total Insyn #03
-                    </HeaderActionLink>
-                    <HeaderActionLink
-                      to="/02"
-                      text="Omkring 25 aktivister gick in på en gård utanför Kristianstad för att
-      dokumentera grisarnas levnadsförhållanden."
-                    >
-                      Total Insyn #02
-                    </HeaderActionLink>
-                    <HeaderActionLink
-                      to="/01"
-                      text="Vår första aktion under #totalinsyn. Omkring 15 aktivister gick in på en
-      kycklingfarm i Katrineholm för att dokumentera hur djuren lever."
-                    >
-                      Total Insyn #01
+                      {{ action.title }}
                     </HeaderActionLink>
                   </div>
                 </div>
@@ -150,6 +130,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   props: {
     dark: {
@@ -164,6 +145,9 @@ export default {
       isOpenMore: false
     }
   },
+  computed: mapState({
+    actions: 'content'
+  }),
   created() {
     this.$bus.$on('close', () => {
       this.mobileOpen = false

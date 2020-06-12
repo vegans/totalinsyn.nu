@@ -51,9 +51,11 @@ export default {
   mixins: [Action],
   data() {
     return {
-      action: 'Världens bästa djurskydd',
-      url: 'https://totalinsyn.nu/lansstyrelsen',
-      title: 'Världens bästa djurskydd'
+      page: {
+        action: 'Världens bästa djurskydd',
+        url: 'https://totalinsyn.nu/lansstyrelsen',
+        title: 'Världens bästa djurskydd'
+      }
     }
   }
 }

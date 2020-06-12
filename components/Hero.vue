@@ -65,7 +65,7 @@ export default {
     title: String,
     subtitle: String,
     url: String,
-    imageUrl: String,
+    imageUrl: [String, Boolean],
     type: {
       type: String,
       default: 'Aktion'

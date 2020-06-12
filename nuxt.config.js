@@ -89,11 +89,12 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    '@nuxtjs/markdownit',
     // Doc: https://github.com/aceforth/nuxt-optimized-images
     '@aceforth/nuxt-optimized-images',
     // Doc: https://github.com/nuxt-community/sitemap-module
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    // Doc: https://content.nuxtjs.org/
+    '@nuxt/content'
   ],
   /*
    ** Build configuration
@@ -104,12 +105,6 @@ export default {
      */
     extend(config, ctx) {}
   },
-  markdownit: {
-    preset: 'default',
-    linkify: true,
-    breaks: true,
-    use: ['markdown-it-div', 'markdown-it-attrs']
-  },
   googleAnalytics: {
     id: 'UA-138880673-2'
   },
@@ -118,5 +113,26 @@ export default {
   },
   optimizedImages: {
     optimizeImages: true
+  },
+  router: {
+    extendRoutes(routes, resolve) {
+      const { $content } = require('@nuxt/content')
+      $content('actions')
+        .only(['slug'])
+        .fetch()
+        .then((actions) => {
+          actions = actions.map(({ slug }) => slug)
+          for (const action of actions) {
+            routes.push({
+              name: `action-${action}`,
+              path: `/${action}`,
+              component: resolve(__dirname, 'pages/action.vue'),
+              meta: {
+                action
+              }
+            })
+          }
+        })
+    }
   }
 }
