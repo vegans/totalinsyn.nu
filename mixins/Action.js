@@ -7,7 +7,7 @@ export default {
   head() {
     const { action, url, title, location, date } = this.page
     const object = {
-      action,
+      action: action || title,
       url,
       title
     }
