@@ -14,8 +14,8 @@
 
 <style lang="postcss">
 .dark-mode .nuxt-content {
-  & h2,
   & h3,
+  & h4,
   & blockquote {
     @apply border-gray-800;
   }
@@ -26,13 +26,13 @@
     @apply bg-gray-800;
   }
 }
-.nuxt-content h2 {
-  @apply text-3xl font-black mb-4 pb-1 border-b -mt-16 pt-24;
+.nuxt-content h3 {
+  @apply text-2xl leading-8 font-extrabold tracking-tight text-gray-900;
   & > a {
     @apply ml-6;
     &::before {
       content: '#';
-      @apply text-blue-500 font-normal -ml-6 pr-1 absolute opacity-100;
+      @apply text-blue-500 font-normal -ml-5 pr-1 absolute opacity-100;
     }
   }
   &:hover {
@@ -41,8 +41,8 @@
     }
   }
 }
-.nuxt-content h3 {
-  @apply text-2xl font-extrabold mb-2 pb-1 border-b -mt-16 pt-20;
+.nuxt-content h4 {
+  @apply mt-4 max-w-3xl text-xl leading-7 text-gray-500 pb-2;
   & > a {
     @apply ml-6;
     &::before {
@@ -57,8 +57,8 @@
   }
 }
 @screen lg {
-  .nuxt-content h2 a,
-  .nuxt-content h3 a {
+  .nuxt-content h3 a,
+  .nuxt-content h4 a {
     @apply ml-0;
     &::before {
       @apply opacity-0;

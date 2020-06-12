@@ -8,9 +8,9 @@ hero:
   image: /calf.jpg
   text: För att förtydliga målet med vår kampanj har vi lämnat in en motion till Sveriges riksdag. Den lämnades in i september 2019. Läs den här nedanför!
 ---
-## Konsumenters rätt till att erhålla produktinformation inom matsektorn
+### Konsumenters rätt till att erhålla produktinformation inom matsektorn
 
-### Motivering
+#### Motivering
 
 I nuläget får inte privatpersoner reda på tillräckligt mycket information för att bilda sig en uppfattning om huruvida produkterna, så som mjölk- och köttprodukter, är något som de vill stödja med anledning av miljö- och djurhänsyn. Privatpersoner är inte välkomna att se in i byggnader där besättningsdjuren vistas. Varken i ladugårdar eller i slakterier. Då de inte på något sätt kan se hur den enskilda produkten har producerats får de heller inte någon chans att bilda sig en noggrann uppfattning om den enskilde produkten.
 
@@ -20,7 +20,7 @@ Då skillnader mellan olika ladugårdar och slakterier kan påverka besättnings
 
 För att konsumenten ska kunna ta ett ställningstagande om vilken produktion den vill bidra till måste den kunna erhålla tydlig information om själva produktionen. Detta kan lösas genom att privatpersoner ska få besöka ladugårdar och slakterier, med regler så att personal och djur inte störs i betydande utsträckning, och genom att införa lagar om att flera delar av produktionen ska spelas in och att konsumenter ska få ta del av dessa inspelningar, och genom att kunna ta del av vissa papper som visar information om vad för slags foder djuren har utfodrats med.
 
-### Förslag till riksdagsbeslut
+#### Förslag till riksdagsbeslut
 
 * Riksdagen ställer sig bakom det som anförs i motionen om att
 konsumenten har rätt till att ta del av produktionen hos den enskilde
