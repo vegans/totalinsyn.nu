@@ -24,17 +24,12 @@
             </div>
             <div>
               <nav class="grid gap-6">
-                <HeaderActionLink to="/04">
-                  Total Insyn #04
-                </HeaderActionLink>
-                <HeaderActionLink to="/03">
-                  Total Insyn #03
-                </HeaderActionLink>
-                <HeaderActionLink to="/02">
-                  Total Insyn #02
-                </HeaderActionLink>
-                <HeaderActionLink to="/01">
-                  Total Insyn #01
+                <HeaderActionLink
+                  v-for="action in actions"
+                  :key="action.slug"
+                  :to="`/${action.slug}`"
+                >
+                  {{ action.title }}
                 </HeaderActionLink>
               </nav>
             </div>
@@ -43,9 +38,9 @@
             <div class="grid grid-cols-2 gap-4">
               <HeaderMobileLink to="/om">Om Total Insyn</HeaderMobileLink>
               <HeaderMobileLink to="/motion">Motionen</HeaderMobileLink>
-              <HeaderMobileLink to="/lansstyrelsen"
-                >Djurskyddet</HeaderMobileLink
-              >
+              <HeaderMobileLink to="/lansstyrelsen">
+                Djurskyddet
+              </HeaderMobileLink>
               <HeaderMobileLink to="/material">Material</HeaderMobileLink>
             </div>
             <div class="space-y-6">
@@ -67,9 +62,13 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   props: {
     value: Boolean
-  }
+  },
+  computed: mapState({
+    actions: 'content'
+  })
 }
 </script>
