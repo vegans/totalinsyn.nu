@@ -28,6 +28,9 @@
 }
 .nuxt-content h3 {
   @apply text-2xl leading-8 font-extrabold tracking-tight text-gray-900;
+  @media (min-width: theme('screens.sm')) {
+    @apply text-3xl leading-10;
+  }
   & > a {
     @apply ml-6;
     &::before {
