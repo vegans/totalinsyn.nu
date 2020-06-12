@@ -32,9 +32,3 @@ export default {
   margin: 10px auto;
 }
 </style>
-
-<style>
-.press-release p {
-  padding-bottom: 10px;
-}
-</style>
