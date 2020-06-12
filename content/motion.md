@@ -22,14 +22,7 @@ För att konsumenten ska kunna ta ett ställningstagande om vilken produktion de
 
 #### Förslag till riksdagsbeslut
 
-* Riksdagen ställer sig bakom det som anförs i motionen om att
-konsumenten har rätt till att ta del av produktionen hos den enskilde
-produkten.
-* Riksdagen ställer sig bakom det som anförs i motionen om att införa
-krav på videoinspelning i ladugårdar, transporter av djur och
-slakterier.
-* Riksdagen ställer sig bakom det som anförs i motionen om att
-privatpersoner, i viss mån, ska få besöka ladugårdar och slakterier.
-* Riksdagen ställer sig bakom det som anförs i motionen om att
-konsumenter har rätt till att ta del av information om hur
-besättningsdjurens foder, hos olika ladugårdar, har producerats.
+* Riksdagen ställer sig bakom det som anförs i motionen om att konsumenten har rätt till att ta del av produktionen hos den enskilde produkten.
+* Riksdagen ställer sig bakom det som anförs i motionen om att införa krav på videoinspelning i ladugårdar, transporter av djur och slakterier.
+* Riksdagen ställer sig bakom det som anförs i motionen om att privatpersoner, i viss mån, ska få besöka ladugårdar och slakterier.
+* Riksdagen ställer sig bakom det som anförs i motionen om att konsumenter har rätt till att ta del av information om hur besättningsdjurens foder, hos olika ladugårdar, har producerats.

@@ -20,13 +20,10 @@ Det innebär att information om vad djuren i industrin går igenom ska vara till
 
 ### Har du någon gång sett något av följande?
 
-* Hur tuppkycklingarna som föds in i äggindustrin dödas för att de inte
-är användbara?
+* Hur tuppkycklingarna som föds in i äggindustrin dödas för att de inte är användbara?
 * Reaktionerna från ko och kalv när de separeras direkt efter födseln?
- *Hur djur hålls instängda under hela sina liv och hur
-levnadsförhållandena ser ut?
-* På vilket sätt dagsgamla kultingar avlivas genom att drämmas in i en
-vägg?
+* Hur djur hålls instängda under hela sina liv och hur levnadsförhållandena ser ut?
+* På vilket sätt dagsgamla kultingar avlivas genom att drämmas in i en vägg?
 * Hur grisar (även eko-märkta) plågsamt gasas ihjäl?
 
 Om du inte har sett detta så behövs väl total insyn för att du ska kunna
@@ -36,9 +33,7 @@ bilda dig en uppfattning om huruvida det är rätt eller inte?
 
 * Dokumentera industrierna
 * Sprida informationen till allmänheten
-* 
-Utföra aktioner för att sätta press på myndigheterna
-
+* Utföra aktioner för att sätta press på myndigheterna
 * Skicka in motioner till riksdagen
 * Samla in underskrifter
 
@@ -46,8 +41,7 @@ Utföra aktioner för att sätta press på myndigheterna
 
 Alla kan hjälpa kampanjen och det finns flera sätt som du kan bidra på
 
-* Du kan skriva under namninsamlingen till riksdagen
-www.change.org/totalinsyn
+* Du kan skriva under namninsamlingen till riksdagen www.change.org/totalinsyn
 * Skriv till dina lokala politiker
 * Dela inläggen som postas på Total insyn på Facebook och Instagram
 * Sprid Total insyn-kampanjen genom att sätta upp information i området där du bor eller på dina sociala medier. Material till det hittar du här: https://totalinsyn.nu/material
