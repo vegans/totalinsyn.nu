@@ -89,7 +89,6 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    '@nuxtjs/markdownit',
     // Doc: https://github.com/aceforth/nuxt-optimized-images
     '@aceforth/nuxt-optimized-images',
     // Doc: https://github.com/nuxt-community/sitemap-module
@@ -105,12 +104,6 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
-  },
-  markdownit: {
-    preset: 'default',
-    linkify: true,
-    breaks: true,
-    use: ['markdown-it-div', 'markdown-it-attrs']
   },
   googleAnalytics: {
     id: 'UA-138880673-2'
