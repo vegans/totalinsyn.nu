@@ -125,12 +125,11 @@
         </div>
       </div>
     </div>
-    <mobile-menu v-model="mobileOpen" />
+    <mobile-menu v-model="mobileOpen" :actions="actions" />
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
 export default {
   props: {
     dark: {
@@ -138,16 +137,20 @@ export default {
       default: false
     }
   },
+  async fetch() {
+    this.actions = await this.$content('actions')
+      .only(['slug', 'title', 'location', 'date', 'header'])
+      .sortBy('slug', 'desc')
+      .fetch()
+  },
   data() {
     return {
+      actions: null,
       mobileOpen: false,
       isOpen: false,
       isOpenMore: false
     }
   },
-  computed: mapState({
-    actions: 'content'
-  }),
   created() {
     this.$bus.$on('close', () => {
       this.mobileOpen = false

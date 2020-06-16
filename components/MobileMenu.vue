@@ -62,13 +62,10 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
 export default {
   props: {
-    value: Boolean
-  },
-  computed: mapState({
-    actions: 'content'
-  })
+    value: Boolean,
+    actions: Array
+  }
 }
 </script>
