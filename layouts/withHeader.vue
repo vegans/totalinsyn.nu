@@ -20,15 +20,28 @@
               <p
                 class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
               >
-                Total insyn-kampanjen startades för att vi anser att varje
-                enskild person har rätt att kräva total insyn på alla gårdar,
-                slakterier och andra företag som utnyttjar djur för ekonomisk
-                vinning i Sverige. I nuläget har privatpersoner inte möjlighet
-                att få tillräckligt mycket information för att bilda sig en
-                realistisk uppfattning om huruvida produkter, så som ägg-,
-                mjölk- och köttprodukter, är något som de vill stödja med tanke
-                på hur produktionskedjan ser ut och vad djuren behöver genomgå i
-                den.
+                Vi anser att allmänhet och konsumenter har rätt att få veta vad
+                som händer bakom stängda dörrar på gårdar, slakterier och andra
+                verksamheter som för ekonomisk vinning utnyttjar djur. Idag har
+                vi inte tillgång till den relevanta informationen som krävs för
+                att bilda oss en realistisk uppfattning om hur ägg, mjölk, kött
+                och andra animaliska produkter faktiskt produceras.
+              </p>
+
+              <p
+                class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
+              >
+                Idag förekommer också massiva reklamkampanjer, som till exempel
+                Bregottfabriken - reklamkampanjer som inte visar sanningen och
+                målar upp en falsk bild om hur bra djuren har det. Följ med oss
+                bakom kulisserna på svenska gårdar och slakterier där vi visar
+                sanningen och slår hål på myten kring världens bästa djurskydd.
+              </p>
+
+              <p
+                class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
+              >
+                Vi kräver Total Insyn.
               </p>
               <div
                 class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start"
