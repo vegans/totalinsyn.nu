@@ -9,7 +9,9 @@
       {{ page.hero.text }}
     </Hero>
     <div class="content">
-      <nuxt-content :document="page" />
+      <article class="prose prose-lg">
+        <nuxt-content :document="page" />
+      </article>
     </div>
   </div>
 </template>

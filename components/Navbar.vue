@@ -103,7 +103,6 @@ export default {
     return {
       mobileOpen: false,
       isOpen: false,
-      isOpenMore: false,
       isOpenAbout: false
     }
   },
@@ -114,7 +113,7 @@ export default {
     this.$bus.$on('close', () => {
       this.mobileOpen = false
       this.isOpen = false
-      this.isOpenMore = false
+      this.isOpenAbout = false
     })
   }
 }
