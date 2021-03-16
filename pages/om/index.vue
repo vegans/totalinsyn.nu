@@ -20,7 +20,7 @@ import Action from '~/mixins/Action.js'
 export default {
   mixins: [Action],
   async asyncData({ $content, route }) {
-    const page = await $content('om').fetch()
+    const page = await $content('om/index').fetch()
     return {
       page
     }

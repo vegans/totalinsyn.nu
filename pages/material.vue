@@ -25,33 +25,6 @@
         </div>
       </div>
     </div>
-    <div class="mx-2">
-      <h3
-        class="mt-1 mb-3 text-3xl tracking-tight leading-10 font-extrabold text-gray-900 sm:leading-none sm:text-5xl lg:text-4xl xl:text-5xl"
-      >
-        Inlägg
-      </h3>
-      <div class="flex flex-wrap">
-        <material
-          v-for="material in page.posts"
-          :key="material"
-          :url="material"
-        />
-      </div>
-      <h3
-        class="mt-1 mb-3 text-3xl tracking-tight leading-10 font-extrabold text-gray-900 sm:leading-none sm:text-5xl lg:text-4xl xl:text-5xl"
-      >
-        Stories
-      </h3>
-      <div class="flex flex-wrap">
-        <material
-          v-for="material in page.stories"
-          :key="material"
-          :url="material"
-          class="xl:w-1/6"
-        />
-      </div>
-    </div>
   </div>
 </template>
 

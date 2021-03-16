@@ -21,53 +21,10 @@
         <div class="relative">
           <header-button
             :dark="dark"
-            data-testid="actions-menu"
-            @click.native="isOpen = !isOpen"
+            data-testid="about-menu"
+            @click.native="isOpenAbout = !isOpenAbout"
           >
-            Aktionerna
-          </header-button>
-          <transition
-            enter-active-class="transition ease-out duration-200"
-            enter-class="opacity-0 translate-y-1"
-            enter-to-class="opacity-100 translate-y-0"
-            leave-active-class="transition ease-in duration-150"
-            leave-class="opacity-100 translate-y-0"
-            leave-to-class="opacity-0 translate-y-1"
-          >
-            <div
-              v-show="isOpen"
-              class="z-50 absolute -ml-4 mt-3 transform w-screen max-w-md lg:max-w-3xl"
-            >
-              <div class="rounded-lg shadow-lg">
-                <div class="rounded-lg shadow-xs overflow-hidden">
-                  <div
-                    class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2"
-                  >
-                    <HeaderActionLink
-                      v-for="action in actions"
-                      :key="action.slug"
-                      :to="`/${action.slug}`"
-                      :text="action.header.preamble"
-                    >
-                      {{ action.title }}
-                    </HeaderActionLink>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </transition>
-        </div>
-        <header-link to="/material" :dark="dark">
-          Material
-        </header-link>
-
-        <div class="relative">
-          <header-button
-            :dark="dark"
-            data-testid="more-menu"
-            @click.native="isOpenMore = !isOpenMore"
-          >
-            Mer
+            Om Total Insyn
           </header-button>
 
           <transition
@@ -79,8 +36,8 @@
             leave-to-class="opacity-0 translate-y-1"
           >
             <div
-              v-show="isOpenMore"
-              class="z-50 absolute left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-xs sm:px-0"
+              v-show="isOpenAbout"
+              class="z-50 absolute -ml-4 mt-3 transform w-screen max-w-xs lg:max-w-3xl"
             >
               <div class="rounded-lg shadow-lg">
                 <div class="rounded-lg shadow-xs overflow-hidden">
@@ -88,23 +45,19 @@
                     class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8"
                   >
                     <HeaderMoreLink
-                      data-testid="link-motion"
-                      to="/motion"
-                      text="Vår motion till riksdagen"
+                      to="/om/foreningen"
+                      text="Om föreningen Total Insyn"
                     >
-                      Motionen
+                      Föreningen
                     </HeaderMoreLink>
-                    <HeaderMoreLink
-                      to="/lansstyrelsen"
-                      text="Hur myten om världens bästa djurskydd upprätthålls"
-                    >
-                      Djurskyddet
+                    <HeaderMoreLink to="/om/syfte" text="Blänkare">
+                      Ändamål/syfte
                     </HeaderMoreLink>
-                    <HeaderMoreLink
-                      to="/om"
-                      text="Vad är egentligen Total Insyn?"
-                    >
-                      Om Total Insyn
+                    <HeaderMoreLink to="/om/styrelsen" text="Blänkare">
+                      Styrelsen
+                    </HeaderMoreLink>
+                    <HeaderMoreLink to="/om/lokalgrupper" text="Blänkare">
+                      Lokalgrupper
                     </HeaderMoreLink>
                   </div>
                 </div>
@@ -112,6 +65,14 @@
             </div>
           </transition>
         </div>
+
+        <header-link to="/material" :dark="dark">
+          Material
+        </header-link>
+
+        <header-link to="/aktionerna" :dark="dark">
+          Aktionerna
+        </header-link>
       </nav>
       <div v-if="!dark" class="flex items-center space-x-8">
         <div class="rounded-md shadow">
@@ -142,7 +103,8 @@ export default {
     return {
       mobileOpen: false,
       isOpen: false,
-      isOpenMore: false
+      isOpenMore: false,
+      isOpenAbout: false
     }
   },
   computed: mapState({
