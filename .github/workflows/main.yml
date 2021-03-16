@@ -32,7 +32,7 @@ jobs:
         run: yarn generate
 
       - name: Run e2e tests
-        uses: cypress-io/github-action@v1
+        uses: cypress-io/github-action@v2
         with:
           start: yarn start
           record: true
