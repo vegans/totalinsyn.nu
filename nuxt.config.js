@@ -57,6 +57,10 @@ export default {
     ]
   },
   /*
+   ** Autoload components from /components
+   */
+  components: true,
+  /*
    ** Customize the progress-bar color
    */
   loading: { color: '#fff' },
