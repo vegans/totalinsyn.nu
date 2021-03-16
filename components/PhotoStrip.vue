@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ti-divider>{{ title }}</ti-divider>
+    <Divider>{{ title }}</Divider>
     <div class="flex-row">
       <div class="flex-col">
         <photo-strip-image :image="images[0]" />

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ti-divider>Map</ti-divider>
+    <Divider>Map</Divider>
     <client-only>
       <MglMap
         :access-token="accessToken"

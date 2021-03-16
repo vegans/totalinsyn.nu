@@ -74,8 +74,7 @@ export default {
   plugins: [
     '~/plugins/bus',
     { src: '~/plugins/mapbox', mode: 'client' },
-    { src: '~/plugins/lazyload', mode: 'client' },
-    '~/plugins/globals'
+    { src: '~/plugins/lazyload', mode: 'client' }
   ],
   /*
    ** Nuxt.js dev-modules

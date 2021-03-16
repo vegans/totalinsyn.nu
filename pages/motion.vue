@@ -1,13 +1,13 @@
 <template>
   <div>
-    <ti-hero
+    <Hero
       :type="page.hero.type"
       :title="page.hero.title"
       :subtitle="page.hero.subtitle"
       :image="page.hero.image"
     >
       {{ page.hero.text }}
-    </ti-hero>
+    </Hero>
     <div class="content">
       <nuxt-content :document="page" />
     </div>

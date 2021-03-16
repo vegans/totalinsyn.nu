@@ -1,7 +1,7 @@
 <template>
   <div>
     <video-embed url="https://www.youtube.com/embed/zsBLEGh9pv4?showinfo=0" />
-    <ti-divider>Bilder</ti-divider>
+    <Divider>Bilder</Divider>
     <image-source
       src="/lansstyrelsen/lobbyn1.png"
       text="Lobbyn påstår det"

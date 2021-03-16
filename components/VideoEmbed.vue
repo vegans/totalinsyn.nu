@@ -1,6 +1,6 @@
 <template>
   <section>
-    <ti-divider>Video</ti-divider>
+    <Divider>Video</Divider>
     <figure class="video">
       <iframe
         :src="url"
