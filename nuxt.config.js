@@ -1,5 +1,5 @@
 export default {
-  mode: 'universal',
+  target: 'static',
   /*
    ** Headers of the page
    */
@@ -56,6 +56,10 @@ export default {
       }
     ]
   },
+  /*
+   ** Autoload components from /components
+   */
+  components: true,
   /*
    ** Customize the progress-bar color
    */
