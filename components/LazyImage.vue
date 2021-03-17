@@ -3,7 +3,6 @@
     v-lazy-container="{ selector: 'img' }"
     :class="`aspect-w-${width} aspect-h-${height}`"
   >
-    {{ `~/assets/${asset}?resize&size=${maxWidth}` }}
     <img
       :data-src="image.src"
       :data-srcset="image.srcSet"
