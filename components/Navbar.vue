@@ -11,6 +11,13 @@
         />
       </nuxt-link>
     </div>
+    <div class="flex-grow md:hidden">
+      <h2
+        class="ml-4 text-2xl tracking-tight font-extrabold text-yellow-500 sm:leading-none"
+      >
+        Total Insyn
+      </h2>
+    </div>
     <div class="-mr-2 -my-2 md:hidden">
       <mobile-menu-button :dark="dark" @click.native="mobileOpen = true" />
     </div>
@@ -106,7 +113,6 @@ export default {
     }
   },
   computed: mapState({
-    actions: 'content',
     pages: 'pages'
   }),
   created() {
