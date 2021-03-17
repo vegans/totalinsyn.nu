@@ -54,12 +54,11 @@
           <div class="relative text-base mx-auto max-w-prose lg:max-w-none">
             <figure>
               <div class="aspect-w-12 aspect-h-7 lg:aspect-none">
-                <img
-                  v-lazy="require(`~/assets/${page.image}?resize&size=1200`)"
-                  :src="require(`~/assets/${page.image}?resize&size=100`)"
-                  class="rounded-lg shadow-lg object-cover object-center"
-                  width="1200"
-                  height="800"
+                <LazyImage
+                  :rounded="true"
+                  :asset="page.image"
+                  :width="12"
+                  :height="8"
                 />
               </div>
               <figcaption class="mt-3 flex text-sm text-gray-500">

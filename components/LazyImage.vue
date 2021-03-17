@@ -4,6 +4,7 @@
     :class="`aspect-w-${width} aspect-h-${height}`"
   >
     <img
+      :class="imageClass"
       :data-src="image.src"
       :data-srcset="image.srcSet"
       :data-loading="require(`~/assets/${asset}?lqip`)"
@@ -29,11 +30,23 @@ export default {
     maxWidth: {
       type: Number,
       default: 1200
+    },
+    rounded: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
     const image = require(`~/assets/${this.asset}?resize&sizes[]=300&sizes[]=600&sizes[]=1000`)
     return { image }
+  },
+  computed: {
+    imageClass() {
+      if (this.rounded) {
+        return 'rounded-lg shadow-lg'
+      }
+      return ''
+    }
   }
 }
 </script>
