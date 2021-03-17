@@ -31,7 +31,7 @@
 <script>
 export default {
   async asyncData({ $content, route }) {
-    const page = await $content('material').fetch()
+    const page = await $content('pages/material').fetch()
     return {
       page
     }

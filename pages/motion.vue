@@ -22,7 +22,7 @@ import Action from '~/mixins/Action.js'
 export default {
   mixins: [Action],
   async asyncData({ $content, route }) {
-    const page = await $content('motion').fetch()
+    const page = await $content('pages/motion').fetch()
     return {
       page
     }

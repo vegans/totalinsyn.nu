@@ -49,7 +49,7 @@ export default {
       .only(['slug', 'name', 'role'])
       .sortBy('order', 'asc')
       .fetch()
-    const page = await $content('om/styrelsen').fetch()
+    const page = await $content('pages/om/styrelsen').fetch()
     return {
       page,
       boardMembers

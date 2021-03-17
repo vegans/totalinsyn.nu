@@ -51,9 +51,9 @@
                 </div>
               </div>
               <div v-else :key="page.url" class="py-3 px-5 space-y-1">
-                <HeaderActionLink :to="page.url">
+                <HeaderMobileLink :to="page.url">
                   {{ page.title }}
-                </HeaderActionLink>
+                </HeaderMobileLink>
               </div>
             </template>
           </div>

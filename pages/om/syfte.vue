@@ -96,7 +96,7 @@
 <script>
 export default {
   async asyncData({ $content }) {
-    const page = await $content('om/syfte').fetch()
+    const page = await $content('pages/om/syfte').fetch()
     return {
       page
     }

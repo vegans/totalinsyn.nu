@@ -1,32 +1,22 @@
+const byOrder = (a, b) => a.order - b.order
+
 export const actions = {
   async nuxtServerInit({ commit }) {
-    const actions = await this.$content('actions')
-      .only(['slug', 'title', 'location', 'date', 'header'])
-      .sortBy('slug', 'desc')
-      .fetch()
     const pages = await this.$content('pages', { deep: true }).fetch()
-    commit('actions', actions)
     commit('pages', pages)
   }
 }
 
 export const state = () => ({
-  content: [],
   pages: []
 })
 
-const byOrder = (a, b) => a.order - b.order
-
 export const mutations = {
-  actions(state, actions) {
-    state.content = actions
-  },
   pages(state, pages) {
     const pagesTree = []
     pages
       .filter((page) => page.menu)
       .forEach((page) => {
-        console.log('page.menu', page.menu)
         const pageObject = {
           title: page.menu.title ?? page.title ?? page.slug,
           url: page.menu.url || page.path.replace('/pages', ''),

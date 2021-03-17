@@ -94,7 +94,7 @@
 <script>
 export default {
   async asyncData({ $content }) {
-    const page = await $content('om/foreningen').fetch()
+    const page = await $content('pages/om/foreningen').fetch()
     return {
       page
     }
