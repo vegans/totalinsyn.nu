@@ -37,7 +37,7 @@
           >
             <div
               v-show="isOpenAbout"
-              class="z-50 absolute -ml-4 mt-3 transform w-screen max-w-xs lg:max-w-3xl"
+              class="z-50 absolute -ml-4 mt-3 transform w-screen max-w-xs"
             >
               <div class="rounded-lg shadow-lg">
                 <div class="rounded-lg shadow-xs overflow-hidden">
