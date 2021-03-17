@@ -45,7 +45,7 @@
 <script>
 export default {
   async asyncData({ $content }) {
-    const boardMembers = await $content('boardMembers')
+    const boardMembers = await $content('styrelsen')
       .only(['slug', 'name', 'role'])
       .sortBy('order', 'asc')
       .fetch()
