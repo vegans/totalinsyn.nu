@@ -11,3 +11,9 @@
     <Footer />
   </div>
 </template>
+
+<style lang="scss">
+img[lazy='loading'] {
+  filter: blur(15px);
+}
+</style>

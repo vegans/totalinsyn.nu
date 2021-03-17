@@ -41,11 +41,38 @@
       <div
         class="relative block w-full rounded-lg overflow-hidden focus:outline-none focus:shadow-outline"
       >
-        <img v-lazy="require(`~/assets${image}?resize&size=600`)" />
+        <div v-lazy-container="{ selector: 'img' }" class="image">
+          <img
+            :data-src="require(`~/assets${image}?resize&size=600`)"
+            :data-loading="require(`~/assets${image}?lqip`)"
+          />
+        </div>
       </div>
     </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.image {
+  position: relative;
+  &:before {
+    display: block;
+    content: '';
+    width: 100%;
+    padding-top: (2 / 3) * 100%;
+  }
+  > img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+</style>
 
 <script>
 import uniqid from 'uniqid'

@@ -32,6 +32,7 @@
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-pngquant": "^9.0.1",
     "imagemin-svgo": "^8.0.0",
+    "lqip-loader": "^2.2.1",
     "mapbox-gl": "^1.8.1",
     "node-sass": "^5.0.0",
     "nuxt": "^2.15.2",
