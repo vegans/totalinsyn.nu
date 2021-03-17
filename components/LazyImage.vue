@@ -42,4 +42,7 @@ export default {
 img[lazy='loading'] {
   filter: blur(15px);
 }
+img {
+  object-fit: cover;
+}
 </style>
