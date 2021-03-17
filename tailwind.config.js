@@ -43,5 +43,5 @@ module.exports = {
       }
     }
   },
-  plugins: [require('@tailwindcss/ui')]
+  plugins: [require('@tailwindcss/aspect-ratio'), require('@tailwindcss/ui')]
 }
