@@ -60,15 +60,6 @@
                       >
                         {{ child.title }}
                       </HeaderMoreLink>
-                      <HeaderMoreLink to="/om/syfte" text="Blänkare">
-                        Ändamål/syfte
-                      </HeaderMoreLink>
-                      <HeaderMoreLink to="/om/styrelsen" text="Blänkare">
-                        Styrelsen
-                      </HeaderMoreLink>
-                      <HeaderMoreLink to="/om/lokalgrupper" text="Blänkare">
-                        Lokalgrupper
-                      </HeaderMoreLink>
                     </div>
                   </div>
                 </div>
