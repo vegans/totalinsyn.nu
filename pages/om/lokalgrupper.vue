@@ -10,7 +10,7 @@
           >
             {{ page.title }}
           </h2>
-          <p class="text-xl text-gray-700">
+          <p class="text-xl text-gray-700 md:max-w-lg">
             <nuxt-content :document="page" />
           </p>
         </div>
@@ -34,7 +34,9 @@
                   alt=""
                 />
               </div>
-              <div class="space-y-2 xl:flex xl:items-center xl:justify-between">
+              <div
+                class="space-y-2 xl:flex xl:items-center xl:justify-between px-4 max-w-7xl sm:px-6 lg:px-8"
+              >
                 <div class="font-medium text-lg leading-6 space-y-1">
                   <h3 class="text-black">{{ group.namn }}</h3>
                   <p class="text-blue-700">{{ group.kontaktperson }}</p>

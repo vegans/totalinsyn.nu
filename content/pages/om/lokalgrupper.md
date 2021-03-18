@@ -7,4 +7,4 @@ menu:
   order: 4
   subtitle: Våra lokalgrupper
 ---
-Lokalgrupper är nice att ha hihi
+Det är bland annat genom våra lokalgrupper som vi på ett kontinuerligt sätt når ut till allmänheten genom bland annat manifestationer.
