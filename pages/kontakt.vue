@@ -259,6 +259,7 @@
               method="POST"
               class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
             >
+              <input type="hidden" name="form-name" value="contact" />
               <div>
                 <label
                   for="first_name"
