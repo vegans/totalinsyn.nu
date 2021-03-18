@@ -38,8 +38,11 @@
                 class="space-y-2 xl:flex xl:items-center xl:justify-between px-4 max-w-7xl sm:px-6 lg:px-8"
               >
                 <div class="font-medium text-lg leading-6 space-y-1">
-                  <h3 class="text-black">{{ group.namn }}</h3>
-                  <p class="text-blue-700">{{ group.kontaktperson }}</p>
+                  <h3 class="text-blue-700">{{ group.namn }}</h3>
+                  <p class="text-black text-sm">
+                    Kontakt:
+                    <span class="text-blue-700">{{ group.kontaktperson }}</span>
+                  </p>
                 </div>
 
                 <ul class="flex justify-center space-x-5">
