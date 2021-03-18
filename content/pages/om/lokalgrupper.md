@@ -7,4 +7,4 @@ menu:
   order: 4
   subtitle: Våra lokalgrupper
 ---
-Lokalgrupper
+Lokalgrupper är nice att ha hihi
