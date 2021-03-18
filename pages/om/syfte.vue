@@ -53,14 +53,12 @@
           </svg>
           <div class="relative text-base mx-auto max-w-prose lg:max-w-none">
             <figure>
-              <div class="aspect-w-12 aspect-h-7 lg:aspect-none">
-                <LazyImage
-                  :rounded="true"
-                  :asset="page.image"
-                  :width="12"
-                  :height="8"
-                />
-              </div>
+              <LazyImage
+                :rounded="true"
+                :asset="page.image"
+                :width="12"
+                :height="8"
+              />
               <figcaption class="mt-3 flex text-sm text-gray-500">
                 <!-- Heroicon name: solid/camera -->
                 <svg
