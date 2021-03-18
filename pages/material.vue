@@ -15,7 +15,8 @@
               <nuxt-content :document="page" />
             </div>
             <a
-              href="#"
+              :href="page.googleDrive"
+              target="blank"
               class="mt-8 bg-white border border-transparent rounded-md shadow px-5 py-3 inline-flex items-center text-base font-medium text-blue-600 hover:bg-blue-50"
               >Öppna Google Drive</a
             >
