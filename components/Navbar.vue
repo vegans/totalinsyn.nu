@@ -1,6 +1,10 @@
 <template>
   <div
     class="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10"
+    :class="{
+      'mx-auto': !dark,
+      'max-w-screen-xl': !dark
+    }"
   >
     <div>
       <nuxt-link to="/" class="flex">
