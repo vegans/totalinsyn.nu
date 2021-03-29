@@ -23,7 +23,7 @@
                 <img
                   class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
                   :src="
-                    require(`~/assets/styrelsen/${member.slug}.jpg?resize&size=600`)
+                    require(`~/assets/styrelsen/${member.slug}.png?resize&size=600`)
                   "
                   alt=""
                 />
