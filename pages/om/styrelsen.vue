@@ -27,10 +27,11 @@
                   <h3>{{ member.name }}</h3>
                   <p class="text-yellow-600">{{ member.role }}</p>
                 </div>
-                <div class="text-lg">
-                  <p class="text-gray-500">
-                    <nuxt-content :document="member" />
-                  </p>
+                <div class="text-lg relative italic text-gray-500 font-serif">
+                  <div class="stylistic-quote-mark" aria-hidden="true">
+                    &ldquo;
+                  </div>
+                  <p class="test"><nuxt-content :document="member" /></p>
                 </div>
               </div>
             </li>
@@ -55,3 +56,18 @@ export default {
   }
 }
 </script>
+
+<style lang="postcss" scoped>
+.stylistic-quote-mark {
+  font-size: 5rem;
+  right: 95%;
+  top: -0.25rem;
+  @apply mr-2 hidden font-serif text-gray-200 absolute leading-none;
+}
+
+@screen sm {
+  .stylistic-quote-mark {
+    @apply block;
+  }
+}
+</style>
