@@ -7,4 +7,4 @@ menu:
   order: 3
   subtitle: Om vår styrelse
 ---
-Vår styrelse osv osv osv osv
+Här presenterar vi vår styrelse som väljs per år på årsmötet.
