@@ -1,18 +1,15 @@
 <template>
   <div>
-    <Hero
-      :type="page.hero.type"
-      :title="page.hero.title"
-      :subtitle="page.hero.subtitle"
-      :image="page.hero.image"
-    >
-      {{ page.hero.text }}
-    </Hero>
-    <div class="content">
-      <article class="prose prose-lg">
-        <nuxt-content :document="page" />
-      </article>
-    </div>
+    <ul class="list-disc">
+      <li v-for="page in pages" :key="page.path">
+        <nuxt-link
+          class="text-yellow-600 font-extrabold text-xl"
+          :to="page.path.replace('/pages', '')"
+        >
+          {{ page.title }}
+        </nuxt-link>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -22,9 +19,9 @@ import Action from '~/mixins/Action.js'
 export default {
   mixins: [Action],
   async asyncData({ $content, route }) {
-    const page = await $content('pages/om/index').fetch()
+    const pages = await $content('pages/om').fetch()
     return {
-      page
+      pages: pages.sort((a, b) => a.menu.order - b.menu.order)
     }
   }
 }

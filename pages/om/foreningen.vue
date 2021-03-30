@@ -81,7 +81,7 @@
         </div>
         <div class="mt-8 lg:mt-0">
           <div
-            class="mt-5 prose max-w-prose prose-yellow text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1"
+            class="mt-5 prose max-w-prose prose-blue text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1"
           >
             <nuxt-content :document="page" />
           </div>

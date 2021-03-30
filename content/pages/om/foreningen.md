@@ -12,6 +12,6 @@ I slutet av 2020 tog vi beslut om att bli en förening och i januari 2021 blev v
 
 Vi är en ideell förening som är politiskt och religiöst obunden. 
 
-Då vi strävar efter en djurindustri med total insyn, vill vi även vara en förening med total insyn. Du är välkommen att ta del av våra stadgar (länk) och styrelseprotokoll (länk).
+Då vi strävar efter en djurindustri med total insyn, vill vi även vara en förening med total insyn. Du är välkommen att ta del av våra stadgar och styrelseprotokoll (nedladdning kommer snart).
 
-Möt vår styrelse (länk).
+<nuxt-link to="/om/styrelsen">Möt vår styrelse.</nuxt-link>
