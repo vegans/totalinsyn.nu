@@ -4,7 +4,7 @@
       title="Engagera dig!"
       cta="Hitta din lokalgrupp"
       to="/om/lokalgrupper"
-      body="Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames."
+      body="Vi söker alltid fler engagerade som vill hjälpa till att granska djurindustrin och stå upp för djuren. Idag har vi tre lokalgrupper i Sverige; i Malmö, Göteborg och Stockholm. Läs mer om dem här."
       asset="engage.jpg"
     />
   </div>

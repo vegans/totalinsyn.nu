@@ -46,9 +46,9 @@
       </div>
       <div class="mt-8">
         <p class="text-center text-base leading-6 text-gray-500">
-          <strong>#totalinsyn</strong> is a campaign for total transparancy
-          into<br />
-          every single farm and every single slaughterhouse in Sweden.
+          Total Insyn, org.nr 802534-0459<br />
+          Vikingagatan 21 | 113 42 Stockholm |
+          <a href="mailto:info@totalinsyn.nu">info@totalinsyn.nu</a>
         </p>
       </div>
     </div>

@@ -5,6 +5,6 @@ menu:
   parent: Om Total Insyn
   parentOrder: 1
   order: 4
-  subtitle: Våra lokalgrupper
+  subtitle: Här hittar du oss
 ---
 Det är bland annat genom våra lokalgrupper som vi på ett kontinuerligt sätt når ut till allmänheten genom bland annat manifestationer.

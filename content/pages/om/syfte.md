@@ -6,7 +6,7 @@ menu:
   parent: Om Total Insyn
   parentOrder: 1
   order: 2
-  subtitle: Syfte osv
+  subtitle: Varför gör vi detta?
 ---
 Vi behövs för att djur inom den svenska produktionssektorn inte ska kunna exploateras bakom stängda dörrar. Det är när vi, konsumenter/allmänhet, får insyn i vad djuren utsätts för som vi kan göra medvetna val och avgöra om det är något som vi stödjer.
 
