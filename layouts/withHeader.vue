@@ -20,12 +20,12 @@
               <p
                 class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
               >
-                Vi anser att allmänhet och konsumenter har rätt att få veta vad
-                som händer bakom stängda dörrar på gårdar, slakterier och andra
-                verksamheter som för ekonomisk vinning utnyttjar djur. Idag har
-                vi inte tillgång till den relevanta informationen som krävs för
-                att bilda oss en realistisk uppfattning om hur ägg, mjölk, kött
-                och andra animaliska produkter faktiskt produceras.
+                Vi anser att alla har rätt att få veta vad som händer bakom
+                stängda dörrar på gårdar, slakterier och andra verksamheter som
+                för ekonomisk vinning utnyttjar djur. Idag har vi inte tillgång
+                till den relevanta informationen som krävs för att bilda oss en
+                realistisk uppfattning om hur ägg, mjölk, kött och andra
+                animaliska produkter produceras.
               </p>
 
               <p
