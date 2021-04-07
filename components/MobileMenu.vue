@@ -18,41 +18,54 @@
               <div>
                 <img class="h-8 w-auto" src="/logo-black.png" alt="Workflow" />
               </div>
+              <div class="flex-grow">
+                <h2
+                  class="mt-1 ml-4 text-2xl tracking-tight font-extrabold text-yellow-500 sm:leading-none"
+                >
+                  Total Insyn
+                </h2>
+              </div>
               <div class="-mr-2">
                 <MobileMenuClose @click.native="$emit('input', false)" />
               </div>
             </div>
-            <div>
-              <nav class="grid gap-6">
-                <HeaderActionLink
-                  v-for="action in actions"
-                  :key="action.slug"
-                  :to="`/${action.slug}`"
-                >
-                  {{ action.title }}
-                </HeaderActionLink>
-              </nav>
-            </div>
           </div>
-          <div class="py-6 px-5 space-y-6">
-            <div class="grid grid-cols-2 gap-4">
-              <HeaderMobileLink to="/om">Om Total Insyn</HeaderMobileLink>
-              <HeaderMobileLink to="/motion">Motionen</HeaderMobileLink>
-              <HeaderMobileLink to="/lansstyrelsen">
-                Djurskyddet
-              </HeaderMobileLink>
-              <HeaderMobileLink to="/material">Material</HeaderMobileLink>
-            </div>
-            <div class="space-y-6">
-              <div class="rounded-md shadow">
-                <a
-                  rel="noopener"
-                  href="https://change.org/totalinsyn"
-                  class="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 rounded-md text-white bg-yellow-500 hover:bg-yellow-400 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-1 md:px-3"
-                >
-                  Skriv under
-                </a>
+          <div>
+            <template v-for="page in pages">
+              <div
+                v-if="page.children"
+                :key="page.url"
+                class="py-6 px-5 space-y-1"
+              >
+                <p class="mt-2 max-w-4xl text-sm text-gray-500">
+                  {{ page.title }}
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                  <HeaderMobileChildLink
+                    v-for="child in page.children"
+                    :key="child.url"
+                    :to="child.url"
+                  >
+                    {{ child.title }}
+                  </HeaderMobileChildLink>
+                </div>
               </div>
+              <div v-else :key="page.url" class="py-3 px-5 space-y-1">
+                <HeaderMobileLink :to="page.url">
+                  {{ page.title }}
+                </HeaderMobileLink>
+              </div>
+            </template>
+          </div>
+          <div class="space-y-6 py-6 px-5">
+            <div class="rounded-md shadow">
+              <a
+                rel="noopener"
+                href="https://change.org/totalinsyn"
+                class="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 rounded-md text-white bg-yellow-500 hover:bg-yellow-400 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-1 md:px-3"
+              >
+                Skriv under
+              </a>
             </div>
           </div>
         </div>
@@ -68,7 +81,7 @@ export default {
     value: Boolean
   },
   computed: mapState({
-    actions: 'content'
+    pages: 'pages'
   })
 }
 </script>

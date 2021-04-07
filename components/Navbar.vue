@@ -1,6 +1,10 @@
 <template>
   <div
     class="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10"
+    :class="{
+      'mx-auto': !dark,
+      'max-w-screen-xl': !dark
+    }"
   >
     <div>
       <nuxt-link to="/" class="flex">
@@ -11,6 +15,13 @@
         />
       </nuxt-link>
     </div>
+    <div class="flex-grow md:hidden">
+      <h2
+        class="ml-4 text-2xl tracking-tight font-extrabold text-yellow-500 sm:leading-none"
+      >
+        Total Insyn
+      </h2>
+    </div>
     <div class="-mr-2 -my-2 md:hidden">
       <mobile-menu-button :dark="dark" @click.native="mobileOpen = true" />
     </div>
@@ -18,100 +29,51 @@
       class="hidden md:flex-1 md:flex md:items-center md:justify-between md:space-x-12"
     >
       <nav class="flex space-x-10">
-        <div class="relative">
-          <header-button
-            :dark="dark"
-            data-testid="actions-menu"
-            @click.native="isOpen = !isOpen"
-          >
-            Aktionerna
-          </header-button>
-          <transition
-            enter-active-class="transition ease-out duration-200"
-            enter-class="opacity-0 translate-y-1"
-            enter-to-class="opacity-100 translate-y-0"
-            leave-active-class="transition ease-in duration-150"
-            leave-class="opacity-100 translate-y-0"
-            leave-to-class="opacity-0 translate-y-1"
-          >
-            <div
-              v-show="isOpen"
-              class="z-50 absolute -ml-4 mt-3 transform w-screen max-w-md lg:max-w-3xl"
+        <template v-for="page in pages">
+          <div v-if="page.children" :key="page.url" class="relative">
+            <header-button
+              :dark="dark"
+              data-testid="about-menu"
+              @click.native="isOpenAbout = !isOpenAbout"
             >
-              <div class="rounded-lg shadow-lg">
-                <div class="rounded-lg shadow-xs overflow-hidden">
-                  <div
-                    class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2"
-                  >
-                    <HeaderActionLink
-                      v-for="action in actions"
-                      :key="action.slug"
-                      :to="`/${action.slug}`"
-                      :text="action.header.preamble"
+              {{ page.title }}
+            </header-button>
+
+            <transition
+              enter-active-class="transition ease-out duration-200"
+              enter-class="opacity-0 translate-y-1"
+              enter-to-class="opacity-100 translate-y-0"
+              leave-active-class="transition ease-in duration-150"
+              leave-class="opacity-100 translate-y-0"
+              leave-to-class="opacity-0 translate-y-1"
+            >
+              <div
+                v-show="isOpenAbout"
+                class="z-50 absolute -ml-4 mt-3 transform w-screen max-w-xs"
+              >
+                <div class="rounded-lg shadow-lg">
+                  <div class="rounded-lg shadow-xs overflow-hidden">
+                    <div
+                      class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8"
                     >
-                      {{ action.title }}
-                    </HeaderActionLink>
+                      <HeaderMoreLink
+                        v-for="child in page.children"
+                        :key="child.url"
+                        :to="child.url"
+                        :text="child.subtitle"
+                      >
+                        {{ child.title }}
+                      </HeaderMoreLink>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </transition>
-        </div>
-        <header-link to="/material" :dark="dark">
-          Material
-        </header-link>
-
-        <div class="relative">
-          <header-button
-            :dark="dark"
-            data-testid="more-menu"
-            @click.native="isOpenMore = !isOpenMore"
-          >
-            Mer
-          </header-button>
-
-          <transition
-            enter-active-class="transition ease-out duration-200"
-            enter-class="opacity-0 translate-y-1"
-            enter-to-class="opacity-100 translate-y-0"
-            leave-active-class="transition ease-in duration-150"
-            leave-class="opacity-100 translate-y-0"
-            leave-to-class="opacity-0 translate-y-1"
-          >
-            <div
-              v-show="isOpenMore"
-              class="z-50 absolute left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-xs sm:px-0"
-            >
-              <div class="rounded-lg shadow-lg">
-                <div class="rounded-lg shadow-xs overflow-hidden">
-                  <div
-                    class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8"
-                  >
-                    <HeaderMoreLink
-                      data-testid="link-motion"
-                      to="/motion"
-                      text="Vår motion till riksdagen"
-                    >
-                      Motionen
-                    </HeaderMoreLink>
-                    <HeaderMoreLink
-                      to="/lansstyrelsen"
-                      text="Hur myten om världens bästa djurskydd upprätthålls"
-                    >
-                      Djurskyddet
-                    </HeaderMoreLink>
-                    <HeaderMoreLink
-                      to="/om"
-                      text="Vad är egentligen Total Insyn?"
-                    >
-                      Om Total Insyn
-                    </HeaderMoreLink>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </transition>
-        </div>
+            </transition>
+          </div>
+          <header-link v-else :key="page.url" :to="page.url" :dark="dark">
+            {{ page.title }}
+          </header-link>
+        </template>
       </nav>
       <div v-if="!dark" class="flex items-center space-x-8">
         <div class="rounded-md shadow">
@@ -142,17 +104,17 @@ export default {
     return {
       mobileOpen: false,
       isOpen: false,
-      isOpenMore: false
+      isOpenAbout: false
     }
   },
   computed: mapState({
-    actions: 'content'
+    pages: 'pages'
   }),
   created() {
     this.$bus.$on('close', () => {
       this.mobileOpen = false
       this.isOpen = false
-      this.isOpenMore = false
+      this.isOpenAbout = false
     })
   }
 }

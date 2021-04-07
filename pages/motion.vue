@@ -1,15 +1,17 @@
 <template>
   <div>
-    <ti-hero
+    <Hero
       :type="page.hero.type"
       :title="page.hero.title"
       :subtitle="page.hero.subtitle"
       :image="page.hero.image"
     >
       {{ page.hero.text }}
-    </ti-hero>
+    </Hero>
     <div class="content">
-      <nuxt-content :document="page" />
+      <article class="prose prose-lg">
+        <nuxt-content :document="page" />
+      </article>
     </div>
   </div>
 </template>
@@ -20,7 +22,7 @@ import Action from '~/mixins/Action.js'
 export default {
   mixins: [Action],
   async asyncData({ $content, route }) {
-    const page = await $content('motion').fetch()
+    const page = await $content('pages/motion').fetch()
     return {
       page
     }

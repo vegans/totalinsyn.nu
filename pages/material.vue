@@ -1,55 +1,34 @@
 <template>
-  <div>
-    <div class="flex mb-4">
-      <div class="mx-2 w-full md:w-1/2">
-        <h2
-          class="mt-1 text-4xl tracking-tight leading-10 font-extrabold text-yellow-500 sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl"
+  <div class="bg-white">
+    <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+      <div
+        class="bg-blue-700 rounded-lg shadow-xl overflow-hidden lg:grid lg:grid-cols-2 lg:gap-4"
+      >
+        <div
+          class="pt-10 pb-12 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20"
         >
-          {{ page.title }}
-        </h2>
-        <p
-          class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"
-        >
-          <nuxt-content :document="page" />
-        </p>
-        <div class="mt-4 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-          <div class="rounded-md shadow">
+          <div class="lg:self-center">
+            <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+              {{ page.title }}
+            </h2>
+            <div class="prose prose-lg text-blue-200">
+              <nuxt-content :document="page" />
+            </div>
             <a
-              rel="noopener"
               :href="page.googleDrive"
-              class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+              target="blank"
+              class="mt-8 bg-white border border-transparent rounded-md shadow px-5 py-3 inline-flex items-center text-base font-medium text-blue-600 hover:bg-blue-50"
+              >Öppna Google Drive</a
             >
-              Öppna Google Drive
-            </a>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="mx-2">
-      <h3
-        class="mt-1 mb-3 text-3xl tracking-tight leading-10 font-extrabold text-gray-900 sm:leading-none sm:text-5xl lg:text-4xl xl:text-5xl"
-      >
-        Inlägg
-      </h3>
-      <div class="flex flex-wrap">
-        <material
-          v-for="material in page.posts"
-          :key="material"
-          :url="material"
-        />
-      </div>
-      <h3
-        class="mt-1 mb-3 text-3xl tracking-tight leading-10 font-extrabold text-gray-900 sm:leading-none sm:text-5xl lg:text-4xl xl:text-5xl"
-      >
-        Stories
-      </h3>
-      <div class="flex flex-wrap">
-        <material
-          v-for="material in page.stories"
-          :key="material"
-          :url="material"
-          class="xl:w-1/6"
-        />
+        <div class="-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1">
+          <img
+            class="transform translate-x-6 translate-y-6 rounded-md object-cover object-left-top sm:translate-x-16 lg:translate-y-20"
+            :src="require(`~/assets/material.png?resize&size=1200`)"
+            alt="App screenshot"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -58,7 +37,7 @@
 <script>
 export default {
   async asyncData({ $content, route }) {
-    const page = await $content('material').fetch()
+    const page = await $content('pages/material').fetch()
     return {
       page
     }

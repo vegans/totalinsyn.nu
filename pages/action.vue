@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ti-hero
+    <Hero
       :title="page.title"
       :subtitle="`${page.location} - ${page.date}`"
       :image="page.header.image"
@@ -8,7 +8,7 @@
       :image-url="page.header.more"
     >
       {{ page.header.preamble }}
-    </ti-hero>
+    </Hero>
 
     <press-release
       :prefix="page.press.prefix"

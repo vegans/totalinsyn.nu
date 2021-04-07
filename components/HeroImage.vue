@@ -41,7 +41,7 @@
       <div
         class="relative block w-full rounded-lg overflow-hidden focus:outline-none focus:shadow-outline"
       >
-        <img v-lazy="require(`~/assets${image}?resize&size=600`)" />
+        <LazyImage :asset="image" :height="2" :width="3" :max-width="600" />
       </div>
     </div>
   </div>

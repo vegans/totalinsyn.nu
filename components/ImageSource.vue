@@ -1,9 +1,9 @@
 <template>
   <div class="image" data-testid="image-source">
     <picture>
-      <source :srcSet="require(`~/assets${src}?webp`)" type="image/webp" />
-      <source :srcSet="require(`~/assets${src}`)" type="image/jpeg" />
-      <img :src="require(`~/assets${src}`)" />
+      <source :srcSet="require(`~/assets/${src}?webp`)" type="image/webp" />
+      <source :srcSet="require(`~/assets/${src}`)" type="image/jpeg" />
+      <img :src="require(`~/assets/${src}`)" />
     </picture>
     <div class="text">
       {{ text }}
