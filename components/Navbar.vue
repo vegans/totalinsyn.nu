@@ -9,9 +9,9 @@
     <div>
       <nuxt-link to="/" class="flex">
         <img
-          class="h-8 w-auto sm:h-10"
+          class="h-8 w-8 sm:h-10 sm:w-10"
           :src="dark ? '/logo-black.png' : '/logo-white.png'"
-          alt="Workflow"
+          alt="Total Insyn logo"
         />
       </nuxt-link>
     </div>

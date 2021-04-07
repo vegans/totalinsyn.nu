@@ -16,7 +16,11 @@
           <div class="pt-5 pb-6 px-5 space-y-6">
             <div class="flex items-center justify-between">
               <div>
-                <img class="h-8 w-auto" src="/logo-black.png" alt="Workflow" />
+                <img
+                  class="h-8 w-8"
+                  src="/logo-black.png"
+                  alt="Total Insyn logo"
+                />
               </div>
               <div class="flex-grow">
                 <h2

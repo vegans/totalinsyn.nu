@@ -1,5 +1,6 @@
 <template>
   <button
+    aria-label="Open submenu"
     type="button"
     class="group inline-flex items-center space-x-2 text-base leading-6 font-medium focus:outline-none transition ease-in-out duration-150"
     :class="
