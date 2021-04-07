@@ -34,7 +34,7 @@
             <header-button
               :dark="dark"
               data-testid="about-menu"
-              @click.native="isOpenAbout = !isOpenAbout"
+              @click.native="toggleMenu"
             >
               {{ page.title }}
             </header-button>
@@ -48,10 +48,10 @@
               leave-to-class="opacity-0 translate-y-1"
             >
               <div
-                v-show="isOpenAbout"
+                v-show="isOpen"
                 class="z-50 absolute -ml-4 mt-3 transform w-screen max-w-xs"
               >
-                <div class="rounded-lg shadow-lg">
+                <div v-click-outside="closeMenu" class="rounded-lg shadow-lg">
                   <div class="rounded-lg shadow-xs overflow-hidden">
                     <div
                       class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8"
@@ -93,7 +93,12 @@
 
 <script>
 import { mapState } from 'vuex'
+import ClickOutside from 'vue-click-outside'
+
 export default {
+  directives: {
+    ClickOutside
+  },
   props: {
     dark: {
       type: Boolean,
@@ -103,8 +108,7 @@ export default {
   data() {
     return {
       mobileOpen: false,
-      isOpen: false,
-      isOpenAbout: false
+      isOpen: false
     }
   },
   computed: mapState({
@@ -114,8 +118,18 @@ export default {
     this.$bus.$on('close', () => {
       this.mobileOpen = false
       this.isOpen = false
-      this.isOpenAbout = false
     })
+  },
+  methods: {
+    closeMenu() {
+      if (this.isOpen) {
+        this.isOpen = false
+      }
+    },
+    toggleMenu(event) {
+      event.stopPropagation()
+      this.isOpen = !this.isOpen
+    }
   }
 }
 </script>
