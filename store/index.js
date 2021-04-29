@@ -2,7 +2,16 @@ const byOrder = (a, b) => a.order - b.order
 
 export const actions = {
   async nuxtServerInit({ commit }) {
-    const pages = await this.$content('pages', { deep: true }).fetch()
+    const res = await this.$contentful.getEntries({
+      content_type: 'page'
+    })
+    const pages = res.items
+      .filter((item) => item.fields.menu)
+      .map((item) => ({
+        title: item.fields.title,
+        slug: item.fields.slug,
+        menu: item.fields.menu.fields
+      }))
     commit('pages', pages)
   }
 }
@@ -19,17 +28,17 @@ export const mutations = {
       .forEach((page) => {
         const pageObject = {
           title: page.menu.title ?? page.title ?? page.slug,
-          url: page.menu.url || page.path.replace('/pages', ''),
+          url: '/' + page.slug,
           order: page.menu.order || 99,
           subtitle: page.menu.subtitle
         }
-        if (page.menu?.parent) {
+        if (page.menu?.parentTitle) {
           let parent = pagesTree.find(
-            (_page) => _page.title === page.menu.parent
+            (_page) => _page.title === page.menu.parentTitle
           )
           if (!parent) {
             parent = {
-              title: page.menu.parent,
+              title: page.menu.parentTitle,
               order: page.menu.parentOrder || 1,
               children: []
             }

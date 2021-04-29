@@ -85,20 +85,14 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/google-analytics',
     // Doc: https://github.com/nuxt-community/tailwindcss-module
-    '@nuxtjs/tailwindcss',
-    // TODO: Remove when upgrading to nuxt 2.13+
-    '@nuxt/components'
+    '@nuxtjs/tailwindcss'
   ],
   /*
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://github.com/aceforth/nuxt-optimized-images
-    // '@aceforth/nuxt-optimized-images',
     // Doc: https://github.com/nuxt-community/sitemap-module
-    '@nuxtjs/sitemap',
-    // Doc: https://content.nuxtjs.org/
-    '@nuxt/content'
+    '@nuxtjs/sitemap'
   ],
   /*
    ** Build configuration
