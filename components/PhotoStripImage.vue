@@ -1,7 +1,7 @@
 <template>
   <div class="column" data-testid="thumbnail">
     <a :href="image">
-      <img v-lazy="image" />
+      <img v-lazy="`${image}?w=300`" />
     </a>
   </div>
 </template>

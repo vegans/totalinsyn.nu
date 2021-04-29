@@ -50,13 +50,15 @@ export default {
     const res = await $contentful.getEntries({
       content_type: 'styrelsen'
     })
-    const boardMembers = res.items.map((item) => ({
-      name: item.fields.name,
-      role: item.fields.role,
-      quote: item.fields.quote,
-      image: item.fields.image.fields.file.url
-    }))
-    // TODO: SORT!!!
+    const boardMembers = res.items
+      .map((item) => ({
+        name: item.fields.name,
+        role: item.fields.role,
+        quote: item.fields.quote,
+        image: item.fields.image.fields.file.url,
+        order: item.fields.order
+      }))
+      .sort((a, b) => a.order - b.order)
     const page = await $contentful.getPage('om/styrelsen')
     return {
       page,

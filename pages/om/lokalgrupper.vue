@@ -107,12 +107,15 @@ export default {
     const res = await $contentful.getEntries({
       content_type: 'lokalgrupper'
     })
-    const groups = res.items.map((item) => ({
-      name: item.fields.name,
-      contact: item.fields.contact,
-      facebook: item.fields.facebook,
-      image: item.fields.image.fields.file.url
-    }))
+    const groups = res.items
+      .map((item) => ({
+        name: item.fields.name,
+        contact: item.fields.contact,
+        facebook: item.fields.facebook,
+        image: item.fields.image.fields.file.url,
+        order: item.fields.order
+      }))
+      .sort((a, b) => a.order - b.order)
     // TODO: sort
     const page = await $contentful.getPage('om/lokalgrupper')
     return {
