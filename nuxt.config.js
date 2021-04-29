@@ -93,7 +93,7 @@ export default {
    */
   modules: [
     // Doc: https://github.com/aceforth/nuxt-optimized-images
-    '@aceforth/nuxt-optimized-images',
+    // '@aceforth/nuxt-optimized-images',
     // Doc: https://github.com/nuxt-community/sitemap-module
     '@nuxtjs/sitemap',
     // Doc: https://content.nuxtjs.org/
@@ -118,24 +118,29 @@ export default {
     optimizeImages: true
   },
   router: {
-    extendRoutes(routes, resolve) {
-      const { $content } = require('@nuxt/content')
-      $content('actions')
-        .only(['slug'])
-        .fetch()
-        .then((actions) => {
-          actions = actions.map(({ slug }) => slug)
-          for (const action of actions) {
-            routes.push({
-              name: `action-${action}`,
-              path: `/${action}`,
-              component: resolve(__dirname, 'pages/action.vue'),
-              meta: {
-                action
-              }
-            })
+    async extendRoutes(routes, resolve) {
+      const { createClient } = require('./plugins/contentful')
+      const client = createClient()
+      const res = await client.getEntries({
+        content_type: 'action'
+      })
+
+      const actions = res.items
+        .map((item) => item.fields.action)
+        .sort()
+        // Poor mans zerofill
+        .map((action) => `0${action}`)
+
+      for (const action of actions) {
+        routes.push({
+          name: `action-${action}`,
+          path: `/${action}`,
+          component: resolve(__dirname, 'pages/action.vue'),
+          meta: {
+            action
           }
         })
+      }
     }
   }
 }

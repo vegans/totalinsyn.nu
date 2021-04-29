@@ -4,10 +4,10 @@
     :class="`aspect-w-${width} aspect-h-${height}`"
   >
     <img
+      :data-src="`${asset}?w=${maxWidth}`"
+      :data-loading="`${asset}?w=100`"
+      :src="`${asset}?w=100`"
       :class="imageClass"
-      :data-src="image.src"
-      :data-srcset="image.srcSet"
-      :data-loading="require(`~/assets/${asset}?lqip`)"
     />
   </div>
 </template>
@@ -36,10 +36,10 @@ export default {
       default: false
     }
   },
-  data() {
-    const image = require(`~/assets/${this.asset}?resize&sizes[]=300&sizes[]=600&sizes[]=1000`)
-    return { image }
-  },
+  // data() {
+  //   const image = require(`~/assets/${this.asset}?resize&sizes[]=300&sizes[]=600&sizes[]=1000`)
+  //   return { image }
+  // },
   computed: {
     imageClass() {
       if (this.rounded) {
