@@ -17,9 +17,7 @@
                 <div class="aspect-w-1 aspect-h-1">
                   <img
                     class="object-cover shadow-lg rounded-full"
-                    :src="
-                      require(`~/assets/styrelsen/${member.slug}.jpg?resize&size=600`)
-                    "
+                    :src="member.image"
                     :alt="member.name"
                   />
                 </div>
@@ -31,7 +29,8 @@
                   <div class="stylistic-quote-mark" aria-hidden="true">
                     &ldquo;
                   </div>
-                  <p class="test"><nuxt-content :document="member" /></p>
+                  <!-- TODO: Markdown this -->
+                  <p class="test">{{ member.quote }}</p>
                 </div>
               </div>
             </li>
@@ -43,11 +42,21 @@
 </template>
 
 <script>
+import { createClient } from '~/plugins/contentful.js'
+const client = createClient()
+
 export default {
   async asyncData({ $content }) {
-    const boardMembers = await $content('styrelsen')
-      .sortBy('order', 'asc')
-      .fetch()
+    const res = await client.getEntries({
+      content_type: 'styrelsen'
+    })
+    const boardMembers = res.items.map((item) => ({
+      name: item.fields.name,
+      role: item.fields.role,
+      quote: item.fields.quote,
+      image: item.fields.image.fields.file.url
+    }))
+    // TODO: SORT!!!
     const page = await $content('pages/om/styrelsen').fetch()
     return {
       page,

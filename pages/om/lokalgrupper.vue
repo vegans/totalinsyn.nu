@@ -28,9 +28,7 @@
                 <img
                   class="mx-auto w-full object-cover rounded-t-lg"
                   classOrg="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
-                  :src="
-                    require(`~/assets/lokalgrupper/${group.slug}.jpg?resize&size=600`)
-                  "
+                  :src="group.image"
                   alt=""
                 />
               </div>
@@ -38,10 +36,10 @@
                 class="space-y-2 xl:flex xl:items-center xl:justify-between px-4 max-w-7xl sm:px-6 lg:px-8"
               >
                 <div class="font-medium text-lg leading-6 space-y-1">
-                  <h3 class="text-blue-700">{{ group.namn }}</h3>
+                  <h3 class="text-blue-700">{{ group.name }}</h3>
                   <p class="text-black text-sm">
                     Kontakt:
-                    <span class="text-blue-700">{{ group.kontaktperson }}</span>
+                    <span class="text-blue-700">{{ group.contact }}</span>
                   </p>
                 </div>
 
@@ -103,12 +101,22 @@
 </template>
 
 <script>
+import { createClient } from '~/plugins/contentful.js'
+const client = createClient()
+
 export default {
   async asyncData({ $content }) {
+    const res = await client.getEntries({
+      content_type: 'lokalgrupper'
+    })
+    const groups = res.items.map((item) => ({
+      name: item.fields.name,
+      contact: item.fields.contact,
+      facebook: item.fields.facebook,
+      image: item.fields.image.fields.file.url
+    }))
+    // TODO: sort
     const page = await $content('pages/om/lokalgrupper').fetch()
-    const groups = await $content('lokalgrupper')
-      .sortBy('order', 'asc')
-      .fetch()
     return {
       page,
       groups
