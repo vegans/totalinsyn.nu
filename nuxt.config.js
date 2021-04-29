@@ -73,6 +73,7 @@ export default {
    */
   plugins: [
     '~/plugins/bus',
+    '~/plugins/contentful',
     { src: '~/plugins/mapbox', mode: 'client' },
     { src: '~/plugins/lazyload', mode: 'client' }
   ],

@@ -11,7 +11,8 @@
             {{ page.title }}
           </h2>
           <p class="text-xl text-gray-700 md:max-w-lg">
-            <nuxt-content :document="page" />
+            <!-- TODO: Markdown -->
+            {{ page.body }}
           </p>
         </div>
         <ul
@@ -101,12 +102,9 @@
 </template>
 
 <script>
-import { createClient } from '~/plugins/contentful.js'
-const client = createClient()
-
 export default {
-  async asyncData({ $content }) {
-    const res = await client.getEntries({
+  async asyncData({ $contentful }) {
+    const res = await $contentful.getEntries({
       content_type: 'lokalgrupper'
     })
     const groups = res.items.map((item) => ({
@@ -116,7 +114,7 @@ export default {
       image: item.fields.image.fields.file.url
     }))
     // TODO: sort
-    const page = await $content('pages/om/lokalgrupper').fetch()
+    const page = await $contentful.getPage('om/lokalgrupper')
     return {
       page,
       groups

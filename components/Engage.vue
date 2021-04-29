@@ -21,7 +21,7 @@
             >
               <img
                 class="object-cover object-center rounded-3xl shadow-2xl"
-                :src="require(`~/assets/${asset}?resize&size=1200`)"
+                :src="asset"
                 alt=""
               />
             </div>

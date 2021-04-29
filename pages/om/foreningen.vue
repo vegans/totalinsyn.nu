@@ -83,7 +83,8 @@
           <div
             class="mt-5 prose max-w-prose prose-blue text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1"
           >
-            <nuxt-content :document="page" />
+            <!-- TODO: Markdown -->
+            {{ page.body }}
           </div>
         </div>
       </div>
@@ -93,8 +94,8 @@
 
 <script>
 export default {
-  async asyncData({ $content }) {
-    const page = await $content('pages/om/foreningen').fetch()
+  async asyncData({ $contentful }) {
+    const page = await $contentful.getPage('om/foreningen')
     return {
       page
     }

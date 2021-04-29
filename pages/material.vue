@@ -12,10 +12,11 @@
               {{ page.title }}
             </h2>
             <div class="prose prose-lg text-blue-200">
-              <nuxt-content :document="page" />
+              <!-- TODO: Markdown -->
+              {{ page.body }}
             </div>
             <a
-              :href="page.googleDrive"
+              :href="page.extra.googleDrive"
               target="blank"
               class="mt-8 bg-white border border-transparent rounded-md shadow px-5 py-3 inline-flex items-center text-base font-medium text-blue-600 hover:bg-blue-50"
               >Öppna Google Drive</a
@@ -25,7 +26,7 @@
         <div class="-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1">
           <img
             class="transform translate-x-6 translate-y-6 rounded-md object-cover object-left-top sm:translate-x-16 lg:translate-y-20"
-            :src="require(`~/assets/material.png?resize&size=1200`)"
+            :src="page.image"
             alt="App screenshot"
           />
         </div>
@@ -36,8 +37,8 @@
 
 <script>
 export default {
-  async asyncData({ $content, route }) {
-    const page = await $content('pages/material').fetch()
+  async asyncData({ $contentful }) {
+    const page = await $contentful.getPage('material')
     return {
       page
     }

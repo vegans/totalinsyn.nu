@@ -6,7 +6,10 @@
           <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
             {{ page.title }}
           </h2>
-          <p class="text-xl text-gray-500"><nuxt-content :document="page" /></p>
+          <p class="text-xl text-gray-500">
+            <!-- TODO: Markdown -->
+            {{ page.body }}
+          </p>
         </div>
         <div class="lg:col-span-2">
           <ul
@@ -42,12 +45,9 @@
 </template>
 
 <script>
-import { createClient } from '~/plugins/contentful.js'
-const client = createClient()
-
 export default {
-  async asyncData({ $content }) {
-    const res = await client.getEntries({
+  async asyncData({ $contentful }) {
+    const res = await $contentful.getEntries({
       content_type: 'styrelsen'
     })
     const boardMembers = res.items.map((item) => ({
@@ -57,7 +57,7 @@ export default {
       image: item.fields.image.fields.file.url
     }))
     // TODO: SORT!!!
-    const page = await $content('pages/om/styrelsen').fetch()
+    const page = await $contentful.getPage('om/styrelsen')
     return {
       page,
       boardMembers

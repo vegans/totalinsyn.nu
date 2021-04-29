@@ -15,7 +15,13 @@ export const createClient = () => {
       'fields.slug[in]': slug
     })
     // convert result
-    return res
+    const { fields } = res.items[0]
+    return {
+      title: fields.title,
+      image: fields.image && fields.image.fields.file.url,
+      body: fields.body,
+      extra: fields.extra
+    }
   }
   return client
 }

@@ -15,8 +15,8 @@
       :sub="page.press.subtitle"
       :title="page.press.title"
     >
+      <!-- TODO: Markdown -->
       {{ page.body }}
-      <!-- <nuxt-content :document="page.body" /> -->
     </press-release>
     <panel :press="page.press.links" :livestream="page.livestreams" />
     <photo-strip

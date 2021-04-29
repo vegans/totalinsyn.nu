@@ -14,12 +14,9 @@
 </template>
 
 <script>
-import { createClient } from '~/plugins/contentful.js'
-const client = createClient()
-
 export default {
-  async asyncData({ $content, route }) {
-    const res = await client.getEntries({
+  async asyncData({ $contentful }) {
+    const res = await $contentful.getEntries({
       content_type: 'action'
     })
     const actions = res.items.map((action) => {
