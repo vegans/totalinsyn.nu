@@ -6,7 +6,10 @@
           <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
             {{ page.title }}
           </h2>
-          <p class="text-xl text-gray-500"><nuxt-content :document="page" /></p>
+          <p class="text-xl text-gray-500">
+            <!-- TODO: Markdown -->
+            {{ page.body }}
+          </p>
         </div>
         <div class="lg:col-span-2">
           <ul
@@ -17,9 +20,7 @@
                 <div class="aspect-w-1 aspect-h-1">
                   <img
                     class="object-cover shadow-lg rounded-full"
-                    :src="
-                      require(`~/assets/styrelsen/${member.slug}.jpg?resize&size=600`)
-                    "
+                    :src="member.image"
                     :alt="member.name"
                   />
                 </div>
@@ -31,7 +32,8 @@
                   <div class="stylistic-quote-mark" aria-hidden="true">
                     &ldquo;
                   </div>
-                  <p class="test"><nuxt-content :document="member" /></p>
+                  <!-- TODO: Markdown this -->
+                  <p class="test">{{ member.quote }}</p>
                 </div>
               </div>
             </li>
@@ -44,11 +46,20 @@
 
 <script>
 export default {
-  async asyncData({ $content }) {
-    const boardMembers = await $content('styrelsen')
-      .sortBy('order', 'asc')
-      .fetch()
-    const page = await $content('pages/om/styrelsen').fetch()
+  async asyncData({ $contentful }) {
+    const res = await $contentful.getEntries({
+      content_type: 'styrelsen'
+    })
+    const boardMembers = res.items
+      .map((item) => ({
+        name: item.fields.name,
+        role: item.fields.role,
+        quote: item.fields.quote,
+        image: item.fields.image.fields.file.url,
+        order: item.fields.order
+      }))
+      .sort((a, b) => a.order - b.order)
+    const page = await $contentful.getPage('om/styrelsen')
     return {
       page,
       boardMembers

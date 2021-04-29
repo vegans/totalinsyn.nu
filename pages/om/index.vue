@@ -18,10 +18,23 @@ import Action from '~/mixins/Action.js'
 
 export default {
   mixins: [Action],
-  async asyncData({ $content, route }) {
-    const pages = await $content('pages/om').fetch()
+  async asyncData({ $contentful }) {
+    const res = await $contentful.getEntries({
+      content_type: 'page'
+    })
+    const pages = res.items
+      .filter((item) => item.fields.slug.startsWith('om/'))
+      .map((item) => {
+        const res2 = {
+          path: '/' + item.fields.slug,
+          title: item.fields.title,
+          order: item.fields.menu.fields.order
+        }
+        return res2
+      })
+      .sort((a, b) => a.order - b.order)
     return {
-      pages: pages.sort((a, b) => a.menu.order - b.menu.order)
+      pages
     }
   }
 }

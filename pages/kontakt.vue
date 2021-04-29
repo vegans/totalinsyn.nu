@@ -170,10 +170,10 @@
               </svg>
             </div>
             <h3 class="text-lg font-medium text-white">
-              {{ page.sidebar.title }}
+              {{ page.extra.sidebar.title }}
             </h3>
             <p class="mt-6 text-base text-white max-w-3xl">
-              {{ page.sidebar.text }}
+              {{ page.extra.sidebar.text }}
             </p>
             <dl class="mt-8 space-y-6 text-white">
               <dt><span class="sr-only">Email</span></dt>
@@ -194,14 +194,14 @@
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span class="ml-3">{{ page.sidebar.email }}</span>
+                <span class="ml-3">{{ page.extra.sidebar.email }}</span>
               </dd>
             </dl>
             <ul class="mt-8 flex space-x-12" role="list">
               <li>
                 <a
                   class="text-blue-200 hover:text-blue-100"
-                  :href="page.sidebar.facebook"
+                  :href="page.extra.sidebar.facebook"
                   target="_blank"
                 >
                   <span class="sr-only">Facebook</span>
@@ -224,7 +224,7 @@
               <li>
                 <a
                   class="text-blue-200 hover:text-blue-100"
-                  :href="page.sidebar.github"
+                  :href="page.extra.sidebar.github"
                   target="_blank"
                 >
                   <span class="sr-only">GitHub</span>
@@ -384,8 +384,8 @@
 
 <script>
 export default {
-  async asyncData({ $content }) {
-    const page = await $content('pages/kontakt').fetch()
+  async asyncData({ $contentful }) {
+    const page = await $contentful.getPage('kontakt')
     return {
       page
     }

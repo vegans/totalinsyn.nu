@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Divider>Map</Divider>
+    <Divider>Karta</Divider>
     <client-only>
       <MglMap
         :access-token="accessToken"
@@ -38,8 +38,8 @@ export default {
   methods: {
     loaded({ component }) {
       if (this.coordinates.length > 1) {
-        const lng = this.coordinates.map((coordinate) => coordinate[0])
-        const lat = this.coordinates.map((coordinate) => coordinate[1])
+        const lng = this.coordinates.map((coordinate) => coordinate.lon)
+        const lat = this.coordinates.map((coordinate) => coordinate.lat)
         const maxLng = Math.max(...lng)
         const minLng = Math.min(...lng)
         const maxLat = Math.max(...lat)

@@ -15,11 +15,25 @@
 
 <script>
 export default {
-  async asyncData({ $content, route }) {
-    const actions = await $content('actions')
-      .only(['slug', 'title', 'location', 'date', 'header'])
-      .sortBy('slug', 'desc')
-      .fetch()
+  async asyncData({ $contentful }) {
+    const res = await $contentful.getEntries({
+      content_type: 'action'
+    })
+    const actions = res.items
+      .map((action) => {
+        return {
+          slug: `0${action.fields.action}`,
+          title: action.fields.title,
+          location: action.fields.location,
+          date: action.fields.date,
+          order: action.fields.action,
+          header: {
+            image: action.fields.headerImage.fields.file.url,
+            preamble: action.fields.headerPreamble
+          }
+        }
+      })
+      .sort((a, b) => a.order - b.order)
     return {
       actions
     }
