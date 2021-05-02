@@ -8,7 +8,7 @@ menu:
   order: 2
   subtitle: Varför gör vi detta?
 ---
-Vi behövs för att djur inom den svenska produktionssektorn inte ska kunna exploateras bakom stängda dörrar. Det är när vi får insyn i vad djuren utsätts för som vi kan göra medvetna val och avgöra om det är något som vi stödjer.
+Total Insyn behövs för att djur inom den svenska produktionssektorn inte ska kunna exploateras bakom stängda dörrar. Det är när vi får insyn i vad djuren utsätts för som vi kan göra medvetna val och avgöra om det är något som vi stödjer.
 
 Sverige anses ha några av de strängaste djurskyddslagarna i världen, men för att djuren i industrin ska skyddas måste djurskyddslagarna också efterföljas samt ifrågasättas. Myndigheternas resurser för att se till att djurskyddslagarna följs är inte stora och vi anser inte att resurserna räcker till för att djuren på individnivå ska få möjlighet att leva ett liv fritt från lidande. 
 
