@@ -5,7 +5,7 @@
     class="group inline-flex items-center space-x-2 text-base leading-6 font-medium focus:outline-none transition ease-in-out duration-150"
     :class="
       dark
-        ? 'text-black hover:text-gray-900 focus:text-gray-900'
+        ? 'underline text-black hover:text-gray-900 focus:text-gray-900'
         : 'text-blue-200 hover:text-white focus:text-white'
     "
   >

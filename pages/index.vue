@@ -1,10 +1,10 @@
 <template>
   <div>
     <Engage
-      title="Engagera dig!"
-      cta="Hitta din lokalgrupp"
-      to="/om/lokalgrupper"
-      body="Vi söker alltid fler engagerade som vill hjälpa till att granska djurindustrin och stå upp för djuren. Idag har vi fem lokalgrupper i Sverige; i Malmö, Göteborg, Norrköping, Gävle och Stockholm. Läs mer om dem här."
+      title="Medlem i Total Insyn"
+      cta="Bli medlem idag!"
+      to="/bli-medlem"
+      body="Vill du stödja vår förening och vårt arbete med att synliggöra djurindustrin i Sverige - då är du mycket välkommen som medlem! Medlemskap kostar 50 kr per år och du blir medlem för det innevarande året."
       asset="engage.jpg"
     />
   </div>

@@ -28,7 +28,7 @@
     <div
       class="hidden md:flex-1 md:flex md:items-center md:justify-between md:space-x-12"
     >
-      <nav class="flex space-x-10">
+      <nav class="flex" :class="dark ? 'space-x-4' : 'space-x-10'">
         <template v-for="page in pages">
           <div v-if="page.children" :key="page.url" class="relative">
             <header-button
