@@ -48,7 +48,8 @@
         <p class="text-center text-base leading-6 text-gray-500">
           Total Insyn, org.nr 802534-0459<br />
           Vikingagatan 21 | 113 42 Stockholm |
-          <a href="mailto:info@totalinsyn.nu">info@totalinsyn.nu</a>
+          <a href="mailto:info@totalinsyn.nu">info@totalinsyn.nu</a><br />
+          Bankgiro: 5664‐9361 | Swish: 1234 864 013
         </p>
       </div>
     </div>
