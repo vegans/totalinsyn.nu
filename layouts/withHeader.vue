@@ -1,5 +1,14 @@
 <template>
   <div>
+    <div class="w-full bg-yellow-500 text-white text-center py-2 font-sm">
+      <span class="font-bold">📰</span> Elever lär sig vanvårda djur på ett
+      naturbruksgymnasium i Värmland -
+      <nuxt-link
+        to="/press/elever-lar-sig-vanvarda-djur-pa-ett-naturbruksgymnasium-i-varmland"
+        class="underline"
+        >Läs mer</nuxt-link
+      >
+    </div>
     <div class="relative bg-white overflow-hidden">
       <div class="max-w-screen-xl mx-auto ">
         <div
